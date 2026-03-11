@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, Instagram } from "lucide-react";
+import logo from "@/assets/logo.jpeg";
 
 const BOOKING_URL = "https://hbook.hsystem.com.br/Booking?companyId=5cae2795ab41d51dd869d73a&checkin=04/12/2019&checkout=08/12/2019&adults=1&children=0&_gl=1*1m36n9x*_gcl_au*MTkzNTI4MzE0Mi4xNzY2MzE3MTcy#_ga=2.158433650.936447759.1773250147-595639725.1766317175";
 
@@ -32,7 +33,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#inicio" className="flex items-center gap-2">
+          <a href="#inicio" className="flex items-center gap-3">
+            <img src={logo} alt="Pousada Gaúcha" className="h-12 w-12 rounded-full object-cover" />
             <span className={`font-display text-2xl font-bold tracking-tight transition-colors ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
               Pousada Gaúcha
             </span>

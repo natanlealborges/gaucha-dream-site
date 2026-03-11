@@ -27,10 +27,10 @@ const rooms = [
 
 
 const amenities = [
-{ icon: Utensils, label: "Cozinha completa" },
+{ icon: UmbrellaIcon, label: "Serviço de praia" },
 { icon: Wind, label: "Ar-condicionado" },
-{ icon: Wifi, label: "Wi-Fi" },
-{ icon: Tv, label: "TV a cabo" }];
+{ icon: Utensils, label: "Restaurante (out–abr)" },
+{ icon: Bath, label: "Jacuzzis panorâmicas" }];
 
 
 const AccommodationsSection = () => {

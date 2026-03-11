@@ -52,6 +52,15 @@ const Navbar = () => {
               </a>
             ))}
             <a
+              href="https://www.instagram.com/pousadagaucha/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`transition-colors hover:text-accent ${scrolled ? "text-foreground" : "text-primary-foreground/90"}`}
+              aria-label="Instagram"
+            >
+              <Instagram size={18} />
+            </a>
+            <a
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"

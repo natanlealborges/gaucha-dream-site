@@ -1,6 +1,6 @@
 import { Wifi, Wind, Utensils, Tv } from "lucide-react";
 import roomGarden from "@/assets/room-garden.jpg";
-import roomGaucha from "@/assets/room-gaucha.jpg";
+
 import roomPraia from "@/assets/room-praia.jpg";
 
 const BOOKING_URL = "https://hbook.hsystem.com.br/Booking?companyId=5cae2795ab41d51dd869d73a&checkin=04/12/2019&checkout=08/12/2019&adults=1&children=0&_gl=1*1m36n9x*_gcl_au*MTkzNTI4MzE0Mi4xNzY2MzE3MTcy#_ga=2.158433650.936447759.1773250147-595639725.1766317175";
@@ -14,7 +14,7 @@ const rooms = [
 },
 {
   name: "Bloco Gaúcha",
-  image: roomGaucha,
+  image: "/lovable-uploads/49227ca8-0666-4332-8d04-b8d45a80310e.jpg",
   description: "Apartamentos amplos, perfeitos para famílias ou grupos que precisam de mais espaço e comodidade.",
   highlight: "Ideal para famílias"
 },

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Instagram } from "lucide-react";
 
 const BOOKING_URL = "https://hbook.hsystem.com.br/Booking?companyId=5cae2795ab41d51dd869d73a&checkin=04/12/2019&checkout=08/12/2019&adults=1&children=0";
 
@@ -51,6 +51,15 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <a
+              href="https://www.instagram.com/pousadagaucha/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`transition-colors hover:text-accent ${scrolled ? "text-foreground" : "text-primary-foreground/90"}`}
+              aria-label="Instagram"
+            >
+              <Instagram size={18} />
+            </a>
             <a
               href={BOOKING_URL}
               target="_blank"

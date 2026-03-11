@@ -6,7 +6,7 @@ const ContactSection = () => {
   return (
     <section id="contato" className="section-padding bg-background">
       <div className="max-w-4xl mx-auto text-center">
-        <p className="text-accent font-semibold text-sm tracking-[0.2em] uppercase mb-3">Contato</p>
+        <p className="font-semibold text-sm tracking-[0.2em] uppercase mb-3 text-secondary-foreground">Contato</p>
         <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">
           Entre em contato
         </h2>

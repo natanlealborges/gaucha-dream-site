@@ -1,4 +1,4 @@
-import { Wifi, Wind, Utensils, Tv } from "lucide-react";
+import { UmbrellaIcon, Wind, Utensils, Bath } from "lucide-react";
 import roomGarden from "@/assets/room-garden.jpg";
 
 import roomPraia from "@/assets/room-praia.jpg";

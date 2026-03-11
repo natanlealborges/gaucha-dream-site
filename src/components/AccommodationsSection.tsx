@@ -14,7 +14,7 @@ const rooms = [
 },
 {
   name: "Bloco Gaúcha",
-  image: roomGaucha,
+  image: "/lovable-uploads/49227ca8-0666-4332-8d04-b8d45a80310e.jpg",
   description: "Apartamentos amplos, perfeitos para famílias ou grupos que precisam de mais espaço e comodidade.",
   highlight: "Ideal para famílias"
 },

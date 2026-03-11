@@ -20,7 +20,7 @@ const rooms = [
 },
 {
   name: "Bloco Praia",
-  image: roomPraia,
+  image: "/lovable-uploads/bdf75423-2928-485e-9c80-d580d5d99039.jpg",
   description: "A acomodação mais próxima do café da manhã à beira-mar, ideal para quem valoriza praticidade e fácil acesso.",
   highlight: "Perto do café da manhã"
 }];

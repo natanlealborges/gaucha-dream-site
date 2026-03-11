@@ -33,7 +33,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#inicio" className="flex items-center gap-2">
+          <a href="#inicio" className="flex items-center gap-3">
+            <img src={logo} alt="Pousada Gaúcha" className="h-12 w-12 rounded-full object-cover" />
             <span className={`font-display text-2xl font-bold tracking-tight transition-colors ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
               Pousada Gaúcha
             </span>

@@ -44,8 +44,8 @@
     --warm: 25 60% 50%;
     --cream: 40 33% 98%;
 
-    --font-display: 'Playfair Display', Georgia, serif;
-    --font-body: 'DM Sans', system-ui, sans-serif;
+    --font-display: 'Cinzel', Georgia, serif;
+    --font-body: 'Calibri', 'Segoe UI', system-ui, sans-serif;
 
     --shadow-soft: 0 4px 30px -8px hsl(210 29% 15% / 0.08);
     --shadow-card: 0 8px 40px -12px hsl(210 29% 15% / 0.12);

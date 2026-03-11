@@ -1,6 +1,6 @@
 import eventsImage from "@/assets/events-wedding.jpg";
 
-const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5547997910034&text&type=phone_number&app_absent=0";
+const WHATSAPP_URL = "http://wa.me/5547997910034";
 
 const EventsSection = () => {
   return (

@@ -37,7 +37,7 @@ const AccommodationsSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-accent font-semibold text-sm tracking-[0.2em] uppercase mb-3">Acomodações</p>
+          <p className="font-semibold text-sm tracking-[0.2em] uppercase mb-3 text-secondary-foreground">Acomodações</p>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
             Conforto à beira-mar
           </h2>

@@ -21,7 +21,7 @@ const ContactSection = () => {
             </div>
             <div>
               <p className="font-semibold text-foreground text-sm">Telefone</p>
-              <a href="tel:+554733692472" className="text-muted-foreground text-sm hover:text-primary">(47) 3369-2472</a>
+              <a href="tel:+554733692472" className="text-muted-foreground text-sm hover:text-primary"></a>
               <br />
               <a href="tel:+554733936985" className="text-muted-foreground text-sm hover:text-primary">(47) 3393-6985</a>
             </div>
@@ -54,13 +54,13 @@ const ContactSection = () => {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-10 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity"
-        >
+          className="inline-flex items-center gap-2 text-accent-foreground px-10 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity bg-green-500">
+          
           Fale pelo WhatsApp
         </a>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default ContactSection;

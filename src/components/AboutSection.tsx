@@ -1,4 +1,7 @@
 import { MapPin, Star, Users, Sun } from "lucide-react";
+import aboutDeck from "@/assets/about-deck.jpg";
+import aboutJacuzzi from "@/assets/about-jacuzzi.jpg";
+import breakfastBuffet from "@/assets/breakfast-buffet.jpg";
 
 const features = [
   {
@@ -27,7 +30,7 @@ const AboutSection = () => {
   return (
     <section id="sobre" className="section-padding bg-sand">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
           {/* Text */}
           <div>
             <p className="text-accent font-semibold text-sm tracking-[0.2em] uppercase mb-3">Sobre nós</p>
@@ -54,6 +57,13 @@ const AboutSection = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Photo gallery */}
+        <div className="grid md:grid-cols-3 gap-4">
+          <img src={aboutDeck} alt="Deck com cadeiras e vista para a praia" className="w-full h-64 object-cover rounded-xl" loading="lazy" />
+          <img src={aboutJacuzzi} alt="Jacuzzi com vista para o mar" className="w-full h-64 object-cover rounded-xl" loading="lazy" />
+          <img src={breakfastBuffet} alt="Buffet de café da manhã da Pousada Gaúcha" className="w-full h-64 object-cover rounded-xl" loading="lazy" />
         </div>
       </div>
     </section>

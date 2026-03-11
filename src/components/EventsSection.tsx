@@ -10,7 +10,7 @@ const EventsSection = () => {
         <div className="relative">
           <img
             src={eventsImage}
-            alt="Casamento na praia de Bombinhas"
+            alt="Café da manhã à beira-mar na Pousada Gaúcha"
             className="w-full h-full object-cover min-h-[400px]"
             loading="lazy"
           />

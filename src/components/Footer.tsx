@@ -7,7 +7,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8 items-center">
           <div>
-            <h3 className="font-display text-xl font-bold text-primary-foreground mb-2">Pousada Gaúcha</h3>
+            <div className="flex items-center gap-3 mb-3">
+              <img src={logo} alt="Pousada Gaúcha" className="h-10 w-10 rounded-full object-cover" />
+              <h3 className="font-display text-xl font-bold text-primary-foreground">Pousada Gaúcha</h3>
+            </div>
             <p className="text-sm">Bombinhas, Santa Catarina</p>
             <a
               href="https://www.instagram.com/pousadagaucha/"

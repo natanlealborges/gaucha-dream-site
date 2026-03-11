@@ -9,12 +9,12 @@ import breakfastBuffet from "@/assets/breakfast-buffet.jpg";
 const BOOKING_URL = "https://hbook.hsystem.com.br/Booking?companyId=5cae2795ab41d51dd869d73a&checkin=04/12/2019&checkout=08/12/2019&adults=1&children=0&_gl=1*1m36n9x*_gcl_au*MTkzNTI4MzE0Mi4xNzY2MzE3MTcy#_ga=2.158433650.936447759.1773250147-595639725.1766317175";
 
 const slides = [
-  { image: heroBeach, alt: "Rooftop com jacuzzis e vista panorâmica do mar" },
-  { image: aboutDeck, alt: "Deck com cadeiras e vista para a praia de Bombinhas" },
-  { image: aboutJacuzzi, alt: "Jacuzzi com vista para o mar" },
-  { image: roomGardenDeck, alt: "Suíte Garden com varanda e vista mar" },
-  { image: breakfastBuffet, alt: "Buffet de café da manhã artesanal" },
-];
+{ image: heroBeach, alt: "Rooftop com jacuzzis e vista panorâmica do mar" },
+{ image: aboutDeck, alt: "Deck com cadeiras e vista para a praia de Bombinhas" },
+{ image: aboutJacuzzi, alt: "Jacuzzi com vista para o mar" },
+{ image: roomGardenDeck, alt: "Suíte Garden com varanda e vista mar" },
+{ image: breakfastBuffet, alt: "Buffet de café da manhã artesanal" }];
+
 
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
@@ -35,48 +35,48 @@ const HeroSection = () => {
   return (
     <section id="inicio" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Background images */}
-      {slides.map((slide, i) => (
-        <img
-          key={i}
-          src={slide.image}
-          alt={slide.alt}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-            i === current ? "opacity-100" : "opacity-0"
-          }`}
-          loading={i === 0 ? "eager" : "lazy"}
-        />
-      ))}
+      {slides.map((slide, i) =>
+      <img
+        key={i}
+        src={slide.image}
+        alt={slide.alt}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+        i === current ? "opacity-100" : "opacity-0"}`
+        }
+        loading={i === 0 ? "eager" : "lazy"} />
+
+      )}
       {/* Overlay */}
-      <div className="absolute inset-0 hero-overlay" />
+      <div className="absolute inset-0 hero-overlay shadow-none" />
 
       {/* Arrows */}
       <button
         onClick={prev}
         className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 bg-background/20 backdrop-blur-sm hover:bg-background/40 text-primary-foreground rounded-full p-2 transition-colors"
-        aria-label="Slide anterior"
-      >
+        aria-label="Slide anterior">
+        
         <ChevronLeft size={24} />
       </button>
       <button
         onClick={next}
         className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 bg-background/20 backdrop-blur-sm hover:bg-background/40 text-primary-foreground rounded-full p-2 transition-colors"
-        aria-label="Próximo slide"
-      >
+        aria-label="Próximo slide">
+        
         <ChevronRight size={24} />
       </button>
 
       {/* Dots */}
       <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`w-2.5 h-2.5 rounded-full transition-all ${
-              i === current ? "bg-primary-foreground w-8" : "bg-primary-foreground/40"
-            }`}
-            aria-label={`Ir para slide ${i + 1}`}
-          />
-        ))}
+        {slides.map((_, i) =>
+        <button
+          key={i}
+          onClick={() => setCurrent(i)}
+          className={`w-2.5 h-2.5 rounded-full transition-all ${
+          i === current ? "bg-primary-foreground w-8" : "bg-primary-foreground/40"}`
+          }
+          aria-label={`Ir para slide ${i + 1}`} />
+
+        )}
       </div>
 
       {/* Content */}
@@ -96,15 +96,15 @@ const HeroSection = () => {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent text-accent-foreground px-10 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity"
-          >
-            Reserve Agora
+            className="text-accent-foreground px-10 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity bg-sidebar-ring">
+            
+            ​RESERVE AGORA 
           </a>
           <a
             href="#acomodacoes"
-            className="border-2 border-primary-foreground/40 text-primary-foreground px-10 py-4 rounded-lg text-lg font-medium hover:bg-primary-foreground/10 transition-colors"
-          >
-            Conheça Nossas Suítes
+            className="border-2 border-primary-foreground/40 text-primary-foreground px-10 py-4 rounded-lg text-lg font-medium hover:bg-primary-foreground/10 transition-colors">
+            
+            Conheça Nossos Quartos
           </a>
         </div>
       </div>
@@ -115,8 +115,8 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-primary-foreground/60 rounded-full" />
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;

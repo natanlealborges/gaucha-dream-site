@@ -23,7 +23,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="text-sm space-y-1 md:text-center">
-            <p>(47) 3393-6985</p>
+            <p>(47) 99791-0034</p>
             <p>reservas@pousadagaucha.com.br</p>
           </div>
           <div className="text-sm md:text-right">

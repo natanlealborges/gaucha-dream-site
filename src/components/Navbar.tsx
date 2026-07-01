@@ -7,8 +7,8 @@ const BOOKING_URL = "https://hbook.hsystem.com.br/Booking?companyId=5cae2795ab41
 const navLinks = [
 { label: "Início", href: "#inicio" },
 { label: "Acomodações", href: "#acomodacoes" },
-{ label: "Eventos", href: "#eventos" },
 { label: "Sobre", href: "#sobre" },
+{ label: "Eventos e Casamentos", href: "#eventos" },
 { label: "Contato", href: "#contato" }];
 
 

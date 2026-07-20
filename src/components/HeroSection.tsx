@@ -85,11 +85,11 @@ const HeroSection = () => {
           Bombinhas • Santa Catarina
         </p>
         <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up opacity-0" style={{ animationDelay: "0.4s" }}>
-          Seu refúgio à<br />
-          <span className="italic font-medium">beira-mar</span>
+          Pousada pé na areia<br />
+          <span className="italic font-medium">em Bombinhas</span>
         </h1>
         <p className="text-primary-foreground/80 text-lg md:text-xl font-body max-w-2xl mx-auto mb-10 animate-fade-up opacity-0" style={{ animationDelay: "0.6s" }}>
-          Acolhimento familiar, conforto premium e acesso direto à praia de Bombinhas. A escolha ideal para suas férias inesquecíveis.
+          Jacuzzi na cobertura com vista panorâmica, café à beira-mar e o acolhimento de uma família gaúcha há 26 anos em Bombinhas/SC.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up opacity-0" style={{ animationDelay: "0.8s" }}>
           <a

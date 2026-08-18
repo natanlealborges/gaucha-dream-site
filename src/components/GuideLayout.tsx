@@ -170,6 +170,7 @@ const GuideLayout = ({ guide, intro, sections, heroImageAlt }: GuideLayoutProps)
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackInitiateCheckout}
                 className="bg-green-500 text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
               >
                 Reservar na Pousada Gaúcha

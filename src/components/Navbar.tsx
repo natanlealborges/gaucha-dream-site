@@ -68,6 +68,7 @@ const Navbar = () => {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackInitiateCheckout}
               className="text-accent-foreground px-6 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity bg-green-500">
               
               RESERVE JÁ 
@@ -102,6 +103,7 @@ const Navbar = () => {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackInitiateCheckout}
             className="block bg-accent text-accent-foreground px-6 py-3 rounded-lg text-center font-semibold">
             
               Reserve Já

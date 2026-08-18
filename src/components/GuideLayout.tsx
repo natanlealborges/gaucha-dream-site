@@ -4,6 +4,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { GuideMeta, getRelatedGuides } from "@/data/guides";
+import { trackInitiateCheckout } from "@/lib/pixel";
 
 const BASE_URL = "https://pousadagaucha.com";
 const BOOKING_URL =

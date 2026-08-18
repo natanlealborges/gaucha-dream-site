@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { trackInitiateCheckout } from "@/lib/pixel";
 import heroBeach from "@/assets/hero-beach.jpg";
 import aboutDeck from "@/assets/about-deck.jpg";
 import aboutJacuzzi from "@/assets/about-jacuzzi.jpg";

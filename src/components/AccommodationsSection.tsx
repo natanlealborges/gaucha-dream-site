@@ -1,4 +1,5 @@
 import { UmbrellaIcon, Wind, Utensils, Bath } from "lucide-react";
+import { trackInitiateCheckout } from "@/lib/pixel";
 import roomGarden from "@/assets/room-garden.jpg";
 import gauchaApto from "@/assets/gaucha-apto.jpg.asset.json";
 

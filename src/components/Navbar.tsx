@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, Instagram } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { trackInitiateCheckout } from "@/lib/pixel";
 
 const BOOKING_URL = "https://hbook.hsystem.com.br/Booking?companyId=5cae2795ab41d51dd869d73a&checkin=04/12/2019&checkout=08/12/2019&adults=1&children=0&_gl=1*1m36n9x*_gcl_au*MTkzNTI4MzE0Mi4xNzY2MzE3MTcy#_ga=2.158433650.936447759.1773250147-595639725.1766317175";
 
@@ -67,6 +68,7 @@ const Navbar = () => {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackInitiateCheckout}
               className="text-accent-foreground px-6 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity bg-green-500">
               
               RESERVE JÁ 
@@ -101,6 +103,7 @@ const Navbar = () => {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackInitiateCheckout}
             className="block bg-accent text-accent-foreground px-6 py-3 rounded-lg text-center font-semibold">
             
               Reserve Já

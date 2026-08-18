@@ -4,6 +4,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { GuideMeta, getRelatedGuides } from "@/data/guides";
+import { trackInitiateCheckout } from "@/lib/pixel";
 
 const BASE_URL = "https://pousadagaucha.com";
 const BOOKING_URL =
@@ -169,6 +170,7 @@ const GuideLayout = ({ guide, intro, sections, heroImageAlt }: GuideLayoutProps)
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackInitiateCheckout}
                 className="bg-green-500 text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
               >
                 Reservar na Pousada Gaúcha

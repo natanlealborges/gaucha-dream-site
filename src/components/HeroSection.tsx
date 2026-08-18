@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { trackInitiateCheckout } from "@/lib/pixel";
 import heroBeach from "@/assets/hero-beach.jpg";
 import aboutDeck from "@/assets/about-deck.jpg";
 import aboutJacuzzi from "@/assets/about-jacuzzi.jpg";
@@ -96,6 +97,7 @@ const HeroSection = () => {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackInitiateCheckout}
             className="text-accent-foreground px-10 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity bg-green-500">
             
             ​RESERVE AGORA 

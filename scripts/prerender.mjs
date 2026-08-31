@@ -45,7 +45,6 @@ async function main() {
       outDir: SSR_OUT,
       emptyOutDir: true,
       ssrEmitAssets: false,
-brk:      false,
     },
   });
 

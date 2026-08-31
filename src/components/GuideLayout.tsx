@@ -34,17 +34,12 @@ const GuideLayout = ({ guide, intro, sections, heroImageAlt }: GuideLayoutProps)
     headline: guide.h1,
     description: guide.description,
     mainEntityOfPage: url,
-    author: { "@type": "Organization", name: "Pousada Gaúcha" },
-    publisher: {
-      "@type": "Organization",
-      name: "Pousada Gaúcha",
-      logo: {
-        "@type": "ImageObject",
-        url: `${BASE_URL}/lovable-uploads/bdf75423-2928-485e-9c80-d580d5d99039.jpg`,
-      },
-    },
-    image: `${BASE_URL}/lovable-uploads/bdf75423-2928-485e-9c80-d580d5d99039.jpg`,
     inLanguage: "pt-BR",
+    datePublished: "2026-08-01",
+    dateModified: "2026-08-31",
+    author: { "@type": "Organization", name: "Pousada Gaúcha" },
+    publisher: { "@id": `${BASE_URL}/#lodging` },
+    image: `${BASE_URL}/lovable-uploads/bdf75423-2928-485e-9c80-d580d5d99039.jpg`,
   };
 
   const breadcrumbLd = {

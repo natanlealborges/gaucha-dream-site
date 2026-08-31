@@ -138,7 +138,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-foreground text-sm pt-2 font-medium">
-              <WhatsApp size={14} />
+              <MessageCircle size={14} />
               WhatsApp: (47) 99791-0034
             </a>
             <a

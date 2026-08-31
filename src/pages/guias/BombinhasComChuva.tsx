@@ -4,7 +4,7 @@ import { getGuide } from "@/data/guides";
 const Page = () => (
   <GuideLayout
     guide={getGuide("o-que-fazer-em-bombinhas-com-chuva")!}
-    heroImageAlt="Deck coberto da pousada em dia de chuva com vista para o mar cinza"
+    heroImage={{ alt: "Deck coberto da pousada em dia de chuva com vista para o mar cinza" }}
     intro="Chuva em Bombinhas é curta e passa — mas se pegar um dia inteiro, tem jeito. A gente já viveu isso mil vezes com hóspede e aprendeu que a chave é desacelerar de propósito."
     sections={[
       {

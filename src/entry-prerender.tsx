@@ -29,14 +29,17 @@ export function render(url: string): PrerenderResult {
   );
 
   const helmet = helmetContext.helmet;
+  const title = helmet?.title.toString() ?? "";
+  // Rotas sem <Helmet><title> emitem um título vazio — nesse caso mantemos o do index.html.
+  const hasTitle = /<title[^>]*>[^<]+<\/title>/i.test(title);
   const head = helmet
     ? [
-        helmet.title.toString(),
+        hasTitle ? title : "",
         helmet.meta.toString(),
         helmet.link.toString(),
         helmet.script.toString(),
       ]
-        .filter(Boolean)
+        .filter((part) => part.trim().length > 0)
         .join("\n    ")
     : "";
 

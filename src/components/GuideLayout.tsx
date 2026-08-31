@@ -57,6 +57,7 @@ const GuideLayout = ({ guide, intro, sections, heroImageAlt }: GuideLayoutProps)
       <Helmet>
         <title>{guide.title}</title>
         <meta name="description" content={guide.description} />
+        <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href={url} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={guide.title} />

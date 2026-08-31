@@ -27,6 +27,7 @@ const GuiasIndex = () => {
           name="description"
           content="Guias honestos sobre Bombinhas escritos por quem mora aqui: mergulho, inverno, trilhas, dias de chuva e viagem com crianças."
         />
+        <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href={url} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Guia de Bombinhas · Pousada Gaúcha" />

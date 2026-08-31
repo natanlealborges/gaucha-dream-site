@@ -38,6 +38,8 @@ const Footer = () => {
             <p>Bombinhas - SC, Brasil</p>
           </div>
 
+          {/* Seção "Guia de Bombinhas" oculta enquanto GUIDES_PUBLISHED = false (ver src/config/site.ts) */}
+          {GUIDES_PUBLISHED && (
           <div className="text-sm md:col-span-2">
             <p className="text-primary-foreground font-semibold mb-3">Guia de Bombinhas</p>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4">
@@ -53,6 +55,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+          )}
         </div>
 
         <div className="border-t border-primary-foreground/10 pt-8 text-center text-xs">

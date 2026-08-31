@@ -56,8 +56,10 @@ async function main() {
     const { html, head } = mod.render(route);
 
     let page = template;
-    if (head) {
-      for (const re of REPLACEABLE) page = page.replace(re, "");
+    if (head.trim()) {
+      for (const { emits, strip } of REPLACEABLE) {
+        if (emits.test(head)) page = page.replace(strip, "");
+      }
       page = page.replace("</head>", `  ${head}\n  </head>`);
     }
     page = page.replace('<div id="root"></div>', `<div id="root">${html}</div>`);

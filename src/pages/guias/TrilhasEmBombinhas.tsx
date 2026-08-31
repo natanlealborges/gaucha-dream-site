@@ -21,7 +21,7 @@ const Page = () => (
         paragraphs: [
           "Cerca de 3,5 km, com desnível em torno de 250 metros, entre 1h30 e 2h. Parte de Bombinhas pela mata, com um trecho pelo costão.",
           "A praia do Retiro dos Padres é pequena, com faixa de areia dividindo espaço com as rochas, e no meio do caminho existe uma pedra grande de onde se vê a região inteira. É a trilha com melhor relação entre esforço e recompensa da cidade.",
-          "Nossa dica: dá para enendar com a Sepultura na mesma manhã.",
+          "Nossa dica: dá para emendar com a Sepultura na mesma manhã.",
         ],
       },
       {

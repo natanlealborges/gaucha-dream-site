@@ -1,15 +1,15 @@
 import GuideLayout from "@/components/GuideLayout";
 import { getGuide } from "@/data/guides";
+import heroBeach from "@/assets/hero-beach.jpg";
 
 const Page = () => (
   <GuideLayout
     guide={getGuide("bombinhas-com-criancas")!}
-    heroImageAlt="Criança brincando na água rasa e transparente da Praia da Sepultura em Bombinhas"
+    heroImage={{ src: heroBeach, alt: "Vista aérea da Praia de Bombinhas, em frente à Pousada Gaúcha, com mar calmo e areia clara" }}
     intro="Bombinhas é um dos melhores destinos de praia do Sul para quem viaja com criança pequena, e o motivo é simples: várias praias daqui são de baía, com mar raso, água transparente e pouca onda. A criança entra e você enxerga o pé dela no fundo. Mas nem toda praia daqui é assim, e escolher errado estraga o dia. É isso que este guia resolve."
     sections={[
       {
         heading: "As praias certas por idade",
-        image: { alt: "Piscina natural da Praia da Sepultura em Bombinhas com água rasa e calma" },
         paragraphs: [
           "Bebês e crianças até 5 anos: Praia da Sepultura. A piscina natural formada entre as pedras é o lugar mais seguro da cidade para criança pequena. Água parada, rasa e cheia de peixe. Vá cedo, porque enche.",
           "Até 8 anos: Praia da Lagoinha, conhecida como praia dos peixinhos. Pequena, abrigada, rasa e transparente. Chega-se por uma caminhada de cerca de vinte minutos, o que já é parte do programa.",

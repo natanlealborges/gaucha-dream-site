@@ -4,7 +4,7 @@ import { getGuide } from "@/data/guides";
 const Page = () => (
   <GuideLayout
     guide={getGuide("mergulho-em-bombinhas")!}
-    heroImageAlt="Mergulhador submerso na Reserva Biológica do Arvoredo em Bombinhas, com peixes e água transparente ao fundo"
+    heroImage={{ alt: "Mergulhador submerso na Reserva Biológica do Arvoredo em Bombinhas, com peixes e água transparente ao fundo" }}
     intro="A gente costuma dizer que existem duas Bombinhas debaixo d'água: a do verão, mais quente e mais movimentada, e a do inverno, que quase ninguém conhece — a água fica tão clara que a gente enxerga o próprio pé no fundo do costão."
     sections={[
       {

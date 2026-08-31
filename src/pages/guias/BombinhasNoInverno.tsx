@@ -1,10 +1,12 @@
 import GuideLayout from "@/components/GuideLayout";
 import { getGuide } from "@/data/guides";
+import heroBeach from "@/assets/hero-beach.jpg";
+import aboutJacuzzi from "@/assets/about-jacuzzi.jpg";
 
 const Page = () => (
   <GuideLayout
     guide={getGuide("bombinhas-no-inverno")!}
-    heroImageAlt="Praia de Bombinhas vazia em manhã de inverno com mar calmo e céu limpo"
+    heroImage={{ src: heroBeach, alt: "Vista aérea da Praia de Bombinhas, em frente à Pousada Gaúcha, com mar calmo e o trapiche" }}
     intro="Vale, desde que você saiba o que vem buscar. No inverno Bombinhas entrega espaço, silêncio, água muito mais transparente, trilhas com clima confortável e a chance de ver baleia da areia. O que muda é que o banho de mar fica curto e parte dos restaurantes reduz o horário. A gente recebe hóspedes aqui há 26 anos e vê a mesma cena todo ano: quem vem no inverno pela primeira vez volta achando que descobriu Bombinhas duas vezes. Esta página não é um folheto. É o que a gente responde por WhatsApp toda semana."
     sections={[
       {
@@ -18,7 +20,6 @@ const Page = () => (
       },
       {
         heading: "A água fica mais clara. Essa é a parte que surpreende",
-        image: { alt: "Água transparente da Praia de Bombinhas no inverno vista da areia" },
         paragraphs: [
           "Aqui está o que quase ninguém conta sobre Bombinhas: o verão é a estação mais chuvosa do ano aqui. E chuva forte mexe com o mar. Ela carrega areia e sedimento dos morros e deixa a água mais turva por um ou dois dias.",
           "No inverno chove muito menos e as correntes ficam mais estáveis. O resultado é aquela água verde-azulada das fotos.",
@@ -29,7 +30,6 @@ const Page = () => (
       },
       {
         heading: "Baleias, e o que a gente pode e não pode prometer",
-        image: { alt: "Mirante em Bombinhas usado para avistamento de baleia-franca no inverno" },
         paragraphs: [
           "Entre julho e novembro, baleias-francas migram do Atlântico Sul para o litoral catarinense para acasalar e cuidar dos filhotes. A maior concentração fica no sul do estado, entre Garopaba, Imbituba e Laguna, mas os avistamentos entre Bombinhas e Porto Belo vêm aumentando ano a ano, porque nossas baías abrigadas e de água calma são exatamente o tipo de lugar que elas procuram.",
           "A gente vê. Não todo dia, não com hora marcada, mas vê.",
@@ -49,7 +49,7 @@ const Page = () => (
       },
       {
         heading: "Como a gente montaria seus dias",
-        image: { alt: "Jacuzzi climatizada na cobertura da Pousada Gaúcha com vista para o mar de Bombinhas" },
+        image: { src: aboutJacuzzi, alt: "Jacuzzi da cobertura da Pousada Gaúcha com vista para o mar de Bombinhas" },
         paragraphs: [
           "Esta é a parte que a gente costuma fazer por WhatsApp, e vale adiantar aqui.",
           "Se você vem para mergulhar: venha entre julho e setembro, reserve o mergulho para os dias sem chuva na véspera e deixe o dia seguinte livre. A gente ajuda a encaixar com a operadora.",

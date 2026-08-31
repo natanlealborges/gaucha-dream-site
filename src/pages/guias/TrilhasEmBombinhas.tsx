@@ -4,7 +4,6 @@ import { getGuide } from "@/data/guides";
 const Page = () => (
   <GuideLayout
     guide={getGuide("trilhas-em-bombinhas")!}
-    heroImageAlt="Vista do alto do Morro do Macaco em Bombinhas com a península e o mar ao fundo"
     intro="Bombinhas tem 67% de área verde e três unidades de conservação num município de 36 km². Na prática, isso quer dizer que quase toda praia daqui tem uma trilha saindo dela. Abaixo estão as cinco que a gente desenha no papel do café toda semana, da mais leve para a mais puxada. Todas dão para fazer sem guia, e todas ficam melhores no inverno, quando não faz calor no meio do caminho."
     sections={[
       {
@@ -17,7 +16,6 @@ const Page = () => (
       },
       {
         heading: "Retiro dos Padres — fácil para moderada",
-        image: { alt: "Trilha do Retiro dos Padres em Bombinhas passando pelo costão com o mar ao lado" },
         paragraphs: [
           "Cerca de 3,5 km, com desnível em torno de 250 metros, entre 1h30 e 2h. Parte de Bombinhas pela mata, com um trecho pelo costão.",
           "A praia do Retiro dos Padres é pequena, com faixa de areia dividindo espaço com as rochas, e no meio do caminho existe uma pedra grande de onde se vê a região inteira. É a trilha com melhor relação entre esforço e recompensa da cidade.",
@@ -41,7 +39,6 @@ const Page = () => (
       },
       {
         heading: "Morro do Macaco — puxada, e vale cada passo",
-        image: { alt: "Mirante no topo do Morro do Macaco em Bombinhas com vista para várias praias" },
         paragraphs: [
           "O ponto mais alto da lista, com 191 metros. A trilha começa no fim da Praia de Canto Grande Mar de Dentro, no fim da Rua Jequitibá, perto do trapiche. São de 30 a 40 minutos de subida quase contínua, com trechos íngremes, areia solta e pedras.",
           "Do topo se vê Conceição, Canto Grande, Mariscal, Quatro Ilhas, Morrinhos e Zimbros de uma vez só. É a melhor vista da península, e o melhor pôr do sol da região.",

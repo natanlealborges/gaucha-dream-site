@@ -4,7 +4,7 @@ import { getGuide } from "@/data/guides";
 const Page = () => (
   <GuideLayout
     guide={getGuide("bombinhas-ou-gramado-no-inverno")!}
-    heroImageAlt="Composição comparando praia de Bombinhas ao amanhecer com paisagem serrana de Gramado no inverno"
+    heroImage={{ alt: "Composição comparando praia de Bombinhas ao amanhecer com paisagem serrana de Gramado no inverno" }}
     intro="A gente ouve essa dúvida toda semana no check-in. As duas cidades são ótimas — e são coisas completamente diferentes. Vale a pena responder com sinceridade em vez de vender a nossa."
     sections={[
       {

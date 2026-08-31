@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { guides } from "@/data/guides";
+import { publishedGuides } from "@/data/guides";
 
 const BASE_URL = "https://pousadagaucha.com";
 
@@ -27,7 +27,7 @@ const GuiasIndex = () => {
           name="description"
           content="Guias honestos sobre Bombinhas escritos por quem mora aqui: mergulho, inverno, trilhas, dias de chuva e viagem com crianças."
         />
-        <meta name="robots" content="noindex, nofollow" />
+        
         <link rel="canonical" href={url} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Guia de Bombinhas · Pousada Gaúcha" />
@@ -60,7 +60,7 @@ const GuiasIndex = () => {
           </header>
 
           <ul className="grid md:grid-cols-2 gap-6">
-            {guides.map((g) => (
+            {publishedGuides().map((g) => (
               <li key={g.slug}>
                 <Link
                   to={`/guias/${g.slug}`}

@@ -23,18 +23,19 @@ const ROUTES = [
   "/guias/bombinhas-com-criancas",
 ];
 
-// Tags do index.html que o Helmet substitui por rota (evita duplicidade).
+// Tags do index.html que o Helmet pode substituir por rota (evita duplicidade).
+// Cada entrada só é removida do template quando a rota realmente emite a tag.
 const REPLACEABLE = [
-  /\n?\s*<title>[\s\S]*?<\/title>/i,
-  /\n?\s*<meta\s+name="description"[^>]*>/i,
-  /\n?\s*<link\s+rel="canonical"[^>]*>/i,
-  /\n?\s*<meta\s+property="og:type"[^>]*>/i,
-  /\n?\s*<meta\s+property="og:title"[^>]*>/i,
-  /\n?\s*<meta\s+property="og:description"[^>]*>/i,
-  /\n?\s*<meta\s+property="og:url"[^>]*>/i,
-  /\n?\s*<meta\s+name="twitter:card"[^>]*>/i,
-  /\n?\s*<meta\s+name="twitter:title"[^>]*>/i,
-  /\n?\s*<meta\s+name="twitter:description"[^>]*>/i,
+  { emits: /<title[^>]*>[^<]+<\/title>/i, strip: /\n?\s*<title>[\s\S]*?<\/title>/i },
+  { emits: /name="description"/i, strip: /\n?\s*<meta\s+name="description"[^>]*>/i },
+  { emits: /rel="canonical"/i, strip: /\n?\s*<link\s+rel="canonical"[^>]*>/i },
+  { emits: /property="og:type"/i, strip: /\n?\s*<meta\s+property="og:type"[^>]*>/i },
+  { emits: /property="og:title"/i, strip: /\n?\s*<meta\s+property="og:title"[^>]*>/i },
+  { emits: /property="og:description"/i, strip: /\n?\s*<meta\s+property="og:description"[^>]*>/i },
+  { emits: /property="og:url"/i, strip: /\n?\s*<meta\s+property="og:url"[^>]*>/i },
+  { emits: /name="twitter:card"/i, strip: /\n?\s*<meta\s+name="twitter:card"[^>]*>/i },
+  { emits: /name="twitter:title"/i, strip: /\n?\s*<meta\s+name="twitter:title"[^>]*>/i },
+  { emits: /name="twitter:description"/i, strip: /\n?\s*<meta\s+name="twitter:description"[^>]*>/i },
 ];
 
 async function main() {

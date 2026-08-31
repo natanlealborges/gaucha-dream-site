@@ -7,7 +7,10 @@ export type GuideMeta = {
   description: string; // meta description
   shortLabel: string; // rótulo curto p/ menus e cross-links
   hook: string; // frase de abertura mostrada nos cards
+  published: boolean; // guias não publicados ficam ocultos de menus, sitemap e levam noindex
 };
+
+export const publishedGuides = () => guides.filter((g) => g.published);
 
 export const guides: GuideMeta[] = [
   {

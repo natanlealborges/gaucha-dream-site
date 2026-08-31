@@ -68,6 +68,12 @@ const ContactSection = () => {
           
           Fale pelo WhatsApp
         </a>
+        <p className="text-muted-foreground text-sm mt-6">
+          ou ligue para nós:{" "}
+          <a href={PHONE_URL} onClick={trackContact} className="font-semibold text-foreground hover:text-primary transition-colors">
+            (47) 3369-2472
+          </a>
+        </p>
       </div>
     </section>);
 

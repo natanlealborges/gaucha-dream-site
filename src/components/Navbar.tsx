@@ -131,9 +131,20 @@ const Navbar = () => {
             
               Reserve Já
             </a>
-            <a href="tel:+554797910034" className="flex items-center gap-2 text-muted-foreground text-sm pt-2">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-foreground text-sm pt-2 font-medium">
+              <WhatsApp size={14} />
+              WhatsApp: (47) 99791-0034
+            </a>
+            <a
+              href={PHONE_URL}
+              onClick={trackContact}
+              className="flex items-center gap-2 text-muted-foreground text-sm">
               <Phone size={14} />
-              (47) 9 9791-0034
+              Telefone: (47) 3369-2472
             </a>
           </div>
         </div>

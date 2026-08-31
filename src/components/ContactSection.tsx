@@ -1,6 +1,8 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import { trackContact } from "@/lib/pixel";
 
 const WHATSAPP_URL = "http://wa.me/5547997910034";
+const PHONE_URL = "tel:+554733692472";
 
 const ContactSection = () => {
   return (

@@ -1,7 +1,7 @@
 import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
-import { guides } from "@/data/guides";
+import { publishedGuides } from "@/data/guides";
 import { GUIDES_PUBLISHED } from "@/config/site";
 
 const Footer = () => {
@@ -44,7 +44,7 @@ const Footer = () => {
           <div className="text-sm md:col-span-2">
             <p className="text-primary-foreground font-semibold mb-3">Guia de Bombinhas</p>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4">
-              {guides.map((g) => (
+              {publishedGuides().map((g) => (
                 <li key={g.slug}>
                   <Link
                     to={`/guias/${g.slug}`}

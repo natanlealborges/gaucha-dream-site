@@ -7,7 +7,10 @@ export type GuideMeta = {
   description: string; // meta description
   shortLabel: string; // rótulo curto p/ menus e cross-links
   hook: string; // frase de abertura mostrada nos cards
+  published: boolean; // guias não publicados ficam ocultos de menus, sitemap e levam noindex
 };
+
+export const publishedGuides = () => guides.filter((g) => g.published);
 
 export const guides: GuideMeta[] = [
   {
@@ -18,6 +21,7 @@ export const guides: GuideMeta[] = [
       "Onde mergulhar em Bombinhas, quando a visibilidade abre e o que ninguém conta sobre o inverno. Dicas de quem recebe hóspedes há 26 anos.",
     shortLabel: "Mergulho em Bombinhas",
     hook: "A gente vive Bombinhas o ano inteiro — e o segredo é que a água fica mais azul de junho a agosto.",
+    published: false,
   },
   {
     slug: "bombinhas-no-inverno",
@@ -27,6 +31,7 @@ export const guides: GuideMeta[] = [
       "Bombinhas no inverno: praia vazia, mar transparente e jacuzzi ligada. O que abre, o que fecha e por que a gente prefere essa época do ano.",
     shortLabel: "Bombinhas no inverno",
     hook: "No inverno a cidade respira — e a gente recebe hóspede achando que descobriu Bombinhas duas vezes.",
+    published: true,
   },
   {
     slug: "o-que-fazer-em-bombinhas-com-chuva",
@@ -36,6 +41,7 @@ export const guides: GuideMeta[] = [
       "Dia de chuva em Bombinhas? Café demorado, jacuzzi coberta, museu, cantina e mirante entre nuvens. Um roteiro real para o dia não virar tédio.",
     shortLabel: "Bombinhas com chuva",
     hook: "Chuva em Bombinhas não é problema — é uma outra Bombinhas, mais lenta e mais bonita.",
+    published: false,
   },
   {
     slug: "bombinhas-ou-gramado-no-inverno",
@@ -45,6 +51,7 @@ export const guides: GuideMeta[] = [
       "Bombinhas ou Gramado no inverno? Comparamos clima, custo, distância e tipo de viagem para você decidir sem arrependimento depois.",
     shortLabel: "Bombinhas ou Gramado",
     hook: "A gente ouve essa dúvida toda semana. Vale a pena responder com sinceridade.",
+    published: false,
   },
   {
     slug: "trilhas-em-bombinhas",
@@ -54,6 +61,7 @@ export const guides: GuideMeta[] = [
       "Trilhas em Bombinhas por nível: Quatro Ilhas, Costão, Sepultura, Morro do Macaco e Lagoinha. Duração, dificuldade e o que levar na mochila.",
     shortLabel: "Trilhas em Bombinhas",
     hook: "Toda semana a gente desenha o mapa no papel do café — decidimos colocar aqui pra facilitar.",
+    published: false,
   },
   {
     slug: "bombinhas-com-criancas",
@@ -63,6 +71,7 @@ export const guides: GuideMeta[] = [
       "Bombinhas com crianças: praias rasas, roteiros curtos e onde comer sem stress. Escrito por uma pousada que recebe famílias há 26 anos.",
     shortLabel: "Bombinhas com crianças",
     hook: "A gente recebe família há 26 anos — e aprendeu que criança feliz é praia rasa e almoço perto.",
+    published: false,
   },
 ];
 

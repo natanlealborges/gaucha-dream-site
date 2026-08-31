@@ -14,17 +14,17 @@ export type GuideSection = {
   heading: string;
   level?: 2 | 3;
   paragraphs?: string[];
-  image?: { alt: string };
+  image?: { src?: string; alt: string };
 };
 
 type GuideLayoutProps = {
   guide: GuideMeta;
   intro: string;
   sections: GuideSection[];
-  heroImageAlt: string;
+  heroImage?: { src?: string; alt: string };
 };
 
-const GuideLayout = ({ guide, intro, sections, heroImageAlt }: GuideLayoutProps) => {
+const GuideLayout = ({ guide, intro, sections, heroImage }: GuideLayoutProps) => {
   const url = `${BASE_URL}/guias/${guide.slug}`;
   const related = getRelatedGuides(guide.slug, 3);
 
@@ -93,14 +93,13 @@ const GuideLayout = ({ guide, intro, sections, heroImageAlt }: GuideLayoutProps)
             <p className="text-lg text-muted-foreground leading-relaxed">{intro}</p>
           </header>
 
-          {/* Espaço de imagem hero — placeholder editorial com alt */}
-          <figure
-            role="img"
-            aria-label={heroImageAlt}
-            className="w-full aspect-[16/9] rounded-xl bg-sand/60 border border-border mb-10 flex items-center justify-center text-muted-foreground text-sm"
-          >
-            [ imagem: {heroImageAlt} ]
-          </figure>
+          {heroImage?.src && (
+            <img
+              src={heroImage.src}
+              alt={heroImage.alt}
+              className="w-full aspect-[16/9] rounded-xl object-cover mb-10"
+            />
+          )}
 
           <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary">
             {sections.map((section, idx) => (
@@ -114,14 +113,13 @@ const GuideLayout = ({ guide, intro, sections, heroImageAlt }: GuideLayoutProps)
                     {section.heading}
                   </h2>
                 )}
-                {section.image && (
-                  <figure
-                    role="img"
-                    aria-label={section.image.alt}
-                    className="w-full aspect-[16/9] rounded-xl bg-sand/60 border border-border my-6 flex items-center justify-center text-muted-foreground text-sm"
-                  >
-                    [ imagem: {section.image.alt} ]
-                  </figure>
+                {section.image?.src && (
+                  <img
+                    src={section.image.src}
+                    alt={section.image.alt}
+                    loading="lazy"
+                    className="w-full aspect-[16/9] rounded-xl object-cover my-6"
+                  />
                 )}
                 {section.paragraphs?.map((p, i) => (
                   <p key={i} className="text-muted-foreground leading-relaxed mb-4">

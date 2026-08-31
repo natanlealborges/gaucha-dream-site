@@ -27,7 +27,12 @@ const Footer = () => {
 
           <div className="text-sm space-y-1">
             <p className="text-primary-foreground font-semibold mb-3">Contato</p>
-            <p>(47) 99791-0034</p>
+            <a href="http://wa.me/5547997910034" target="_blank" rel="noopener noreferrer" className="block hover:text-primary-foreground transition-colors">
+              WhatsApp: (47) 99791-0034
+            </a>
+            <a href="tel:+554733692472" className="block hover:text-primary-foreground transition-colors">
+              Telefone: (47) 3369-2472
+            </a>
             <p>reservas@pousadagaucha.com.br</p>
             <p className="pt-2">Rua Castanheta, 1127</p>
             <p>Bombinhas - SC, Brasil</p>

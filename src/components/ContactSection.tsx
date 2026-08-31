@@ -1,6 +1,8 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import { trackContact } from "@/lib/pixel";
 
 const WHATSAPP_URL = "http://wa.me/5547997910034";
+const PHONE_URL = "tel:+554733692472";
 
 const ContactSection = () => {
   return (
@@ -20,8 +22,18 @@ const ContactSection = () => {
               <Phone size={22} className="text-primary" />
             </div>
             <div>
+              <p className="font-semibold text-foreground text-sm mb-2">WhatsApp</p>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm hover:text-primary">(47) 99791-0034</a>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center gap-3">
+            <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center">
+              <Phone size={22} className="text-primary" />
+            </div>
+            <div>
               <p className="font-semibold text-foreground text-sm mb-2">Telefone</p>
-              <a href="tel:+5547997910034" className="text-muted-foreground text-sm hover:text-primary">(47) 99791-0034</a>
+              <a href={PHONE_URL} onClick={trackContact} className="text-muted-foreground text-sm hover:text-primary">(47) 3369-2472</a>
             </div>
           </div>
 
@@ -56,6 +68,12 @@ const ContactSection = () => {
           
           Fale pelo WhatsApp
         </a>
+        <p className="text-muted-foreground text-sm mt-6">
+          ou ligue para nós:{" "}
+          <a href={PHONE_URL} onClick={trackContact} className="font-semibold text-foreground hover:text-primary transition-colors">
+            (47) 3369-2472
+          </a>
+        </p>
       </div>
     </section>);
 

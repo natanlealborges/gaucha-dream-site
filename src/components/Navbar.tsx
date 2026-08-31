@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, Instagram } from "lucide-react";
+import { Menu, X, Phone, Instagram, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
-import { trackInitiateCheckout } from "@/lib/pixel";
+import { trackInitiateCheckout, trackContact } from "@/lib/pixel";
 
 const BOOKING_URL = "https://hbook.hsystem.com.br/Booking?companyId=5cae2795ab41d51dd869d73a&checkin=04/12/2019&checkout=08/12/2019&adults=1&children=0&_gl=1*1m36n9x*_gcl_au*MTkzNTI4MzE0Mi4xNzY2MzE3MTcy#_ga=2.158433650.936447759.1773250147-595639725.1766317175";
+
+const WHATSAPP_URL = "http://wa.me/5547997910034";
+
+const PHONE_URL = "tel:+554733692472";
 
 const navLinks = [
 { label: "Início", href: "/#inicio" },
@@ -61,8 +65,20 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className={`transition-colors hover:text-accent ${scrolled ? "text-foreground" : "text-primary-foreground/90"}`}
               aria-label="Instagram">
-              
+
               <Instagram size={18} />
+            </a>
+            <a
+              href={PHONE_URL}
+              onClick={trackContact}
+              className={`hidden md:inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border transition-colors ${
+                scrolled
+                  ? "border-foreground/30 text-foreground hover:bg-foreground/5"
+                  : "border-primary-foreground/40 text-primary-foreground/90 hover:bg-primary-foreground/10"
+              }`}
+              aria-label="Ligar para (47) 3369-2472">
+              <Phone size={15} />
+              <span className="hidden lg:inline">(47) 3369-2472</span>
             </a>
             <a
               href={BOOKING_URL}
@@ -70,18 +86,27 @@ const Navbar = () => {
               rel="noopener noreferrer"
               onClick={trackInitiateCheckout}
               className="text-accent-foreground px-6 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity bg-green-500">
-              
-              RESERVE JÁ 
+
+              RESERVE JÁ
             </a>
           </div>
 
-          {/* Mobile toggle */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden p-2 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
-            
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile toggle + phone icon */}
+          <div className="md:hidden flex items-center gap-1">
+            <a
+              href={PHONE_URL}
+              onClick={trackContact}
+              className={`p-2 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
+              aria-label="Ligar para (47) 3369-2472">
+              <Phone size={22} />
+            </a>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className={`p-2 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
+
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -108,9 +133,20 @@ const Navbar = () => {
             
               Reserve Já
             </a>
-            <a href="tel:+554797910034" className="flex items-center gap-2 text-muted-foreground text-sm pt-2">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-foreground text-sm pt-2 font-medium">
+              <MessageCircle size={14} />
+              WhatsApp: (47) 99791-0034
+            </a>
+            <a
+              href={PHONE_URL}
+              onClick={trackContact}
+              className="flex items-center gap-2 text-muted-foreground text-sm">
               <Phone size={14} />
-              (47) 9 9791-0034
+              Telefone: (47) 3369-2472
             </a>
           </div>
         </div>

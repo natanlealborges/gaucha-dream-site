@@ -17,3 +17,14 @@ export function trackInitiateCheckout(): void {
     window.fbq("track", "InitiateCheckout");
   }
 }
+
+/**
+ * Fires the Meta Pixel standard "Contact" event.
+ * Used on phone (landline) click links. Does not affect WhatsApp events.
+ */
+export function trackContact(): void {
+  if (typeof window === "undefined") return;
+  if (typeof window.fbq === "function") {
+    window.fbq("track", "Contact");
+  }
+}

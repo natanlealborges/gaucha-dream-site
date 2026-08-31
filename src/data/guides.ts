@@ -61,7 +61,7 @@ export const guides: GuideMeta[] = [
       "Trilhas em Bombinhas por nível: Quatro Ilhas, Costão, Sepultura, Morro do Macaco e Lagoinha. Duração, dificuldade e o que levar na mochila.",
     shortLabel: "Trilhas em Bombinhas",
     hook: "Toda semana a gente desenha o mapa no papel do café — decidimos colocar aqui pra facilitar.",
-    published: false,
+    published: true,
   },
   {
     slug: "bombinhas-com-criancas",
@@ -71,7 +71,7 @@ export const guides: GuideMeta[] = [
       "Bombinhas com crianças: praias rasas, roteiros curtos e onde comer sem stress. Escrito por uma pousada que recebe famílias há 26 anos.",
     shortLabel: "Bombinhas com crianças",
     hook: "A gente recebe família há 26 anos — e aprendeu que criança feliz é praia rasa e almoço perto.",
-    published: false,
+    published: true,
   },
 ];
 

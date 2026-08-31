@@ -2,6 +2,7 @@ import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import { guides } from "@/data/guides";
+import { GUIDES_PUBLISHED } from "@/config/site";
 
 const Footer = () => {
   return (

@@ -11,12 +11,6 @@ const platforms = [
     count: "mais de 400 avaliações",
     href: "https://www.tripadvisor.com.br/Hotel_Review-g612476-d4512999-Reviews-Pousada_Gaucha-Bombinhas_State_of_Santa_Catarina.html",
   },
-  {
-    score: "9,1",
-    name: "Booking.com",
-    count: "avaliação dos hóspedes",
-    href: "https://www.booking.com/hotel/br/pousada-gaucha-bombinhas1.html",
-  },
 ];
 
 const themes = [
@@ -56,7 +50,7 @@ const SocialProofSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
+        <div className="grid md:grid-cols-2 gap-6 mb-10 max-w-2xl mx-auto">
           {platforms.map((p) => (
             <a
               key={p.name}
@@ -105,8 +99,8 @@ const SocialProofSection = () => {
             className="text-primary hover:underline"
           >
             Google
-          </a>
-          , no{" "}
+          </a>{" "}
+          e no{" "}
           <a
             href={platforms[1].href}
             target="_blank"
@@ -114,15 +108,6 @@ const SocialProofSection = () => {
             className="text-primary hover:underline"
           >
             Tripadvisor
-          </a>{" "}
-          e na{" "}
-          <a
-            href={platforms[2].href}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="text-primary hover:underline"
-          >
-            Booking
           </a>
           .
         </p>

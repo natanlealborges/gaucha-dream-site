@@ -7,6 +7,8 @@ export type AccommodationBlock = {
   description: string;
   href: string;
   published: boolean;
+  /** true quando a página de detalhe da rota já existe */
+  hasDetailPage: boolean;
 };
 
 export const ACCOMMODATIONS_PUBLISHED = true;
@@ -20,6 +22,7 @@ export const accommodations: AccommodationBlock[] = [
       "8 apartamentos de 40 a 45m² com vista para a Praia de Bombinhas. Três categorias: deck privativo no nível do jardim, sacada no andar superior e studio com vista lateral. TV com Netflix, cozinha equipada e sofá-cama.",
     href: "/acomodacoes/garden",
     published: true,
+    hasDetailPage: true,
   },
   {
     id: "bloco-gaucha",
@@ -29,6 +32,7 @@ export const accommodations: AccommodationBlock[] = [
       "Sacada com churrasqueira privativa, cozinha mais completa e mais espaço interno. A escolha de quem vem por uma semana ou mais com crianças.",
     href: "/acomodacoes/bloco-gaucha",
     published: true,
+    hasDetailPage: false,
   },
   {
     id: "bloco-praia",
@@ -38,6 +42,7 @@ export const accommodations: AccommodationBlock[] = [
       "Apartamentos compactos a poucos passos do deck onde o café da manhã é servido à beira-mar das 7h30 às 10h.",
     href: "/acomodacoes/bloco-praia",
     published: false,
+    hasDetailPage: false,
   },
 ];
 

@@ -11,9 +11,9 @@ const WHATSAPP_URL = "http://wa.me/5547997910034";
 const BOOKING_URL =
   "https://hbook.hsystem.com.br/Booking?companyId=5cae2795ab41d51dd869d73a&checkin=04/12/2019&checkout=08/12/2019&adults=1&children=0&_gl=1*1m36n9x*_gcl_au*MTkzNTI4MzE0Mi4xNzY2MzE3MTcy#_ga=2.158433650.936447759.1773250147-595639725.1766317175";
 
-const TITLE = "Quartos frente ao mar em Bombinhas · Garden · Pousada Gaúcha";
+const TITLE = "Garden Frente Mar Bombinhas · Deck e Superior · Pousada Gaúcha";
 const DESCRIPTION =
-  "Os únicos 6 quartos com vista direta para a Praia de Bombinhas no centro da cidade. Deck privativo ou sacada privativa, 40 a 45m², TV com Netflix, cozinha equipada. Pousada Gaúcha.";
+  "Garden Frente Mar Deck (deck exclusivo + sacada) e Garden Frente Mar Superior (sacada no andar de cima). 40–45m², queen-size, 2 TVs 43\" Netflix, cozinha completa. Únicos quartos de pousada frente ao mar no centro de Bombinhas.";
 
 const breadcrumbLd = {
   "@context": "https://schema.org",

@@ -36,6 +36,24 @@ const themes = [
   },
 ];
 
+const quotes = [
+  {
+    title: "Simplesmente único",
+    quote: "Bah, sentimento de não querer mais sair de lá!",
+    author: "Vanderlei W.",
+    meta: "Tripadvisor · março de 2026 · viajou com a família",
+  },
+  {
+    title: "Dias incríveis",
+    quote: "Nota 1000 em todos os quesitos.",
+    author: "Viviane C.",
+    meta: "Tripadvisor · março de 2026",
+  },
+];
+
+const TRIPADVISOR_URL =
+  "https://www.tripadvisor.com.br/Hotel_Review-g612476-d4512999-Reviews-Pousada_Gaucha-Bombinhas_State_of_Santa_Catarina.html";
+
 const SocialProofSection = () => {
   return (
     <section className="section-padding bg-card">

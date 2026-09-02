@@ -274,8 +274,11 @@ const CATEGORIES: Category[] = [
       {
         question: "Qual a política de cancelamento?",
         answer: [
-          "A política de cancelamento aparece na tela de reserva, antes da confirmação, e varia conforme a tarifa e o período escolhidos. Alta temporada e feriados costumam ter regras mais restritas.",
-          "Se você tem alguma dúvida ou precisa de flexibilidade nas datas, fale com a gente pelo WhatsApp antes de reservar. É mais fácil resolver antes do que depois.",
+          "As regras mudam conforme a época do ano, porque a ocupação e a antecedência de reserva são muito diferentes entre alta e baixa temporada.",
+          "De setembro a abril, que é a nossa alta temporada: cancelamentos ou alterações feitos até 30 dias antes do check-in têm reembolso do valor pago, com retenção de 25% referente a despesas operacionais. Cancelamentos com menos de 30 dias do check-in não são reembolsáveis. Reservas feitas com menos de 30 dias para o check-in também não são reembolsáveis.",
+          "De maio a agosto, que é a baixa temporada, as regras são mais flexíveis. Cancelamentos com 30 dias ou mais de antecedência têm reembolso integral. Entre 29 e 15 dias antes do check-in, multa de 25% sobre o valor da reserva. Entre 14 e 8 dias, taxa de R$ 295,00, e o valor pago vira crédito para usar em até 12 meses. Com 7 dias ou menos, multa de 50% sobre o valor total.",
+          "Alteração de datas na baixa temporada tem taxa administrativa de R$ 295,00.",
+          "Sabemos que imprevistos acontecem. Se algo aconteceu com você, fale com a gente pelo WhatsApp antes de cancelar pelo sistema. Nem sempre dá para resolver, mas sempre dá para conversar.",
         ],
       },
       {

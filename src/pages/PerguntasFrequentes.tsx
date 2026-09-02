@@ -66,7 +66,7 @@ const CATEGORIES: Category[] = [
         question: "A pousada faz transfer do aeroporto?",
         answer: [
           "Fazemos, através de operadoras parceiras. O transfer é pago e precisa ser combinado com antecedência.",
-          "Avise o horário do seu voo quando reservar que a gente organiza. Sai mais tranquilo do que resolver na hora do desbarque, principalmente na alta temporada.",
+          "Avise o horário do seu voo quando reservar que a gente organiza. Sai mais tranquilo do que resolver na hora do desembarque, principalmente na alta temporada.",
         ],
       },
       {

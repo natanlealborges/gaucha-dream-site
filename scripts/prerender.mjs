@@ -14,6 +14,7 @@ const SSR_OUT = path.join(ROOT, ".prerender");
 
 const ROUTES = [
   "/",
+  "/pousada-pe-na-areia-bombinhas",
   "/acomodacoes",
   "/acomodacoes/garden",
   "/acomodacoes/bloco-gaucha",

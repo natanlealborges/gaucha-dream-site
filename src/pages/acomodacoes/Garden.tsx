@@ -107,25 +107,31 @@ const FAQ: { question: string; answer: string[] }[] = [
   {
     question: "Qual a diferença entre Garden Deck, Garden Superior e Garden Studio?",
     answer: [
-      "Garden Deck: três apartamentos no nível do jardim, com deck privativo e vista frontal para a Praia de Bombinhas.",
-      "Garden Superior: três apartamentos no andar de cima, com sacada privativa e vista frontal elevada.",
-      "Garden Studio: dois apartamentos com vista lateral pelo deck, mesma metragem e mesma estrutura interna, por um valor menor.",
+      "Garden Frente Mar Deck: sacada no quarto com vista para o mar e deck exclusivo no nível do jardim. São dois espaços ao ar livre privativos.",
+      "Garden Frente Mar Superior: sacada privativa no quarto com vista para o mar, no andar de cima. Vista mais alta e panorâmica, sem o deck exclusivo.",
+      "Garden Studio 01 Dormitório: sem sacada, com vista lateral pelo deck para o jardim e o mar ao fundo. Mesma metragem e estrutura interna. Tem TV a cabo além do Netflix.",
     ],
   },
   {
     question: "Os quartos Garden têm vista para o mar?",
     answer: [
-      "Garden Deck e Garden Superior têm vista direta para a Praia de Bombinhas. O Garden Studio tem vista lateral pelo deck para o jardim e o mar ao fundo.",
+      "Garden Frente Mar Deck e Garden Frente Mar Superior têm vista direta para a Praia de Bombinhas. O Garden Studio tem vista lateral pelo deck, com o mar ao fundo.",
     ],
   },
   {
     question: "Qual a metragem dos quartos Garden?",
-    answer: ["40 a 45m², com sala, cozinha equipada e área privativa."],
+    answer: ["40 a 45m². Todos têm quarto, sala, cozinha equipada e espaço privativo externo (exceto o Studio, que não tem sacada)."],
   },
   {
     question: "Quantas pessoas cabem nos apartamentos Garden?",
     answer: [
-      "2 adultos e até 2 crianças, com sofá-cama na sala para acomodação adicional.",
+      "Dois adultos na cama de casal queen-size e mais duas pessoas no sofá-cama da sala. Capacidade ideal: 2 adultos e 2 crianças.",
+    ],
+  },
+  {
+    question: "Os quartos Garden têm Netflix?",
+    answer: [
+      "Sim. Todos os quartos Garden têm duas TVs de 43\" com Netflix. O Garden Studio tem também TV a cabo além do streaming.",
     ],
   },
 ];

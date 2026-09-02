@@ -60,10 +60,10 @@ const ROOMS: RoomCard[] = [
     heading: "Garden Studio 01 Dormitório",
     schemaName: "Garden Studio 01 Dormitório",
     paragraph:
-      "Apartamento com a mesma metragem e estrutura interna dos demais quartos Garden, com vista lateral pelo deck para o jardim e o mar ao fundo. Sem sacada. A melhor relação custo-benefício do bloco para quem prioriza cozinha, espaço e localização sem precisar da vista frontal. Um quarto com cama de casal queen-size. Sala com sofá-cama para mais duas pessoas. Cozinha com balcão de pia, frigobar, fogão, micro-ondas e utensílios básicos. Duas TVs de 43\" com TV a cabo e Netflix. Ar-condicionado split no quarto e na sala. Telefone.",
+      "Apartamento com a mesma metragem e estrutura interna dos demais quartos Garden. Sem sacada, mas com vista para o mar pela janela do quarto — lateral, com a praia e as palmeiras visíveis da janela. Uma vista de mar de verdade, num ângulo diferente. A melhor relação custo-benefício do bloco para quem quer o Bloco Garden com um valor menor. Um quarto com cama de casal queen-size. Sala com sofá-cama para mais duas pessoas. Cozinha com balcão de pia, frigobar, fogão, micro-ondas e utensílios básicos. Duas TVs de 43\" com TV a cabo e Netflix. Ar-condicionado split no quarto e na sala. Telefone.",
     specs:
-      "40 a 45m² · 2 adultos + 2 crianças · vista lateral · sem sacada · 2 TVs 43\" com TV a cabo e Netflix · cozinha completa · sofá-cama · ar-condicionado split",
-    bed: "Vista lateral pelo deck para o jardim e o mar ao fundo. Sem sacada.",
+      "40 a 45m² · 2 adultos + 2 crianças · vista lateral para o mar pela janela do quarto · sem sacada · 2 TVs 43\" com TV a cabo e Netflix · cozinha completa · sofá-cama · ar-condicionado split",
+    bed: "Vista lateral para a praia e o mar pela janela do quarto. Sem sacada.",
   },
 ];
 

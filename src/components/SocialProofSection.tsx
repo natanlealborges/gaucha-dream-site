@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 const platforms = [
   {
     score: "4,7",
@@ -102,9 +104,26 @@ const quotes = [
 const TRIPADVISOR_URL =
   "https://www.tripadvisor.com.br/Hotel_Review-g612476-d4512999-Reviews-Pousada_Gaucha-Bombinhas_State_of_Santa_Catarina.html";
 
+const VISIBLE = 3;
+const GROUPS = Math.ceil(quotes.length / VISIBLE);
+
 const SocialProofSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+    const timer = setInterval(() => {
+      setActiveIndex((i) => (i + 1) % GROUPS);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [paused]);
+
+  const visibleQuotes = Array.from({ length: VISIBLE }, (_, j) => quotes[(activeIndex * VISIBLE + j) % quotes.length]);
+
   return (
     <section className="section-padding bg-card">
+      <style>{`@keyframes quoteFade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }`}</style>
       <div className="max-w-7xl mx-auto">
         {/* Cabeçalho com números reais */}
         <div className="text-center mb-14">
@@ -126,7 +145,7 @@ const SocialProofSection = () => {
               className="bg-background rounded-xl p-6 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-card)] transition-shadow duration-300 text-center flex flex-col items-center justify-center"
             >
               <span className="font-display text-4xl font-bold text-foreground mb-2">
-                {p.score}
+                {p.score}<span className="text-muted-foreground text-xs"> / 5</span>
               </span>
               <span className="text-foreground font-semibold mb-1">{p.name}</span>
               <span className="text-muted-foreground text-sm">{p.count}</span>
@@ -163,22 +182,69 @@ const SocialProofSection = () => {
           <p className="text-center text-foreground font-semibold mb-8">
             O que hóspedes escreveram no TripAdvisor
           </p>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {quotes.map((q) => (
-              <div
-                key={q.title}
-                className="bg-background rounded-xl p-6 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-card)] transition-shadow duration-300"
-              >
-                <h3 className="font-display text-xl font-bold text-foreground mb-3">
-                  {q.title}
-                </h3>
-                <p className="text-muted-foreground italic leading-relaxed mb-4">
-                  &ldquo;{q.quote}&rdquo;
-                </p>
-                <p className="text-foreground font-semibold">{q.author}</p>
-                <p className="text-muted-foreground text-sm">{q.meta}</p>
+          <div
+            className="max-w-5xl mx-auto"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+          >
+            <div
+              key={activeIndex}
+              className="grid md:grid-cols-3 gap-6"
+              style={{ animation: "quoteFade 300ms ease-in-out" }}
+            >
+              {visibleQuotes.map((q) => (
+                <div
+                  key={q.title + q.author}
+                  className="bg-background rounded-xl p-6 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-card)] transition-shadow duration-300"
+                >
+                  <h3 className="font-display text-xl font-bold text-foreground mb-3">
+                    {q.title}
+                  </h3>
+                  <p className="text-muted-foreground italic leading-relaxed mb-4">
+                    &ldquo;{q.quote}&rdquo;
+                  </p>
+                  <p className="text-foreground font-semibold">{q.author}</p>
+                  <p className="text-muted-foreground text-sm">{q.meta}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Controles */}
+            <div className="flex flex-col items-center gap-4 mt-8">
+              <div className="flex items-center gap-4">
+                <button
+                  type="button"
+                  onClick={() => setActiveIndex((i) => (i - 1 + GROUPS) % GROUPS)}
+                  className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-border text-foreground font-semibold hover:bg-foreground/5 transition-colors"
+                  aria-label="Citações anteriores"
+                >
+                  ← Anterior
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveIndex((i) => (i + 1) % GROUPS)}
+                  className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-border text-foreground font-semibold hover:bg-foreground/5 transition-colors"
+                  aria-label="Próximas citações"
+                >
+                  Próximo →
+                </button>
               </div>
-            ))}
+
+              {/* Indicadores */}
+              <div className="flex items-center gap-2">
+                {Array.from({ length: GROUPS }).map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => setActiveIndex(i)}
+                    aria-label={`Grupo ${i + 1}`}
+                    className={`h-2 w-2 rounded-full transition-colors ${
+                      i === activeIndex ? "bg-primary" : "bg-muted-foreground/40"
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
           <p className="text-center text-muted-foreground text-sm mt-6">
             Estas e todas as outras avaliações estão públicas{" "}

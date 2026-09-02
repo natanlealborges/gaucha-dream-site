@@ -35,7 +35,7 @@ const Footer = () => {
               Telefone: (47) 3369-2472
             </a>
             <p>reservas@pousadagaucha.com.br</p>
-            <p className="pt-2">Rua Castanheta, 1127</p>
+            <p className="pt-2">R. Cascudo, 10-A - Beira Mar</p>
             <p>Bombinhas - SC, Brasil</p>
           </div>
 

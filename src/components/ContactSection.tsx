@@ -55,7 +55,7 @@ const ContactSection = () => {
             </div>
             <div>
               <p className="font-semibold text-foreground text-sm">Endereço</p>
-              <p className="text-muted-foreground text-sm">Rua Castanheta, 1127<br />Bombinhas - SC</p>
+              <p className="text-muted-foreground text-sm">R. Cascudo, 10-A - Beira Mar<br />Bombinhas - SC</p>
             </div>
           </div>
         </div>

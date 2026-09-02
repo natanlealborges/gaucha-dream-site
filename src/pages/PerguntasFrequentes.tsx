@@ -194,6 +194,28 @@ const CATEGORIES: Category[] = [
           "Não aceitamos. É uma decisão que assumimos e preferimos deixar clara antes da reserva, para ninguém se programar e ter problema na chegada.",
         ],
       },
+      {
+        question: "A Pousada Gaúcha tem acessibilidade para cadeirantes?",
+        answer: [
+          "A pousada não tem elevador, e o acesso a alguns ambientes envolve escadas.",
+          "Hóspedes com mobilidade reduzida, cadeirantes ou idosos com dificuldade de locomoção devem falar com a gente pelo WhatsApp (47) 99791-0034 antes de reservar. A equipe indica a acomodação mais adequada e explica com sinceridade quais são as limitações reais, para ninguém chegar e ter surpresa.",
+        ],
+      },
+      {
+        question: "Como funcionam as jacuzzis da cobertura?",
+        answer: [
+          "São quatro jacuzzis climatizadas na cobertura da Pousada Gaúcha, cada uma em uma temperatura diferente, com vista para a Praia de Bombinhas de um lado e para a mata do outro.",
+          "O uso não tem custo adicional. O fim de tarde é o horário mais concorrido, então vale combinar com a recepção com algumas horas de antecedência.",
+          "Funcionam o ano inteiro. É no inverno que costumam render os melhores comentários.",
+        ],
+      },
+      {
+        question: "O serviço de praia da Pousada Gaúcha é pago?",
+        answer: [
+          "Não. Cadeiras e guarda-sóis estão incluídos na diária para todos os hóspedes, já montados na areia em frente à pousada, com um funcionário cuidando da estrutura durante o dia.",
+          "Consumo no bar e no restaurante é cobrado à parte.",
+        ],
+      },
     ],
   },
   {

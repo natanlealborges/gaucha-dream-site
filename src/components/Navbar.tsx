@@ -12,7 +12,7 @@ const PHONE_URL = "tel:+554733692472";
 
 const navLinks = [
 { label: "Início", href: "/#inicio" },
-{ label: "Acomodações", href: "/#acomodacoes" },
+{ label: "Acomodações", href: "/acomodacoes" },
 { label: "Sobre", href: "/#sobre" },
 // Link "Guias" oculto enquanto GUIDES_PUBLISHED = false (ver src/config/site.ts)
 ...(GUIDES_PUBLISHED ? [{ label: "Guias", href: "/guias" }] : []),

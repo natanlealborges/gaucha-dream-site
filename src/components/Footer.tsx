@@ -60,6 +60,9 @@ const Footer = () => {
 
           <div className="text-sm space-y-1">
             <p className="text-primary-foreground font-semibold mb-3">Ajuda</p>
+            <Link to="/pousada-pe-na-areia-bombinhas" className="block hover:text-primary-foreground transition-colors">
+              Pousada beira-mar
+            </Link>
             <Link to="/acomodacoes" className="block hover:text-primary-foreground transition-colors">
               Acomodações
             </Link>

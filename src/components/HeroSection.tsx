@@ -90,7 +90,7 @@ const HeroSection = () => {
           <span className="italic font-medium">em Bombinhas</span>
         </h1>
         <p className="text-primary-foreground/80 text-lg md:text-xl font-body max-w-2xl mx-auto mb-10 animate-fade-up opacity-0" style={{ animationDelay: "0.6s" }}>
-          Jacuzzi na cobertura com vista panorâmica, café à beira-mar e o acolhimento de uma família gaúcha há 26 anos em Bombinhas/SC.
+          Pousada beira-mar, pé na areia na Praia de Bombinhas. Café à beira-mar, serviço de praia incluído, jacuzzis na cobertura e 26 anos de família gaúcha.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up opacity-0" style={{ animationDelay: "0.8s" }}>
           <a

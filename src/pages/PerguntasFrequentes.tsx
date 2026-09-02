@@ -123,7 +123,7 @@ const CATEGORIES: Category[] = [
       {
         question: "O que tem no apartamento?",
         answer: [
-          "Cozinha equipada, ar-condicionado, TV, frigobar e varanda na maior parte das unidades. Os apartamentos do Bloco Gaúcha têm churrasqueira na sacada e cozinha mais completa.",
+          "Cozinha equipada, ar-condicionado, TV com Netflix, frigobar e varanda na maior parte das unidades. Os apartamentos do Bloco Gaúcha têm churrasqueira na sacada e cozinha mais completa.",
           "A cozinha é o que mais faz diferença para quem viaja em família: dá para preparar a mamadeira, guardar fruta e fazer um jantar rápido quando ninguém aguenta mais sair.",
         ],
       },

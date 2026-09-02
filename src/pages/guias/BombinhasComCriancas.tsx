@@ -31,7 +31,7 @@ const Page = () => (
       {
         heading: "Programas para os dias que não são de praia",
         paragraphs: [
-          "Parque Ambiental Família Schurmann, a poucos minutos a pé, com a história da volta ao mundo de veleiro. Funciona bem com crianças a partir de uns 6 anos.",
+          
           "Trilha da Sepultura ou da Lagoinha, que são curtas e terminam em banho.",
           "Snorkel na piscina natural da Sepultura, que costuma ser a primeira experiência de mergulho da criança e vira memória de infância.",
           "Passeio de barco pela baía, em dia de mar calmo.",
@@ -52,7 +52,7 @@ const Page = () => (
         heading: "O que a gente recomenda trazer",
         paragraphs: [
           "Protetor solar infantil e camiseta com proteção UV, que resolve melhor que passar protetor de novo a cada hora. Boia ou colete se a criança ainda não nada. Máscara de snorkel infantil, que custa pouco e rende muito na Sepultura. Remédio de rotina, porque farmácia em janeiro tem fila.",
-          "E uma dica que vale o ano inteiro: depois de chuva forte, espere um dia antes de colocar a criança na água, e prefira os trechos mais afastados das saídas de água pluvial.",
+          
         ],
       },
       {

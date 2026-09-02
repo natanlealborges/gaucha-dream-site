@@ -170,15 +170,11 @@ const Garden = () => (
         </nav>
 
         <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-          Quartos frente ao mar em Bombinhas — Bloco Garden
+          Garden Frente Mar — os únicos quartos de pousada com vista para o mar no centro de Bombinhas
         </h1>
 
         <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-          O Bloco Garden da Pousada Gaúcha tem 8 apartamentos de 40 a 45m² no centro de Bombinhas,
-          com acesso direto ao jardim e ao mar. São os únicos quartos de pousada no centro de
-          Bombinhas com vista direta para a Praia de Bombinhas. Todos têm cozinha equipada, TV com
-          Netflix, ar-condicionado e sofá-cama na sala, com capacidade para 2 adultos e até 2
-          crianças.
+          O Bloco Garden da Pousada Gaúcha tem 8 apartamentos de 40 a 45m² no centro de Bombinhas. São os únicos quartos de pousada no centro da cidade com vista direta para a Praia de Bombinhas. Três categorias: Garden Frente Mar Deck (com deck exclusivo e sacada), Garden Frente Mar Superior (sacada no andar de cima) e Garden Studio 01 Dormitório (vista lateral, sem sacada). Todos têm quarto com cama de casal queen-size, sala com sofá-cama, cozinha com fogão e micro-ondas, duas TVs de 43" com Netflix, ar-condicionado split no quarto e na sala, e capacidade para 2 adultos e 2 crianças.
         </p>
 
         <h2 className="font-display text-3xl font-bold text-foreground mb-6">

@@ -38,16 +38,64 @@ const themes = [
 
 const quotes = [
   {
-    title: "Simplesmente único",
-    quote: "Bah, sentimento de não querer mais sair de lá!",
-    author: "Vanderlei W.",
-    meta: "Tripadvisor · março de 2026 · viajou com a família",
+    title: "16 anos voltando",
+    quote: "Há 16 anos passo férias em Bombinhas com minha família e a Pousada Gaúcha sempre foi uma ótima opção.",
+    author: "Stay33542671999",
+    meta: "TripAdvisor · dezembro de 2023 · fidelidade + localização",
   },
   {
-    title: "Dias incríveis",
-    quote: "Nota 1000 em todos os quesitos.",
-    author: "Viviane C.",
-    meta: "Tripadvisor · março de 2026",
+    title: "Além do esperado",
+    quote: "Um funcionário da recepção pegou o carro próprio e me levou até uma farmácia em Bombas para comprar um remédio — algo que nunca vi antes.",
+    author: "Mano",
+    meta: "TripAdvisor · junho de 2023 · atendimento",
+  },
+  {
+    title: "Serviço de praia que surpreende",
+    quote: "Não precisa se preocupar com cadeiras e guarda-sol, pois são oferecidos e o melhor: tudo montado, você só vai pra praia para curtir.",
+    author: "Ana Carolina V.",
+    meta: "TripAdvisor · abril de 2025 · serviço de praia",
+  },
+  {
+    title: "Uma família para atender sua família",
+    quote: "Organização e limpeza excelentes! Enfim, uma família para atender sua família!",
+    author: "Advocacia T.",
+    meta: "TripAdvisor · fevereiro de 2025 · limpeza + equipe",
+  },
+  {
+    title: "Vista e jacuzzi",
+    quote: "O nascer do sol da varanda do quarto foi um dos pontos altos da viagem. Poder usufruir da jacuzzi quentinha no fim do dia também foi muito bacana.",
+    author: "Nanci Z.",
+    meta: "TripAdvisor · julho de 2025 · vista + jacuzzi",
+  },
+  {
+    title: "Inverno na praia — e faria de novo",
+    quote: "Tem 4 ofurôs quentíssimos na cobertura com a vista para o mar e floresta! Inverno na praia? Pois falo que vou novamente.",
+    author: "Loivaeildo",
+    meta: "TripAdvisor · julho de 2023 · jacuzzi + baixa temporada",
+  },
+  {
+    title: "Pertinho da passarela das baleias",
+    quote: "Pé na areia. Na melhor praia de Bombinhas, pertinho da passarela pra observar as baleias. Bem no centrinho, perto de ótimos restaurantes.",
+    author: "Dionatan Z.",
+    meta: "TripAdvisor · junho de 2024 · localização",
+  },
+  {
+    title: "Com bebê, sem complicação",
+    quote: "A experiência da hospedagem à beira-mar facilita muito para quem tem bebê! Indicamos e voltaremos com certeza.",
+    author: "Thais M.",
+    meta: "TripAdvisor · abril de 2024 · viagem com bebê",
+  },
+  {
+    title: "O Sr. Luiz",
+    quote: "Serviço de praia: ótimo. Sr. Luis sempre muito gentil, organizado e prestativo.",
+    author: "Bianca Catharine",
+    meta: "TripAdvisor · maio de 2024 · equipe + estrutura",
+  },
+  {
+    title: "Bolo de aniversário",
+    quote: "Nosso amigo estava de aniversário e a equipe do café com muito carinho preparou um bolo delicioso para comemorarmos.",
+    author: "Taíse M.",
+    meta: "TripAdvisor · março de 2024 · celebrações",
   },
 ];
 
@@ -110,10 +158,10 @@ const SocialProofSection = () => {
           ))}
         </div>
 
-        {/* Duas avaliações recentes */}
+        {/* Citações de hóspedes */}
         <div className="mt-14">
           <p className="text-center text-foreground font-semibold mb-8">
-            Duas avaliações recentes
+            O que hóspedes escreveram no TripAdvisor
           </p>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {quotes.map((q) => (

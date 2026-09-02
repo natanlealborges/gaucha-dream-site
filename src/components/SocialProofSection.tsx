@@ -110,6 +110,42 @@ const SocialProofSection = () => {
           ))}
         </div>
 
+        {/* Duas avaliações recentes */}
+        <div className="mt-14">
+          <p className="text-center text-foreground font-semibold mb-8">
+            Duas avaliações recentes
+          </p>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {quotes.map((q) => (
+              <div
+                key={q.title}
+                className="bg-background rounded-xl p-6 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-card)] transition-shadow duration-300"
+              >
+                <h3 className="font-display text-xl font-bold text-foreground mb-3">
+                  {q.title}
+                </h3>
+                <p className="text-muted-foreground italic leading-relaxed mb-4">
+                  &ldquo;{q.quote}&rdquo;
+                </p>
+                <p className="text-foreground font-semibold">{q.author}</p>
+                <p className="text-muted-foreground text-sm">{q.meta}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-muted-foreground text-sm mt-6">
+            Estas e todas as outras avaliações estão públicas{" "}
+            <a
+              href={TRIPADVISOR_URL}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="text-primary hover:underline"
+            >
+              no Tripadvisor
+            </a>
+            .
+          </p>
+        </div>
+
         {/* Chamada */}
         <p className="text-center text-muted-foreground mt-14">
           Prefira ler por conta própria. Todas as avaliações estão públicas no{" "}

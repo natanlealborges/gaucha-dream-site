@@ -68,8 +68,11 @@ const SocialProofSection = () => {
           ))}
         </div>
 
-        <p className="text-center text-foreground font-semibold mb-14">
-          Travelers' Choice 2026 no Tripadvisor · 4ª colocada entre os hotéis de Bombinhas
+        <p className="text-center text-foreground font-semibold mb-2">
+          1ª colocada entre as pousadas de Bombinhas no Tripadvisor
+        </p>
+        <p className="text-center text-muted-foreground text-sm mb-14">
+          Travelers' Choice 2026 · 4ª colocada também no ranking geral de hotéis de Bombinhas · Posições verificadas em setembro de 2026
         </p>
 
         {/* O que mais aparece nas avaliações */}

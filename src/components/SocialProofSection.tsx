@@ -1,26 +1,44 @@
-import { Star } from "lucide-react";
+const platforms = [
+  {
+    score: "4,7",
+    name: "Google",
+    count: "mais de 1.100 avaliações",
+    href: "https://www.google.com/maps/search/?api=1&query=Pousada+Ga%C3%BAcha+Bombinhas",
+  },
+  {
+    score: "4,7",
+    name: "Tripadvisor",
+    count: "mais de 400 avaliações",
+    href: "https://www.tripadvisor.com.br/Hotel_Review-g612476-d4512999-Reviews-Pousada_Gaucha-Bombinhas_State_of_Santa_Catarina.html",
+  },
+  {
+    score: "9,1",
+    name: "Booking.com",
+    count: "avaliação dos hóspedes",
+    href: "https://www.booking.com/hotel/br/pousada-gaucha-bombinhas1.html",
+  },
+];
 
-const reviews = [
+const themes = [
   {
-    name: "Mariana S.",
-    location: "São Paulo, SP",
-    rating: 5,
-    text: "Lugar incrível! A localização é perfeita, literalmente pé na areia. O café da manhã é delicioso e o atendimento da família é impecável. Voltaremos com certeza!",
-    date: "Fev 2025",
+    title: "Nossa equipe tem nome",
+    text: "Nas avaliações, hóspedes citam Luiz, Edson, Fabinho, Marcelo e João pelo nome. Isso não é comum em hotelaria, e é a coisa da qual mais nos orgulhamos.",
   },
   {
-    name: "Roberto C.",
-    location: "Curitiba, PR",
-    rating: 5,
-    text: "Melhor pousada de Bombinhas! As jacuzzis no rooftop com vista para o mar são um sonho. Perfeito para família, nossos filhos adoraram.",
-    date: "Jan 2025",
+    title: "Pé na areia é literal",
+    text: "A localização é o item mais bem avaliado da Pousada Gaúcha, com nota máxima no Tripadvisor. Da porta até a areia da Praia de Bombinhas não se atravessa rua.",
   },
   {
-    name: "Fernanda L.",
-    location: "Porto Alegre, RS",
-    rating: 5,
-    text: "Já é a terceira vez que nos hospedamos e sempre superamos as expectativas. Acolhimento familiar que faz toda a diferença. Recomendo de olhos fechados!",
-    date: "Dez 2024",
+    title: "O café da manhã à beira-mar",
+    text: "É o que mais aparece nos comentários depois do atendimento. Todo produzido dentro da pousada e servido de frente para o mar, das 7h30 às 10h.",
+  },
+  {
+    title: "O serviço de praia",
+    text: "Cadeiras e guarda-sóis montados antes de você chegar, com alguém cuidando da sua estrutura o dia inteiro. Hóspedes costumam dizer que nem em resort encontraram isso.",
+  },
+  {
+    title: "Gente que volta",
+    text: "Boa parte das nossas reservas é de famílias que retornam há anos, algumas desde antes dos filhos nascerem. São 26 anos recebendo as mesmas pessoas.",
   },
 ];
 
@@ -28,75 +46,86 @@ const SocialProofSection = () => {
   return (
     <section className="section-padding bg-card">
       <div className="max-w-7xl mx-auto">
-        {/* TripAdvisor badge */}
+        {/* Cabeçalho com números reais */}
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 bg-background px-5 py-2.5 rounded-full shadow-[var(--shadow-soft)] mb-6">
-            <img
-              src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg"
-              alt="TripAdvisor"
-              className="h-6"
-              loading="lazy"
-            />
-          </div>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
-            Amada pelos hóspedes
+            O que dizem quem já ficou
           </h2>
-          <div className="flex items-center justify-center gap-3 mb-3">
-            <div className="flex gap-0.5">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star
-                  key={i}
-                  size={22}
-                  className="fill-accent text-accent"
-                />
-              ))}
-            </div>
-            <span className="text-foreground font-bold text-xl">4.8</span>
-            <span className="text-muted-foreground text-sm">
-              · 320+ avaliações
-            </span>
-          </div>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Eleita uma das melhores pousadas de Bombinhas no TripAdvisor. Veja o
-            que nossos hóspedes dizem.
+            Números reais, verificáveis nas próprias plataformas. Atualizados em setembro de 2026.
           </p>
         </div>
 
-        {/* Reviews grid */}
-        <div className="grid md:grid-cols-3 gap-6">
-          {reviews.map((review) => (
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
+          {platforms.map((p) => (
+            <a
+              key={p.name}
+              href={p.href}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="bg-background rounded-xl p-6 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-card)] transition-shadow duration-300 text-center flex flex-col items-center justify-center"
+            >
+              <span className="font-display text-4xl font-bold text-foreground mb-2">
+                {p.score}
+              </span>
+              <span className="text-foreground font-semibold mb-1">{p.name}</span>
+              <span className="text-muted-foreground text-sm">{p.count}</span>
+            </a>
+          ))}
+        </div>
+
+        <p className="text-center text-foreground font-semibold mb-14">
+          Travelers' Choice 2026 no Tripadvisor · 4ª colocada entre os hotéis de Bombinhas
+        </p>
+
+        {/* O que mais aparece nas avaliações */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {themes.map((t) => (
             <div
-              key={review.name}
+              key={t.title}
               className="bg-background rounded-xl p-6 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-card)] transition-shadow duration-300"
             >
-              <div className="flex gap-0.5 mb-4">
-                {Array.from({ length: review.rating }).map((_, i) => (
-                  <Star
-                    key={i}
-                    size={16}
-                    className="fill-accent text-accent"
-                  />
-                ))}
-              </div>
-              <p className="text-foreground leading-relaxed mb-5 text-sm italic">
-                "{review.text}"
+              <h3 className="font-display text-xl font-bold text-foreground mb-3">
+                {t.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-sm">
+                {t.text}
               </p>
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-foreground font-semibold text-sm">
-                    {review.name}
-                  </p>
-                  <p className="text-muted-foreground text-xs">
-                    {review.location}
-                  </p>
-                </div>
-                <span className="text-muted-foreground text-xs">
-                  {review.date}
-                </span>
-              </div>
             </div>
           ))}
         </div>
+
+        {/* Chamada */}
+        <p className="text-center text-muted-foreground mt-14">
+          Prefira ler por conta própria. Todas as avaliações estão públicas no{" "}
+          <a
+            href={platforms[0].href}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="text-primary hover:underline"
+          >
+            Google
+          </a>
+          , no{" "}
+          <a
+            href={platforms[1].href}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="text-primary hover:underline"
+          >
+            Tripadvisor
+          </a>{" "}
+          e na{" "}
+          <a
+            href={platforms[2].href}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="text-primary hover:underline"
+          >
+            Booking
+          </a>
+          .
+        </p>
       </div>
     </section>
   );

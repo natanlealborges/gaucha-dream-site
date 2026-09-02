@@ -63,6 +63,13 @@ const CATEGORIES: Category[] = [
         ],
       },
       {
+        question: "A pousada faz transfer do aeroporto?",
+        answer: [
+          "Fazemos, através de operadoras parceiras. O transfer é pago e precisa ser combinado com antecedência.",
+          "Avise o horário do seu voo quando reservar que a gente organiza. Sai mais tranquilo do que resolver na hora do desbarque, principalmente na alta temporada.",
+        ],
+      },
+      {
         question: "Dá para chegar em Bombinhas de ônibus?",
         answer: [
           "Dá, com uma ressalva: Bombinhas não tem terminal rodoviário. O desembarque acontece na Avenida Leão Marinho.",
@@ -250,6 +257,27 @@ const CATEGORIES: Category[] = [
   {
     heading: "Reserva e contato",
     items: [
+      {
+        question: "Quanto custa a diária na Pousada Gaúcha?",
+        answer: [
+          "As diárias vão de R$ 595 a R$ 3.595, dependendo da categoria do apartamento, do número de pessoas e do período do ano.",
+          "A maior variação é entre alta e baixa temporada. De abril a novembro os valores ficam bem abaixo do teto da faixa, e é quando Bombinhas está mais tranquila. Para o valor exato das suas datas, consulte no nosso site ou fale com a gente pelo WhatsApp.",
+        ],
+      },
+      {
+        question: "Aceitam cartão? Dá para parcelar?",
+        answer: [
+          "Aceitamos cartão. O parcelamento existe e as condições variam conforme os pacotes vigentes no período da sua reserva.",
+          "Fale com a gente antes de fechar que a gente informa as condições disponíveis para as suas datas.",
+        ],
+      },
+      {
+        question: "Qual a política de cancelamento?",
+        answer: [
+          "A política de cancelamento aparece na tela de reserva, antes da confirmação, e varia conforme a tarifa e o período escolhidos. Alta temporada e feriados costumam ter regras mais restritas.",
+          "Se você tem alguma dúvida ou precisa de flexibilidade nas datas, fale com a gente pelo WhatsApp antes de reservar. É mais fácil resolver antes do que depois.",
+        ],
+      },
       {
         question: "Vale mais a pena reservar direto?",
         answer: [

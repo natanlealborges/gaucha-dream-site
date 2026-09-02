@@ -90,14 +90,17 @@ const roomLd = ROOMS.map((room) => ({
 }));
 
 const INCLUDED = [
-  "Cozinha equipada com fogão, geladeira e utensílios",
-  "TV com Netflix",
-  "Ar-condicionado",
-  "Wi-Fi gratuito",
-  "Sofá-cama na sala para acomodação adicional",
+  "Um quarto com cama de casal queen-size",
+  "Sala com sofá-cama para mais duas pessoas",
+  "Cozinha com balcão de pia, frigobar, fogão, micro-ondas e utensílios básicos",
+  "Duas TVs de 43\" com Netflix",
+  "Ar-condicionado split no quarto e na sala",
+  "Telefone",
   "Acesso às jacuzzis climatizadas da cobertura (uso por agendamento, sem custo)",
-  "Serviço de praia com cadeiras e guarda-sóis incluídos",
+  "Serviço de praia com cadeiras e guarda-sóis incluídos na diária",
   "Acesso direto à areia da Praia de Bombinhas",
+  "Estacionamento privativo gratuito (uma vaga por hospedagem)",
+  "Wi-Fi gratuito",
 ];
 
 const FAQ: { question: string; answer: string[] }[] = [

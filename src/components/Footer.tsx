@@ -63,6 +63,15 @@ const Footer = () => {
             <Link to="/acomodacoes" className="block hover:text-primary-foreground transition-colors">
               Acomodações
             </Link>
+            <Link to="/acomodacoes/garden" className="block hover:text-primary-foreground transition-colors">
+              Bloco Garden
+            </Link>
+            <Link to="/acomodacoes/bloco-gaucha" className="block hover:text-primary-foreground transition-colors">
+              Bloco Gaúcha
+            </Link>
+            <Link to="/acomodacoes/bloco-praia" className="block hover:text-primary-foreground transition-colors">
+              Bloco Praia
+            </Link>
             <Link to="/perguntas-frequentes" className="block hover:text-primary-foreground transition-colors">
               Perguntas frequentes
             </Link>

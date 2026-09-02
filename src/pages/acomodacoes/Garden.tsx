@@ -37,33 +37,33 @@ type RoomCard = {
 const ROOMS: RoomCard[] = [
   {
     id: "garden-deck",
-    heading: "Garden Deck — deck privativo frente ao mar",
-    schemaName: "Garden Deck",
+    heading: "Garden Frente Mar Deck",
+    schemaName: "Garden Frente Mar Deck",
     paragraph:
-      "Três apartamentos no nível do jardim com deck privativo de frente para a Praia de Bombinhas. A varanda está no mesmo nível da areia, separada da praia apenas pelo jardim da pousada. É o apartamento mais próximo do mar da Pousada Gaúcha.",
+      "Apartamento de frente para a Praia de Bombinhas com sacada privativa no quarto e deck exclusivo no nível do jardim — dois espaços ao ar livre com vista para o mar. Um quarto com cama de casal queen-size. Sala com sofá-cama para mais duas pessoas. Cozinha com balcão de pia, frigobar, fogão, micro-ondas e utensílios básicos. Duas TVs de 43\" com Netflix. Ar-condicionado split no quarto e na sala. Telefone.",
     specs:
-      "40 a 45m² · 2 adultos + 2 crianças · deck privativo · vista frontal · TV com Netflix · cozinha equipada · sofá-cama",
-    bed: "Deck privativo com vista frontal para a Praia de Bombinhas.",
+      "40 a 45m² · 2 adultos + 2 crianças · sacada no quarto + deck exclusivo · vista frontal para o mar · 2 TVs 43\" com Netflix · cozinha completa · sofá-cama · ar-condicionado split",
+    bed: "Sacada privativa no quarto e deck exclusivo com vista direta para a Praia de Bombinhas.",
   },
   {
     id: "garden-superior",
-    heading: "Garden Superior — sacada no andar de cima com vista panorâmica",
-    schemaName: "Garden Superior",
+    heading: "Garden Frente Mar Superior",
+    schemaName: "Garden Frente Mar Superior",
     paragraph:
-      "Três apartamentos no andar superior com sacada privativa e vista para a Praia de Bombinhas de uma altura maior. A perspectiva elevada abre o horizonte e é mais fotogênica que o nível do deck.",
+      "Apartamento no andar superior com sacada privativa no quarto e vista direta para a Praia de Bombinhas. A altura maior abre o horizonte e entrega uma perspectiva mais panorâmica que o nível do deck. Um quarto com cama de casal queen-size. Sala com sofá-cama para mais duas pessoas. Cozinha com balcão de pia, frigobar, fogão, micro-ondas e utensílios básicos. Duas TVs de 43\" com Netflix. Ar-condicionado split no quarto e na sala. Telefone.",
     specs:
-      "40 a 45m² · 2 adultos + 2 crianças · sacada privativa · vista frontal elevada · TV com Netflix · cozinha equipada · sofá-cama",
-    bed: "Sacada privativa com vista frontal elevada para a Praia de Bombinhas.",
+      "40 a 45m² · 2 adultos + 2 crianças · sacada privativa no quarto · vista frontal elevada para o mar · 2 TVs 43\" com Netflix · cozinha completa · sofá-cama · ar-condicionado split",
+    bed: "Sacada privativa no quarto com vista frontal elevada para a Praia de Bombinhas.",
   },
   {
     id: "garden-studio",
-    heading: "Garden Studio — o melhor custo-benefício do bloco",
-    schemaName: "Garden Studio",
+    heading: "Garden Studio 01 Dormitório",
+    schemaName: "Garden Studio 01 Dormitório",
     paragraph:
-      "Dois apartamentos com vista lateral pelo deck para o jardim e para o mar. Mesma metragem, mesma estrutura interna — a diferença é a orientação da janela. Para quem quer o Bloco Garden gastando um pouco menos.",
+      "Apartamento com a mesma metragem e estrutura interna dos demais quartos Garden, com vista lateral pelo deck para o jardim e o mar ao fundo. Sem sacada. A melhor relação custo-benefício do bloco para quem prioriza cozinha, espaço e localização sem precisar da vista frontal. Um quarto com cama de casal queen-size. Sala com sofá-cama para mais duas pessoas. Cozinha com balcão de pia, frigobar, fogão, micro-ondas e utensílios básicos. Duas TVs de 43\" com TV a cabo e Netflix. Ar-condicionado split no quarto e na sala. Telefone.",
     specs:
-      "40 a 45m² · 2 adultos + 2 crianças · vista lateral · TV com Netflix · cozinha equipada · sofá-cama",
-    bed: "Vista lateral pelo deck para o jardim e o mar ao fundo.",
+      "40 a 45m² · 2 adultos + 2 crianças · vista lateral · sem sacada · 2 TVs 43\" com TV a cabo e Netflix · cozinha completa · sofá-cama · ar-condicionado split",
+    bed: "Vista lateral pelo deck para o jardim e o mar ao fundo. Sem sacada.",
   },
 ];
 

@@ -24,7 +24,6 @@ const Page = () => (
           "Aqui está o que quase ninguém conta sobre Bombinhas: o verão é a estação mais chuvosa do ano aqui. E chuva forte mexe com o mar. Ela carrega areia e sedimento dos morros e deixa a água mais turva por um ou dois dias.",
           "No inverno chove muito menos e as correntes ficam mais estáveis. O resultado é aquela água verde-azulada das fotos.",
           "Não é acaso que Bombinhas é a Capital Nacional do Mergulho Ecológico e que os mergulhadores vêm justamente nesta época: é quando dá para enxergar longe debaixo d'água. Da areia, o efeito é o mesmo.",
-          "Uma dica que vale o ano inteiro: depois de uma chuva forte, espere um dia antes de entrar no mar e prefira os trechos mais afastados das saídas de água pluvial. A praia se recupera sozinha muito rápido.",
           "Sobre entrar no mar, com sinceridade: a água fica mais fria, e quanto você aguenta depende muito de onde você vem. Gaúcho e catarinense entram. Quem vem do Nordeste, provavelmente não. Mas mesmo quem não entra costuma dizer que a praia no inverno é mais bonita, e a gente concorda.",
         ],
       },

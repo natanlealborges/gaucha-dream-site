@@ -11,12 +11,16 @@ import BombinhasComCriancas from "./pages/guias/BombinhasComCriancas.tsx";
 import PerguntasFrequentes from "./pages/PerguntasFrequentes.tsx";
 import Acomodacoes from "./pages/Acomodacoes.tsx";
 import Garden from "./pages/acomodacoes/Garden.tsx";
+import BlocoGaucha from "./pages/acomodacoes/BlocoGaucha.tsx";
+import BlocoPraia from "./pages/acomodacoes/BlocoPraia.tsx";
 
 const AppRoutes = () => (
   <Routes>
     <Route path="/" element={<Index />} />
     <Route path="/acomodacoes" element={<Acomodacoes />} />
     <Route path="/acomodacoes/garden" element={<Garden />} />
+    <Route path="/acomodacoes/bloco-gaucha" element={<BlocoGaucha />} />
+    <Route path="/acomodacoes/bloco-praia" element={<BlocoPraia />} />
     <Route path="/guias" element={<GuiasIndex />} />
     <Route path="/guias/mergulho-em-bombinhas" element={<MergulhoEmBombinhas />} />
     <Route path="/guias/bombinhas-no-inverno" element={<BombinhasNoInverno />} />

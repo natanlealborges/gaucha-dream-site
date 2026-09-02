@@ -16,6 +16,8 @@ const ROUTES = [
   "/",
   "/acomodacoes",
   "/acomodacoes/garden",
+  "/acomodacoes/bloco-gaucha",
+  "/acomodacoes/bloco-praia",
   "/guias",
   "/guias/mergulho-em-bombinhas",
   "/guias/bombinhas-no-inverno",

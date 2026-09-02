@@ -32,17 +32,17 @@ export const accommodations: AccommodationBlock[] = [
       "Sacada com churrasqueira privativa, cozinha mais completa e mais espaço interno. A escolha de quem vem por uma semana ou mais com crianças.",
     href: "/acomodacoes/bloco-gaucha",
     published: true,
-    hasDetailPage: false,
+    hasDetailPage: true,
   },
   {
     id: "bloco-praia",
     name: "Bloco Praia",
     subtitle: "Mais próximos do café da manhã",
     description:
-      "Apartamentos compactos a poucos passos do deck onde o café da manhã é servido à beira-mar das 7h30 às 10h.",
+      "Suítes e apartamentos de 1 e 2 dormitórios, com opções frente mar e laterais, a poucos passos do deck onde o café da manhã é servido à beira-mar.",
     href: "/acomodacoes/bloco-praia",
-    published: false,
-    hasDetailPage: false,
+    published: true,
+    hasDetailPage: true,
   },
 ];
 

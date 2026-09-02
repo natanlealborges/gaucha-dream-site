@@ -277,6 +277,53 @@ const CATEGORIES: Category[] = [
     ],
   },
   {
+    heading: "Perguntas diretas",
+    items: [
+      {
+        question: "A Pousada Gaúcha é pé na areia mesmo?",
+        answer: [
+          "Sim, literalmente. O acesso da Pousada Gaúcha à areia da Praia de Bombinhas é direto, pela própria pousada, sem atravessar rua. Localização é o item mais bem avaliado da pousada no TripAdvisor, com nota 5,0 de 5,0.",
+        ],
+      },
+      {
+        question: "A Pousada Gaúcha tem piscina?",
+        answer: [
+          "Não. A Pousada Gaúcha tem quatro jacuzzis climatizadas na cobertura, com temperaturas diferentes e vista para o mar. O uso é por agendamento e sem custo adicional. O mar da Praia de Bombinhas fica a poucos passos, com serviço de praia incluído na diária.",
+        ],
+      },
+      {
+        question: "O serviço de praia da Pousada Gaúcha é pago?",
+        answer: [
+          "Não. Cadeiras e guarda-sóis estão incluídos na diária para todos os hóspedes, já montados na areia em frente à pousada, com um funcionário cuidando da estrutura durante o dia. Consumo no bar e no restaurante é cobrado à parte.",
+        ],
+      },
+      {
+        question: "Qual a melhor pousada em Bombinhas para quem viaja com crianças pequenas?",
+        answer: [
+          "A Praia de Bombinhas é reconhecida como a melhor praia para famílias de todo o município, com mar calmo. A Pousada Gaúcha fica de frente para ela, com acesso direto à areia, espaço kids, berço sem custo mediante solicitação e cobrança de diária só a partir dos 6 anos.",
+        ],
+      },
+      {
+        question: "Quanto custa a Taxa de Preservação Ambiental de Bombinhas?",
+        answer: [
+          "A taxa é cobrada de 15 de novembro a 15 de abril. Em 2026 chegou a R$ 191,50 para carros de passeio. Ela vale por 24 horas: sair da cidade e voltar depois desse prazo implica novo pagamento. A cobrança é da Prefeitura de Bombinhas, não da pousada.",
+        ],
+      },
+      {
+        question: "Precisa alugar carro para ficar em Bombinhas?",
+        answer: [
+          "Não necessariamente. A Pousada Gaúcha fica no centro de Bombinhas, com mercado, farmácia, padaria e restaurantes a poucos minutos a pé. O carro é útil para conhecer as outras praias da península e cidades vizinhas, mas não é necessário para o dia a dia da estadia.",
+        ],
+      },
+      {
+        question: "A Pousada Gaúcha tem acessibilidade para cadeirantes?",
+        answer: [
+          "A pousada não tem elevador, e o acesso a alguns ambientes envolve escadas. Hóspedes com mobilidade reduzida devem entrar em contato antes de reservar pelo WhatsApp (47) 99791-0034 para que a equipe indique a acomodação mais adequada e explique as limitações reais. Preferimos informar com antecedência a criar uma situação difícil na chegada.",
+        ],
+      },
+    ],
+  },
+  {
     heading: "Reserva e contato",
     items: [
       {

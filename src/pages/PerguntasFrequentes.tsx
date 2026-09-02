@@ -20,7 +20,7 @@ const CATEGORIES: Category[] = [
       {
         question: "Posso chegar antes das 15h?",
         answer: [
-          "Pode. O apartamento fica pronto às 15h, mas você não precisa esperar do lado de fora. Chegando de manhã, você deixa a bagagem conosco, usa o serviço de praia com cadeira e guarda-sol e aproveita a estrutura da pousada. Quando o quarto libera, a gente avisa.",
+          "Pode. O apartamento fica pronto às 15h, mas você não precisa esperar do lado de fora. Chegando de manhã, você deixa a bagagem conosco, usa o serviço de praia com cadeira e guarda-sol e aproveita a estrutura da Pousada Gaúcha. Quando o quarto libera, a gente avisa.",
           "A gente chama isso de Chegada Livre, e existe por um motivo prático: boa parte dos nossos hóspedes vem dirigindo de Curitiba, Porto Alegre ou São Paulo e chega pela manhã. Não faz sentido perder o primeiro dia de férias sentado no carro.",
           "O café da manhã do dia da chegada não está incluído, porque a diária começa às 15h. Se quiser tomar conosco, é opcional e cobrado à parte. Pergunte o valor na hora da reserva, para você já chegar sabendo.",
           "O que não conseguimos garantir é o apartamento antes das 15h, porque a saída do hóspede anterior é ao meio-dia e a arrumação leva tempo. Se estiver livre antes, liberamos.",
@@ -39,11 +39,51 @@ const CATEGORIES: Category[] = [
     ],
   },
   {
+    heading: "Como chegar",
+    items: [
+      {
+        question: "Como chegar em Bombinhas vindo de Curitiba?",
+        answer: [
+          "São cerca de 250 km, pela BR-101 no sentido norte-sul. Depois de passar Itapema, no km 155, você pega o trevo de acesso a Porto Belo e Bombinhas, entra na SC-412 e segue mais 10 km até a península.",
+          "Fora da alta temporada, a viagem costuma levar em torno de três horas e meia. Em janeiro, o último trecho é o que mais atrasa, porque o acesso à península é único. Quem sai de madrugada chega antes do movimento, e por isso a nossa Chegada Livre existe.",
+        ],
+      },
+      {
+        question: "Como chegar em Bombinhas vindo de Porto Alegre?",
+        answer: [
+          "São cerca de 510 km, pela BR-101 no sentido sul-norte. Depois do pedágio de Tijucas, o acesso a Porto Belo e Bombinhas vem logo em seguida, pela marginal. Dali são mais 10 km pela SC-412 até chegar.",
+          "Fora da alta temporada, a viagem costuma levar em torno de seis a sete horas. É a origem mais comum dos nossos hóspedes, e a maioria sai de madrugada e chega pela manhã.",
+        ],
+      },
+      {
+        question: "Qual aeroporto usar para ir a Bombinhas?",
+        answer: [
+          "São dois. O Aeroporto Internacional de Navegantes é o mais próximo, a cerca de 60 km. O Aeroporto Internacional Hercílio Luz, em Florianópolis, fica a cerca de 80 km, mas costuma ter mais voos e mais opções de horário.",
+          "De qualquer um dos dois, o trajeto de carro até Bombinhas leva em média uma hora e meia, dependendo do trânsito. Do aeroporto até aqui, as opções são carro alugado, táxi, aplicativo ou transfer particular.",
+        ],
+      },
+      {
+        question: "Dá para chegar em Bombinhas de ônibus?",
+        answer: [
+          "Dá, com uma ressalva: Bombinhas não tem terminal rodoviário. O desembarque acontece na Avenida Leão Marinho.",
+          "O caminho mais comum é vir de ônibus até Balneário Camboriú, Itajaí, Itapema ou Porto Belo e, de lá, pegar a Auto Viação Praiana, que faz o trajeto até Bombinhas de hora em hora. Na alta temporada, algumas empresas operam linhas diretas para Bombinhas saindo de Porto Alegre, Florianópolis e Curitiba.",
+        ],
+      },
+      {
+        question: "Preciso alugar carro para vir a Bombinhas?",
+        answer: [
+          "Depende de onde você vai ficar. Hospedado na Pousada Gaúcha, no centro de Bombinhas, mercado, farmácia, padaria, restaurantes e praia ficam a poucos minutos a pé, e o serviço de praia está na porta.",
+          "O carro é útil para conhecer as outras praias da península e as cidades vizinhas. Se o seu plano é ficar na praia e descansar, dá para passar a semana inteira sem tirar o carro da garagem.",
+        ],
+      },
+    ],
+  },
+  {
     heading: "Café da manhã",
     items: [
       {
         question: "Que horas é servido o café da manhã?",
-        answer: ["Das 7h30 às 10h, à beira-mar."],
+        answer: ["Das 7h30 às 10h, à beira-mar, na Pousada Gaúcha."],
       },
       {
         question: "O café da manhã está incluído na diária?",
@@ -53,7 +93,7 @@ const CATEGORIES: Category[] = [
         question: "Vocês atendem restrições alimentares?",
         answer: [
           "Em parte, e vamos ser honestos sobre os limites.",
-          "Nosso café da manhã é todo produzido dentro da pousada. O buffet tem ovos, frutas e opções variadas que atendem bem quem evita lactose, quem come pouco carboidrato, quem é vegetariano ou quem prefere comida mais leve.",
+          "O café da manhã da Pousada Gaúcha é todo produzido dentro da pousada. O buffet tem ovos, frutas e opções variadas que atendem bem quem evita lactose, quem come pouco carboidrato, quem é vegetariano ou quem prefere comida mais leve.",
           "O que não conseguimos garantir é ausência de glúten. Como tudo é feito na mesma cozinha, existe contato cruzado, e seria irresponsável prometer o contrário. Quem tem doença celíaca deve considerar isso. Nesse caso, o apartamento tem cozinha equipada e há mercado a poucos passos.",
           "Se você tem alguma restrição, avise na reserva. A gente vê o que dá para fazer.",
         ],
@@ -68,7 +108,7 @@ const CATEGORIES: Category[] = [
         answer: [
           "São três blocos, e cada um resolve uma necessidade diferente.",
           "Bloco Garden: os apartamentos mais refinados da pousada, com a melhor vista. Dentro do Garden existem também os studios, que têm vista lateral e não possuem sacada.",
-          "Bloco Praia: apartamentos mais compactos e os mais próximos do nosso café da manhã.",
+          "Bloco Praia: apartamentos mais compactos e os mais próximos do café da manhã da Pousada Gaúcha.",
           "Bloco Gaúcha: os maiores apartamentos, com sacada com churrasqueira e cozinha mais completa. São os ideais para família.",
           "Se você não tiver certeza de qual escolher, fale com a gente antes de reservar. A gente indica pela composição do grupo e pelo tipo de viagem.",
         ],
@@ -102,12 +142,12 @@ const CATEGORIES: Category[] = [
     items: [
       {
         question: "A pousada é pé na areia mesmo?",
-        answer: ["É. O acesso à areia da Praia de Bombinhas é direto, sem atravessar rua."],
+        answer: ["É. O acesso da Pousada Gaúcha à areia da Praia de Bombinhas é direto, sem atravessar rua."],
       },
       {
         question: "Tem piscina?",
         answer: [
-          "Não temos piscina. Temos quatro jacuzzis climatizadas na cobertura, com temperaturas diferentes e vista para o mar, e a praia na porta.",
+          "Não temos piscina. Temos quatro jacuzzis climatizadas na cobertura, com temperaturas diferentes e vista para o mar, e a Praia de Bombinhas na porta.",
           "Preferimos dizer isso com clareza antes da reserva. Quem viaja procurando piscina para criança nadar deve saber disso na hora de escolher.",
         ],
       },
@@ -118,7 +158,7 @@ const CATEGORIES: Category[] = [
       {
         question: "O restaurante funciona o ano inteiro?",
         answer: [
-          "Não. Nosso restaurante à beira-mar é sazonal e funciona de outubro a abril. Fora desse período, a cidade tem boas opções abertas, e a gente indica. O café da manhã funciona o ano inteiro, sem mudança de qualidade.",
+          "Não. O restaurante à beira-mar da Pousada Gaúcha é sazonal e funciona de outubro a abril. Fora desse período, a cidade tem boas opções abertas, e a gente indica. O café da manhã funciona o ano inteiro, sem mudança de qualidade.",
         ],
       },
       {
@@ -133,7 +173,13 @@ const CATEGORIES: Category[] = [
       },
       {
         question: "Tem wi-fi?",
-        answer: ["Tem, em toda a pousada, sem custo."],
+        answer: ["Tem, em toda a Pousada Gaúcha, sem custo."],
+      },
+      {
+        question: "Tem mercado e farmácia perto da pousada?",
+        answer: [
+          "Tem. A Pousada Gaúcha fica no centro de Bombinhas, com mercado, farmácia, padaria e restaurantes a poucos minutos a pé.",
+        ],
       },
       {
         question: "Aceitam animais de estimação?",
@@ -153,7 +199,7 @@ const CATEGORIES: Category[] = [
       {
         question: "Preciso de carro para me locomover em Bombinhas?",
         answer: [
-          "Hospedado aqui, quase não. Mercado, farmácia, restaurantes e praia ficam a pé. O carro serve para conhecer as outras praias da península e as cidades vizinhas.",
+          "Hospedado na Pousada Gaúcha, quase não. Mercado, farmácia, restaurantes e praia ficam a pé. O carro serve para conhecer as outras praias da península e as cidades vizinhas.",
         ],
       },
       {
@@ -180,7 +226,7 @@ const CATEGORIES: Category[] = [
       {
         question: "Qual praia é melhor para criança pequena?",
         answer: [
-          "A praia em frente à pousada. A Praia de Bombinhas é reconhecida como a melhor praia para famílias de todo o município, com ondas pequenas e água clara, e é onde a maioria das nossas famílias fica.",
+          "A Praia de Bombinhas, em frente à Pousada Gaúcha. É reconhecida como a melhor praia para famílias de todo o município, com ondas pequenas e água clara, e é onde a maioria das nossas famílias fica.",
           "Para criança bem pequena, a piscina natural da Praia da Sepultura é o lugar mais protegido da cidade. A Praia da Lagoinha também é rasa e abrigada.",
           "Evite Bombas, Quatro Ilhas e Mariscal com criança pequena: são praias de onda.",
         ],
@@ -189,6 +235,14 @@ const CATEGORIES: Category[] = [
         question: "Vocês ajudam a montar o roteiro?",
         answer: [
           "Ajudamos, e é a parte que a gente mais gosta. Diga o que você quer da viagem quando reservar, e a gente sugere qual praia em cada dia, quando fazer cada trilha e como encaixar os passeios conforme a previsão da sua semana.",
+        ],
+      },
+      {
+        question: "Quantos dias vale a pena ficar em Bombinhas?",
+        answer: [
+          "Nossa recomendação é de cinco a sete noites. Bombinhas tem 39 praias, e cada uma pede um dia diferente, além das trilhas, do mergulho e dos passeios de barco.",
+          "Com três noites dá para conhecer o essencial, mas você vai passar a viagem correndo. Com menos de três, considere escolher uma praia só e descansar, em vez de tentar ver tudo.",
+          "Quem vem dirigindo de longe, como de Curitiba ou Porto Alegre, costuma se dar melhor com sete noites, porque os dois dias de estrada pesam menos no total.",
         ],
       },
     ],

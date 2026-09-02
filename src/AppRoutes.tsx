@@ -8,6 +8,7 @@ import BombinhasComChuva from "./pages/guias/BombinhasComChuva.tsx";
 import BombinhasOuGramado from "./pages/guias/BombinhasOuGramado.tsx";
 import TrilhasEmBombinhas from "./pages/guias/TrilhasEmBombinhas.tsx";
 import BombinhasComCriancas from "./pages/guias/BombinhasComCriancas.tsx";
+import PerguntasFrequentes from "./pages/PerguntasFrequentes.tsx";
 
 const AppRoutes = () => (
   <Routes>
@@ -19,6 +20,7 @@ const AppRoutes = () => (
     <Route path="/guias/bombinhas-ou-gramado-no-inverno" element={<BombinhasOuGramado />} />
     <Route path="/guias/trilhas-em-bombinhas" element={<TrilhasEmBombinhas />} />
     <Route path="/guias/bombinhas-com-criancas" element={<BombinhasComCriancas />} />
+    <Route path="/perguntas-frequentes" element={<PerguntasFrequentes />} />
     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
     <Route path="*" element={<NotFound />} />
   </Routes>

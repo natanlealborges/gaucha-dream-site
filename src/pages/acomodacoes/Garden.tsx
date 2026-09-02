@@ -82,6 +82,9 @@ const roomLd = ROOMS.map((room) => ({
     { "@type": "LocationFeatureSpecification", name: "Ar-condicionado", value: true },
     { "@type": "LocationFeatureSpecification", name: "Wi-Fi gratuito", value: true },
     { "@type": "LocationFeatureSpecification", name: "Sofá-cama na sala", value: true },
+    ...(room.id === "garden-studio"
+      ? [{ "@type": "LocationFeatureSpecification", name: "TV a cabo", value: true }]
+      : []),
   ],
   containedInPlace: { "@id": `${BASE_URL}/#lodging` },
 }));

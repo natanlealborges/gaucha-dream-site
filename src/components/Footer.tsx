@@ -57,6 +57,13 @@ const Footer = () => {
             </ul>
           </div>
           )}
+
+          <div className="text-sm space-y-1">
+            <p className="text-primary-foreground font-semibold mb-3">Ajuda</p>
+            <Link to="/perguntas-frequentes" className="block hover:text-primary-foreground transition-colors">
+              Perguntas frequentes
+            </Link>
+          </div>
         </div>
 
         <div className="border-t border-primary-foreground/10 pt-8 text-center text-xs">

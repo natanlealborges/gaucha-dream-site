@@ -21,6 +21,7 @@ const ROUTES = [
   "/guias/bombinhas-ou-gramado-no-inverno",
   "/guias/trilhas-em-bombinhas",
   "/guias/bombinhas-com-criancas",
+  "/perguntas-frequentes",
 ];
 
 // Tags do index.html que o Helmet pode substituir por rota (evita duplicidade).

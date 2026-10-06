@@ -14,11 +14,17 @@ import Garden from "./pages/acomodacoes/Garden.tsx";
 import BlocoGaucha from "./pages/acomodacoes/BlocoGaucha.tsx";
 import BlocoPraia from "./pages/acomodacoes/BlocoPraia.tsx";
 import PousadaPeNaAreia from "./pages/PousadaPeNaAreia.tsx";
+import ServicoDePraia from "./pages/ServicoDePraia.tsx";
+import CafeDaManha from "./pages/CafeDaManha.tsx";
+import Jacuzzis from "./pages/Jacuzzis.tsx";
 
 const AppRoutes = () => (
   <Routes>
     <Route path="/" element={<Index />} />
     <Route path="/pousada-pe-na-areia-bombinhas" element={<PousadaPeNaAreia />} />
+    <Route path="/servico-de-praia" element={<ServicoDePraia />} />
+    <Route path="/cafe-da-manha" element={<CafeDaManha />} />
+    <Route path="/jacuzzis" element={<Jacuzzis />} />
     <Route path="/acomodacoes" element={<Acomodacoes />} />
     <Route path="/acomodacoes/garden" element={<Garden />} />
     <Route path="/acomodacoes/bloco-gaucha" element={<BlocoGaucha />} />

@@ -13,7 +13,7 @@ const BOOKING_URL =
 
 const TITLE = "Pousada com jacuzzi em Bombinhas · Quatro na cobertura · Pousada Gaúcha";
 const DESCRIPTION =
-  "A Pousada Gaúcha tem quatro jacuzzis climatizadas na cobertura, com temperaturas diferentes e vista para a Praia de Bombinhas. Uso por agendamento, sem custo adicional. O ano inteiro.";
+  "A Pousada Gaúcha tem quatro jacuzzis climatizadas na cobertura, com temperaturas diferentes e vista para a Praia de Bombinhas. Uso por agendamento, sem custo. O ano inteiro.";
 
 const breadcrumbLd = {
   "@context": "https://schema.org",
@@ -55,17 +55,17 @@ const Jacuzzis = () => (
         </h1>
 
         <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-          A Pousada Gaúcha tem quatro jacuzzis climatizadas na cobertura, cada uma com temperatura diferente, com vista para a Praia de Bombinhas de um lado e para a mata do outro. O uso é por agendamento e sem custo adicional para hóspedes. Funcionam o ano inteiro.
+          A Pousada Gaúcha tem quatro jacuzzis climatizadas na cobertura, cada uma com temperatura diferente, com vista para a Praia de Bombinhas e para a mata. O uso é por agendamento e sem custo adicional para hóspedes. Funcionam o ano inteiro.
         </p>
 
         <h2 className="font-display text-3xl font-bold text-foreground mb-6">
           O que torna as jacuzzis da Pousada Gaúcha diferentes
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          Bombinhas tem dezenas de pousadas. Poucas têm jacuzzi. E entre as que têm, a Pousada Gaúcha é a única no centro da cidade com quatro unidades climatizadas na cobertura — não numa área de lazer no térreo, mas no andar mais alto, com vista panorâmica para o mar.
+          Bombinhas tem dezenas de pousadas. Poucas têm jacuzzi. A Pousada Gaúcha é a única no centro da cidade com quatro unidades climatizadas na cobertura — não numa área de lazer no térreo, mas no andar mais alto, com vista panorâmica para o mar.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-16">
-          A Pousada Gaúcha não tem piscina. Essa é uma escolha deliberada e que preferimos deixar clara antes de qualquer reserva. O que temos são essas quatro jacuzzis na cobertura, que ocupam um espaço diferente no programa da estadia: não são para nadar, são para descansar com vista.
+          A Pousada Gaúcha não tem piscina. Preferimos deixar isso claro antes de qualquer reserva. O que temos são essas quatro jacuzzis na cobertura: não são para nadar, são para descansar com vista.
         </p>
 
         <div className="bg-muted/40 rounded-xl p-6 mb-16">
@@ -76,37 +76,34 @@ const Jacuzzis = () => (
         </div>
 
         <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-          Por que o inverno é a melhor época para as jacuzzis
+          Por que o inverno é a melhor época
         </h2>
-        <p className="text-muted-foreground leading-relaxed mb-4">
-          Em janeiro, a jacuzzi compete com o mar, a praia e o sol. Em julho, ela não tem concorrência. O hóspede chega da trilha ou do passeio de tarde, a temperatura lá fora caiu, e a jacuzzi climatizada com vista para o mar vazio é uma combinação que aparece repetidamente nas avaliações de quem escolhe a baixa temporada.
-        </p>
         <p className="text-muted-foreground leading-relaxed mb-16">
-          É a razão pela qual a Pousada Gaúcha opera o ano inteiro com o mesmo padrão de estrutura — e por que hóspedes que vêm no inverno costumam dizer que vão voltar no inverno.
+          Em janeiro, a jacuzzi compete com o mar, a praia e o sol. Em julho, ela não tem concorrência. O hóspede chega da trilha ou do passeio de tarde, a temperatura lá fora caiu, e a jacuzzi climatizada com vista para o mar vazio é uma combinação que aparece repetidamente nas avaliações de quem escolhe a baixa temporada.
         </p>
 
         <h2 className="font-display text-3xl font-bold text-foreground mb-6">
           Como usar: agendamento e horários
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          O uso das jacuzzis é por agendamento, feito na recepção. Não há custo adicional para hóspedes. O agendamento existe para garantir que você encontre a estrutura pronta e com a temperatura certa na hora combinada.
+          O uso é por agendamento, feito na recepção da Pousada Gaúcha ou pelo WhatsApp. Não há custo adicional para hóspedes.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-16">
-          A recomendação dos próprios hóspedes nas avaliações: agendar com algumas horas de antecedência, especialmente para o fim de tarde, que é o horário mais disputado.
+          Recomendação dos próprios hóspedes: agendar com algumas horas de antecedência, especialmente para o fim de tarde, que é o horário mais disputado.
         </p>
 
         <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-          Um ponto importante sobre manutenção e temperatura
+          Um ponto importante sobre temperatura e manutenção
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          As jacuzzis aparecem em 26 avaliações no TripAdvisor. A maioria é elogio. Oito citam temperatura irregular ou higienização entre hóspedes — e preferimos abordar isso diretamente.
+          As jacuzzis aparecem em 26 avaliações no TripAdvisor. A maioria é elogio. Algumas citam temperatura irregular — e preferimos abordar isso diretamente.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-16">
-          Jacuzzi tem manutenção de temperatura sensível a condições externas (vento, tempo de uso antes do seu horário, clima do dia). Se na sua chegada a temperatura não estiver como esperado, avise a recepção: a equipe ajusta ou realoca o horário. Não aguarde em silêncio.
+          Temperatura de jacuzzi é sensível a condições externas (vento, tempo de uso antes do seu horário, clima do dia). Se na chegada não estiver como esperado, avise a recepção: a equipe ajusta ou realoca o horário. Não aguarde em silêncio.
         </p>
 
         <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-          Perguntas diretas sobre as jacuzzis
+          Perguntas diretas
         </h2>
         <div className="space-y-6 mb-16">
           <div>
@@ -114,39 +111,39 @@ const Jacuzzis = () => (
               A Pousada Gaúcha tem piscina?
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Não. A Pousada Gaúcha tem quatro jacuzzis climatizadas na cobertura, com temperaturas diferentes e vista para o mar. O mar da Praia de Bombinhas fica a poucos passos, com serviço de praia incluído na diária.
+              Não. Tem quatro jacuzzis climatizadas na cobertura, com temperaturas diferentes e vista para o mar. O uso é por agendamento e sem custo adicional. O mar da Praia de Bombinhas fica a poucos passos, com serviço de praia incluído na diária.
             </p>
           </div>
           <div>
             <h3 className="font-display text-lg font-bold text-foreground mb-2">
-              As jacuzzis são para todos os hóspedes ou só para quem fica no Garden?
+              As jacuzzis são para todos os hóspedes?
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              São para todos os hóspedes, de todos os blocos. O uso é por agendamento na recepção, sem custo adicional.
+              Sim, para todos os hóspedes, de todos os blocos. O uso é por agendamento na recepção, sem custo adicional.
             </p>
           </div>
           <div>
             <h3 className="font-display text-lg font-bold text-foreground mb-2">
-              As jacuzzis funcionam no inverno?
+              Funcionam no inverno?
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Sim, o ano inteiro. No inverno, com temperatura externa mais baixa, a jacuzzi aquecida com vista para o mar vazio é um dos programas mais elogiados pelos hóspedes que vêm na baixa temporada.
+              Sim, o ano inteiro. No inverno, com temperatura externa mais baixa, a jacuzzi aquecida com vista para o mar vazio é um dos programas mais elogiados pelos hóspedes da baixa temporada.
             </p>
           </div>
           <div>
             <h3 className="font-display text-lg font-bold text-foreground mb-2">
-              Como fazer o agendamento?
+              Como agendar?
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Na recepção da Pousada Gaúcha, presencialmente ou pelo WhatsApp (47) 99791-0034. O agendamento é para garantir que a estrutura esteja pronta e na temperatura certa no seu horário.
+              Na recepção da Pousada Gaúcha presencialmente ou pelo WhatsApp (47) 99791-0034. Agende com antecedência para garantir disponibilidade no horário desejado.
             </p>
           </div>
           <div>
             <h3 className="font-display text-lg font-bold text-foreground mb-2">
-              Quantas jacuzzis existem e qual a diferença entre elas?
+              Qual a diferença entre as quatro jacuzzis?
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Quatro unidades na cobertura, cada uma com temperatura diferente. A diferença de temperatura permite opções para quem prefere mais quente ou mais morno. Pergunte na recepção qual está disponível no seu horário.
+              Cada uma tem uma temperatura diferente, o que permite opções para quem prefere mais quente ou mais morno. Pergunte na recepção qual está disponível no seu horário.
             </p>
           </div>
         </div>

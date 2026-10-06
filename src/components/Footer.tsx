@@ -63,6 +63,15 @@ const Footer = () => {
             <Link to="/pousada-pe-na-areia-bombinhas" className="block hover:text-primary-foreground transition-colors">
               Pousada beira-mar
             </Link>
+            <Link to="/servico-de-praia" className="block hover:text-primary-foreground transition-colors">
+              Serviço de praia
+            </Link>
+            <Link to="/cafe-da-manha" className="block hover:text-primary-foreground transition-colors">
+              Café da manhã
+            </Link>
+            <Link to="/jacuzzis" className="block hover:text-primary-foreground transition-colors">
+              Jacuzzis
+            </Link>
             <Link to="/acomodacoes" className="block hover:text-primary-foreground transition-colors">
               Acomodações
             </Link>

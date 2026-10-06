@@ -62,20 +62,20 @@ const CafeDaManha = () => (
           O que faz esse café diferente
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          Em Bombinhas, a maioria das pousadas serve café da manhã. Pouquíssimas servem com vista para o mar. E dentro desse grupo, a diferença que os hóspedes da Pousada Gaúcha mais mencionam não é o que está na mesa — é onde a mesa está.
+          Em Bombinhas, a maioria das pousadas serve café da manhã. Pouquíssimas servem com vista para o mar. O deck fica literalmente à beira-mar da Praia de Bombinhas. Você toma café enquanto vê o estado do mar, decide se vai cedo ou mais tarde.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          O deck fica literalmente à beira-mar da Praia de Bombinhas. Você toma café enquanto vê o estado do mar, decide se vai cedo ou mais tarde, e em dias de frio as portas de vidro são fechadas e o café é servido com a mesma vista, do lado de dentro.
+          Em dias de frio as portas de vidro são fechadas e o café é servido com a mesma vista, do lado de dentro.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-16">
-          É o segundo atributo mais citado espontaneamente nas avaliações públicas da pousada no TripAdvisor, aparecendo em quase 70% dos comentários com texto integral — atrás apenas do atendimento da equipe.
+          É o segundo atributo mais citado espontaneamente nas avaliações da Pousada Gaúcha no TripAdvisor, aparecendo em quase 70% dos comentários com texto integral.
         </p>
 
         <div className="bg-muted/40 rounded-xl p-6 mb-16">
           <p className="text-lg italic text-foreground leading-relaxed mb-3">
             "Café no deck, tudo feito na pousada, fresquinho, variedade enorme."
           </p>
-          <p className="text-sm text-muted-foreground">Hóspede · TripAdvisor · avaliações recentes</p>
+          <p className="text-sm text-muted-foreground">Hóspede · TripAdvisor</p>
         </div>
 
         <h2 className="font-display text-3xl font-bold text-foreground mb-6">
@@ -85,29 +85,29 @@ const CafeDaManha = () => (
           O café da manhã da Pousada Gaúcha é produzido internamente — não é reabastecimento de fornecedor externo. Pães, bolos, tortas e quitutes são preparados na cozinha da pousada antes de cada manhã.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          O buffet inclui opções para quem evita lactose, quem prefere baixo carboidrato e quem é vegetariano. Para quem tem restrição, a recomendação é avisar na reserva para que a equipe se organize.
+          O buffet inclui opções para quem evita lactose, prefere baixo carboidrato e quem é vegetariano. Para quem tem restrição, avise na reserva para que a equipe se organize.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-16">
-          Uma limitação que preferimos informar com antecedência: como tudo é preparado na mesma cozinha, não conseguimos garantir ausência de glúten. Quem tem doença celíaca deve considerar isso. Os apartamentos têm cozinha equipada e há mercado a poucos passos da pousada.
+          Uma limitação que preferimos informar: como tudo é preparado na mesma cozinha, não conseguimos garantir ausência de glúten. Quem tem doença celíaca deve considerar isso. Os apartamentos têm cozinha equipada e há mercado a poucos passos.
         </p>
 
         <h2 className="font-display text-3xl font-bold text-foreground mb-6">
           Horário e funcionamento
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          Das 7h30 às 10h, todos os dias, o ano inteiro — inclusive nos meses em que o restaurante à beira-mar está fechado (maio a setembro). O café não muda de qualidade nem de localização fora da alta temporada.
+          Das 7h30 às 10h, todos os dias, o ano inteiro — inclusive nos meses em que o restaurante à beira-mar está fechado (maio a setembro).
         </p>
         <p className="text-muted-foreground leading-relaxed mb-16">
-          Quem chega à pousada antes das 15h (horário de check-in) pode tomar café da manhã por valor adicional, cobrado à parte. Pergunte na reserva.
+          Quem chega antes das 15h (check-in) pode tomar café da manhã por valor adicional, cobrado à parte. Pergunte na reserva.
         </p>
 
         <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-          Perguntas diretas sobre o café da manhã
+          Perguntas diretas
         </h2>
         <div className="space-y-6 mb-16">
           <div>
             <h3 className="font-display text-lg font-bold text-foreground mb-2">
-              O café da manhã está incluído na diária?
+              Está incluído na diária?
             </h3>
             <p className="text-muted-foreground leading-relaxed">
               Sim, para todos os hóspedes, em todos os dias da estadia na Pousada Gaúcha, sem custo adicional.
@@ -115,26 +115,18 @@ const CafeDaManha = () => (
           </div>
           <div>
             <h3 className="font-display text-lg font-bold text-foreground mb-2">
-              Que horas é o café da manhã?
+              Que horas é o café?
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Das 7h30 às 10h, servido no deck à beira-mar da Pousada Gaúcha, de frente para a Praia de Bombinhas.
+              Das 7h30 às 10h, no deck à beira-mar de frente para a Praia de Bombinhas.
             </p>
           </div>
           <div>
             <h3 className="font-display text-lg font-bold text-foreground mb-2">
-              O café da manhã funciona no inverno?
+              Funciona no inverno?
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Sim. O café da manhã da Pousada Gaúcha funciona o ano inteiro, com o mesmo horário e a mesma qualidade. O restaurante à beira-mar é sazonal (outubro a abril), mas o café não para.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-display text-lg font-bold text-foreground mb-2">
-              É possível tomar café antes das 7h30?
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              O café começa às 7h30. Para quem acorda antes e quer algo, os apartamentos têm cozinha equipada.
+              Sim. O café da manhã da Pousada Gaúcha funciona o ano inteiro, com o mesmo horário e qualidade. O restaurante é sazonal, o café não.
             </p>
           </div>
           <div>
@@ -142,7 +134,7 @@ const CafeDaManha = () => (
               Vocês atendem restrições alimentares?
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Em parte. O buffet tem opções para quem evita lactose, prefere baixo carboidrato ou é vegetariano. Não conseguimos garantir ausência de glúten porque tudo é produzido na mesma cozinha. Avise na reserva e a equipe faz o que for possível.
+              Em parte. O buffet tem opções para quem evita lactose, prefere baixo carboidrato ou é vegetariano. Não conseguimos garantir ausência de glúten — tudo é produzido na mesma cozinha. Avise na reserva.
             </p>
           </div>
         </div>

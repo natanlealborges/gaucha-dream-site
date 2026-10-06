@@ -62,13 +62,13 @@ const ServicoDePraia = () => (
           Como funciona na prática
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          A estrutura de praia da Pousada Gaúcha fica na faixa de areia em frente à pousada — a mesma que você acessa diretamente pela porta, sem atravessar rua. As cadeiras e guarda-sóis são montados cedo pela manhã, antes dos hóspedes descerem.
+          A estrutura fica na faixa de areia em frente à Pousada Gaúcha — a mesma que você acessa diretamente pela porta, sem atravessar rua. As cadeiras e guarda-sóis são montados cedo pela manhã, antes dos hóspedes descerem.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-4">
           Um funcionário permanece na praia durante o dia: ajusta o guarda-sol conforme o sol vira, atende pedidos e remonta tudo quando você volta do almoço ou de um passeio.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-16">
-          O restaurante à beira-mar da pousada atende de outubro a abril. Nos demais meses o serviço de cadeiras e guarda-sóis continua funcionando normalmente.
+          O restaurante à beira-mar atende de outubro a abril. Nos demais meses o serviço de cadeiras e guarda-sóis continua funcionando normalmente.
         </p>
 
         <div className="bg-muted/40 rounded-xl p-6 mb-16">
@@ -79,7 +79,7 @@ const ServicoDePraia = () => (
         </div>
 
         <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-          Por que o serviço de praia aparece em quase metade das avaliações
+          Por que aparece em quase metade das avaliações
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
           O serviço de praia é o terceiro atributo mais citado espontaneamente nas avaliações públicas da Pousada Gaúcha no TripAdvisor — atrás apenas do atendimento da equipe e do café da manhã, e na frente de jacuzzi, espaço kids, academia e cozinha somados.
@@ -92,38 +92,30 @@ const ServicoDePraia = () => (
           Quem é o responsável pelo serviço de praia
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          O serviço de praia da Pousada Gaúcha tem um rosto. Luiz — o Sr. Luiz, como os hóspedes costumam chamar — é citado nominalmente em avaliações do TripAdvisor desde 2019, inclusive em comentários que apontam alguma crítica a outros aspectos da pousada. São mais de 18 menções nominais ao longo de sete anos consecutivos.
+          Luiz — o Sr. Luiz, como os hóspedes costumam chamar — é citado nominalmente em avaliações do TripAdvisor desde 2019, inclusive em comentários que apontam alguma crítica a outros aspectos da pousada. São mais de 18 menções nominais ao longo de sete anos consecutivos.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-16">
           Isso é incomum em hotelaria. E é a razão pela qual o serviço de praia da Pousada Gaúcha não é apenas uma comodidade — é um diferencial com nome próprio.
         </p>
 
         <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-          Perguntas diretas sobre o serviço de praia
+          Perguntas diretas
         </h2>
         <div className="space-y-6 mb-16">
           <div>
             <h3 className="font-display text-lg font-bold text-foreground mb-2">
-              O serviço de praia da Pousada Gaúcha é pago?
+              O serviço de praia é pago?
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Não. Cadeiras e guarda-sóis estão incluídos na diária para todos os hóspedes, já montados na areia em frente à Pousada Gaúcha, com um funcionário cuidando da estrutura durante o dia. Consumo no bar e no restaurante é cobrado à parte.
+              Não. Cadeiras e guarda-sóis estão incluídos na diária para todos os hóspedes da Pousada Gaúcha, já montados na areia, com funcionário cuidando durante o dia. Consumo no bar e restaurante é cobrado à parte.
             </p>
           </div>
           <div>
             <h3 className="font-display text-lg font-bold text-foreground mb-2">
-              Funciona na baixa temporada também?
+              Funciona na baixa temporada?
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Sim. O serviço de cadeiras e guarda-sóis funciona o ano inteiro, inclusive nos meses em que o restaurante à beira-mar fecha (maio a setembro). A praia no inverno é uma das experiências mais elogiadas pelos hóspedes que vêm fora da alta temporada.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-display text-lg font-bold text-foreground mb-2">
-              Quantas cadeiras cada apartamento tem direito?
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Combinamos a estrutura conforme a capacidade de cada apartamento e o movimento do dia. Se tiver dúvida sobre a sua reserva, confirme com a recepção na chegada.
+              Sim. Funciona o ano inteiro. O restaurante à beira-mar fecha de maio a setembro, mas o serviço de cadeiras e guarda-sóis continua.
             </p>
           </div>
           <div>
@@ -131,7 +123,7 @@ const ServicoDePraia = () => (
               A areia em frente à pousada é boa?
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              A Praia de Bombinhas, em frente à Pousada Gaúcha, é reconhecida como a melhor praia para famílias de todo o município, com mar calmo, água clara e ondas pequenas. É o ponto da orla onde o serviço de praia opera.
+              A Praia de Bombinhas, em frente à Pousada Gaúcha, é reconhecida como a melhor praia para famílias do município, com mar calmo, água clara e ondas pequenas.
             </p>
           </div>
         </div>

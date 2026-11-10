@@ -63,13 +63,20 @@ const UI = {
     updated: "Actualizado en noviembre de 2026",
     faq: "Preguntas frecuentes",
     others: "Otras guías",
-    ctaTitle: "¿Querés vivirlo de cerca?",
+    ctaTitle: "Todo esto, a pasos de la posada",
     ctaText: "La Pousada Gaúcha está frente al mar, con acceso directo a la arena de la Praia de Bombinhas.",
     availability: "Ver disponibilidad",
     rooms: "Ver alojamientos",
-    beachfront: "Conocé la posada frente al mar",
+    beachfront: "Conocer la posada frente al mar",
   },
 } as const;
+
+/** Escolhe o conteúdo do idioma atual (pt/es) e renderiza o layout. */
+export const LocalizedGuide = ({ guide, content }: { guide: GuideMeta; content: Partial<Record<GuideLocale, GuideContent>> }) => {
+  const { locale } = useI18n();
+  const c = (locale === "es" ? content.es : content.pt) ?? content.pt ?? content.es!;
+  return <GuideLayout guide={guide} {...c} />;
+};
 
 const GuideLayout = ({ guide, intro, sections, faqs, ctaText, heroImage }: GuideLayoutProps) => {
   const { locale: rawLocale } = useI18n();

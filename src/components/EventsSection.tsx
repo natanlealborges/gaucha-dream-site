@@ -1,6 +1,6 @@
+import { getWhatsAppUrl } from "@/lib/attribution";
 import eventsImage from "@/assets/events-wedding.jpg";
 
-const WHATSAPP_URL = "http://wa.me/5547997910034";
 
 const EventsSection = () => {
   return (
@@ -32,7 +32,7 @@ const EventsSection = () => {
               Entre em contato pelo WhatsApp e faça sua consulta de disponibilidade e valores.
             </p>
             <a
-              href={WHATSAPP_URL}
+              href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-semibold hover:opacity-90 transition-opacity bg-green-500 text-primary-foreground">

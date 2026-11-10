@@ -1,9 +1,9 @@
+import { getBookingUrl } from "@/lib/attribution";
 import { UmbrellaIcon, Wind, Utensils, Bath } from "lucide-react";
 import { trackInitiateCheckout } from "@/lib/pixel";
 import roomGarden from "@/assets/room-garden.jpg";
 import gauchaApto from "@/assets/gaucha-apto.jpg.asset.json";
 
-const BOOKING_URL = "https://hbook.hsystem.com.br/Booking?companyId=5cae2795ab41d51dd869d73a&checkin=04/12/2019&checkout=08/12/2019&adults=1&children=0&_gl=1*1m36n9x*_gcl_au*MTkzNTI4MzE0Mi4xNzY2MzE3MTcy#_ga=2.158433650.936447759.1773250147-595639725.1766317175";
 
 const rooms = [
 {
@@ -70,7 +70,7 @@ const AccommodationsSection = () => {
                 <h3 className="font-display text-2xl font-bold text-foreground mb-3">{room.name}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-5">{room.description}</p>
                 <a
-                href={BOOKING_URL}
+                href={getBookingUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={trackInitiateCheckout}

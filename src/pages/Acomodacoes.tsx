@@ -1,3 +1,4 @@
+import { getWhatsAppUrl } from "@/lib/attribution";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ChevronRight, MessageCircle } from "lucide-react";
@@ -7,7 +8,6 @@ import { publishedAccommodations } from "@/data/accommodations";
 
 const BASE_URL = "https://pousadagaucha.com";
 const URL = `${BASE_URL}/acomodacoes`;
-const WHATSAPP_URL = "http://wa.me/5547997910034";
 
 const TITLE = "Acomodações em Bombinhas · Pousada Gaúcha";
 const DESCRIPTION =
@@ -149,7 +149,7 @@ const Acomodacoes = () => {
               gente indica pelo tamanho do grupo e pelo que você quer da viagem.
             </p>
             <a
-              href={WHATSAPP_URL}
+              href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-500 text-accent-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"

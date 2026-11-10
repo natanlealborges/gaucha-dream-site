@@ -1,7 +1,7 @@
+import { getWhatsAppUrl } from "@/lib/attribution";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { trackContact } from "@/lib/pixel";
 
-const WHATSAPP_URL = "http://wa.me/5547997910034";
 const PHONE_URL = "tel:+554733692472";
 
 const ContactSection = () => {
@@ -23,7 +23,7 @@ const ContactSection = () => {
             </div>
             <div>
               <p className="font-semibold text-foreground text-sm mb-2">WhatsApp</p>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm hover:text-primary">(47) 99791-0034</a>
+              <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm hover:text-primary">(47) 99791-0034</a>
             </div>
           </div>
 
@@ -61,7 +61,7 @@ const ContactSection = () => {
         </div>
 
         <a
-          href={WHATSAPP_URL}
+          href={getWhatsAppUrl()}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-accent-foreground px-10 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity bg-green-500">

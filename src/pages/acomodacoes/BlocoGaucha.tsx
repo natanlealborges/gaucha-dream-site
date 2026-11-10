@@ -1,5 +1,6 @@
+import { useI18n } from "@/i18n/context";
 import { getBookingUrl, getWhatsAppUrl } from "@/lib/attribution";
-import { Helmet } from "react-helmet-async";
+import { LocaleHelmet as Helmet } from "@/i18n/LocaleHelmet";
 import { Link } from "react-router-dom";
 import { ChevronRight, MessageCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -134,12 +135,14 @@ const FAQ: { question: string; answer: string[] }[] = [
   },
 ];
 
-const BlocoGaucha = () => (
+const BlocoGaucha = () => {
+  const { t, text: translate, locale, path } = useI18n();
+  return (
   <div className="min-h-screen bg-background">
     <Helmet>
       <title>{TITLE}</title>
       <meta name="description" content={DESCRIPTION} />
-      <link rel="canonical" href={URL} />
+      <link rel="canonical" href={path(URL)} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={TITLE} />
       <meta property="og:description" content={DESCRIPTION} />
@@ -159,30 +162,19 @@ const BlocoGaucha = () => (
 
     <main className="pt-32 pb-16 px-6">
       <div className="max-w-3xl mx-auto">
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-          <Link to="/" className="hover:text-primary">Início</Link>
+        <nav aria-label={t("copy596")} className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
+          <Link to={path("/")} className="hover:text-primary">{t("copy000")}</Link>
           <ChevronRight size={14} />
-          <Link to="/acomodacoes" className="hover:text-primary">Acomodações</Link>
+          <Link to={path("/acomodacoes")} className="hover:text-primary">{t("copy001")}</Link>
           <ChevronRight size={14} />
           <span className="text-foreground">Bloco Gaúcha</span>
         </nav>
 
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-          Bloco Gaúcha — apartamentos com sacada e churrasqueira privativa em Bombinhas
-        </h1>
+        <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">{t("copy521")}</h1>
 
-        <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-          O Bloco Gaúcha reúne os maiores apartamentos da Pousada Gaúcha. São três tipos: Suíte
-          Gaúcha (ambiente único com mini cozinha, sem sacada), Apartamento de 01 Dormitório Gaúcha
-          e Apartamento de 02 Dormitórios Gaúcha, os dois com sala, sofá-cama, cozinha completa e
-          sacada com churrasqueira privativa. Todos têm ar-condicionado split, telefone, TVs de 32"
-          com canais de TV a cabo e banheiro com ducha e secador de cabelo. É a escolha de quem vem
-          em família e fica vários dias.
-        </p>
+        <p className="text-lg text-muted-foreground leading-relaxed mb-12">{t("copy522")}</p>
 
-        <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-          Três tipos de acomodação no Bloco Gaúcha
-        </h2>
+        <h2 className="font-display text-3xl font-bold text-foreground mb-6">{t("copy523")}</h2>
         <div className="space-y-6 mb-16">
           {ROOMS.map((room) => (
             <div
@@ -190,30 +182,28 @@ const BlocoGaucha = () => (
               id={room.id}
               className="bg-background rounded-xl p-6 shadow-[var(--shadow-soft)]"
             >
-              <h3 className="font-display text-xl font-bold text-foreground mb-3">{room.heading}</h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">{room.paragraph}</p>
-              <p className="text-sm font-medium text-primary">{room.specs}</p>
+              <h3 className="font-display text-xl font-bold text-foreground mb-3">{translate(room.heading)}</h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">{translate(room.paragraph)}</p>
+              <p className="text-sm font-medium text-primary">{translate(room.specs)}</p>
             </div>
           ))}
         </div>
 
-        <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-          O que todas as acomodações do Bloco Gaúcha têm
-        </h2>
+        <h2 className="font-display text-3xl font-bold text-foreground mb-6">{t("copy524")}</h2>
         <ul className="list-disc pl-5 space-y-2 text-muted-foreground mb-16">
           {INCLUDED.map((item) => (
-            <li key={item}>{item}</li>
+            <li key={translate(item)}>{translate(item)}</li>
           ))}
         </ul>
 
-        <h2 className="font-display text-3xl font-bold text-foreground mb-6">Perguntas rápidas</h2>
+        <h2 className="font-display text-3xl font-bold text-foreground mb-6">{t("copy488")}</h2>
         <div className="space-y-6 mb-16">
           {FAQ.map((item) => (
-            <div key={item.question}>
-              <h3 className="font-display text-lg font-bold text-foreground mb-2">{item.question}</h3>
+            <div key={translate(item.question)}>
+              <h3 className="font-display text-lg font-bold text-foreground mb-2">{translate(item.question)}</h3>
               {item.answer.map((p) => (
-                <p key={p} className="text-muted-foreground leading-relaxed mb-2">
-                  {p}
+                <p key={translate(p)} className="text-muted-foreground leading-relaxed mb-2">
+                  {translate(p)}
                 </p>
               ))}
             </div>
@@ -221,10 +211,7 @@ const BlocoGaucha = () => (
         </div>
 
         <div className="bg-muted/40 rounded-xl p-8 text-center">
-          <p className="text-lg text-foreground mb-6 leading-relaxed">
-            Reserve pelo site e garanta o melhor valor. Se quiser ajuda para escolher entre a suíte
-            e os apartamentos de 1 ou 2 dormitórios, fale com a gente pelo WhatsApp.
-          </p>
+          <p className="text-lg text-foreground mb-6 leading-relaxed">{t("copy525")}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href={getBookingUrl()}
@@ -232,18 +219,14 @@ const BlocoGaucha = () => (
               rel="noopener noreferrer"
               onClick={trackInitiateCheckout}
               className="inline-flex items-center justify-center bg-green-500 text-accent-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-            >
-              RESERVE JÁ
-            </a>
+            >{t("copy007")}</a>
             <a
-              href={getWhatsAppUrl()}
+              href={getWhatsAppUrl(locale)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-border text-foreground px-6 py-3 rounded-lg font-semibold hover:bg-foreground/5 transition-colors"
             >
-              <MessageCircle size={18} />
-              WhatsApp (47) 99791-0034
-            </a>
+              <MessageCircle size={18} />{t("copy178")}</a>
           </div>
         </div>
       </div>
@@ -252,5 +235,6 @@ const BlocoGaucha = () => (
     <Footer />
   </div>
 );
+};
 
 export default BlocoGaucha;

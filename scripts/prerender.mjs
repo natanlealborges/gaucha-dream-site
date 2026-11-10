@@ -32,9 +32,13 @@ const ROUTES = [
   "/perguntas-frequentes",
 ];
 
+const translatedPaths = ROUTES.filter((route) => !route.startsWith("/guias"));
+ROUTES.push(...["es", "en"].flatMap((locale) => translatedPaths.map((route) => `/${locale}${route === "/" ? "" : route}`)));
+
 // Tags do index.html que o Helmet pode substituir por rota (evita duplicidade).
 // Cada entrada só é removida do template quando a rota realmente emite a tag.
 const REPLACEABLE = [
+  { emits: /property="og:locale"/i, strip: /\n?\s*<meta\s+property="og:locale"[^>]*>/i },
   { emits: /<title[^>]*>[^<]+<\/title>/i, strip: /\n?\s*<title>[\s\S]*?<\/title>/i },
   { emits: /name="description"/i, strip: /\n?\s*<meta\s+name="description"[^>]*>/i },
   { emits: /rel="canonical"/i, strip: /\n?\s*<link\s+rel="canonical"[^>]*>/i },
@@ -62,9 +66,13 @@ async function main() {
   const template = await readFile(path.join(DIST, "index.html"), "utf8");
 
   for (const route of ROUTES) {
-    const { html, head } = mod.render(route);
+    const { html, head, htmlAttributes } = mod.render(route);
 
     let page = template;
+    if (htmlAttributes) page = page.replace(/<html[^>]*>/i, `<html ${htmlAttributes}>`);
+    if (/^\/(es|en)(?:\/|$)/.test(route)) {
+      page = page.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, "");
+    }
     if (head.trim()) {
       for (const { emits, strip } of REPLACEABLE) {
         if (emits.test(head)) page = page.replace(strip, "");

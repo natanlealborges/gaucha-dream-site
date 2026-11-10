@@ -1,5 +1,6 @@
+import { useI18n } from "@/i18n/context";
 import { getBookingUrl, getWhatsAppUrl } from "@/lib/attribution";
-import { Helmet } from "react-helmet-async";
+import { LocaleHelmet as Helmet } from "@/i18n/LocaleHelmet";
 import { Link } from "react-router-dom";
 import { ChevronRight, MessageCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -22,12 +23,14 @@ const breadcrumbLd = {
   ],
 };
 
-const CafeDaManha = () => (
+const CafeDaManha = () => {
+  const { t, text: translate, locale, path } = useI18n();
+  return (
   <div className="min-h-screen bg-background">
     <Helmet>
       <title>{TITLE}</title>
       <meta name="description" content={DESCRIPTION} />
-      <link rel="canonical" href={URL} />
+      <link rel="canonical" href={path(URL)} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={TITLE} />
       <meta property="og:description" content={DESCRIPTION} />
@@ -42,105 +45,57 @@ const CafeDaManha = () => (
 
     <main className="pt-32 pb-16 px-6">
       <div className="max-w-3xl mx-auto">
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-          <Link to="/" className="hover:text-primary">Início</Link>
+        <nav aria-label={t("copy596")} className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
+          <Link to={path("/")} className="hover:text-primary">{t("copy000")}</Link>
           <ChevronRight size={14} />
-          <span className="text-foreground">Café da manhã</span>
+          <span className="text-foreground">{t("copy017")}</span>
         </nav>
 
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-          Café da manhã à beira-mar em Bombinhas — Pousada Gaúcha
-        </h1>
+        <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">{t("copy181")}</h1>
 
-        <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-          O café da manhã da Pousada Gaúcha é servido no deck à beira-mar, de frente para a Praia de Bombinhas, das 7h30 às 10h. Está incluído na diária para todos os hóspedes, em todos os dias da estadia. Pães, bolos e tortas são produzidos dentro da própria pousada.
-        </p>
+        <p className="text-lg text-muted-foreground leading-relaxed mb-12">{t("copy182")}</p>
 
-        <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-          O que faz esse café diferente
-        </h2>
-        <p className="text-muted-foreground leading-relaxed mb-4">
-          Em Bombinhas, a maioria das pousadas serve café da manhã. Pouquíssimas servem com vista para o mar. O deck fica literalmente à beira-mar da Praia de Bombinhas. Você toma café enquanto vê o estado do mar, decide se vai cedo ou mais tarde.
-        </p>
-        <p className="text-muted-foreground leading-relaxed mb-4">
-          Em dias de frio as portas de vidro são fechadas e o café é servido com a mesma vista, do lado de dentro.
-        </p>
-        <p className="text-muted-foreground leading-relaxed mb-16">
-          É o segundo atributo mais citado espontaneamente nas avaliações da Pousada Gaúcha no TripAdvisor, aparecendo em quase 70% dos comentários com texto integral.
-        </p>
+        <h2 className="font-display text-3xl font-bold text-foreground mb-6">{t("copy183")}</h2>
+        <p className="text-muted-foreground leading-relaxed mb-4">{t("copy184")}</p>
+        <p className="text-muted-foreground leading-relaxed mb-4">{t("copy185")}</p>
+        <p className="text-muted-foreground leading-relaxed mb-16">{t("copy186")}</p>
 
         <div className="bg-muted/40 rounded-xl p-6 mb-16">
-          <p className="text-lg italic text-foreground leading-relaxed mb-3">
-            "Café no deck, tudo feito na pousada, fresquinho, variedade enorme."
-          </p>
-          <p className="text-sm text-muted-foreground">Hóspede · TripAdvisor</p>
+          <p className="text-lg italic text-foreground leading-relaxed mb-3">{t("copy187")}</p>
+          <p className="text-sm text-muted-foreground">{t("copy188")}</p>
         </div>
 
-        <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-          O que está no buffet
-        </h2>
-        <p className="text-muted-foreground leading-relaxed mb-4">
-          O café da manhã da Pousada Gaúcha é produzido internamente — não é reabastecimento de fornecedor externo. Pães, bolos, tortas e quitutes são preparados na cozinha da pousada antes de cada manhã.
-        </p>
-        <p className="text-muted-foreground leading-relaxed mb-4">
-          O buffet inclui opções para quem evita lactose, prefere baixo carboidrato e quem é vegetariano. Para quem tem restrição, avise na reserva para que a equipe se organize.
-        </p>
-        <p className="text-muted-foreground leading-relaxed mb-16">
-          Uma limitação que preferimos informar: como tudo é preparado na mesma cozinha, não conseguimos garantir ausência de glúten. Quem tem doença celíaca deve considerar isso. Os apartamentos têm cozinha equipada e há mercado a poucos passos.
-        </p>
+        <h2 className="font-display text-3xl font-bold text-foreground mb-6">{t("copy189")}</h2>
+        <p className="text-muted-foreground leading-relaxed mb-4">{t("copy190")}</p>
+        <p className="text-muted-foreground leading-relaxed mb-4">{t("copy191")}</p>
+        <p className="text-muted-foreground leading-relaxed mb-16">{t("copy192")}</p>
 
-        <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-          Horário e funcionamento
-        </h2>
-        <p className="text-muted-foreground leading-relaxed mb-4">
-          Das 7h30 às 10h, todos os dias, o ano inteiro — inclusive nos meses em que o restaurante à beira-mar está fechado (maio a setembro).
-        </p>
-        <p className="text-muted-foreground leading-relaxed mb-16">
-          Quem chega antes das 15h (check-in) pode tomar café da manhã por valor adicional, cobrado à parte. Pergunte na reserva.
-        </p>
+        <h2 className="font-display text-3xl font-bold text-foreground mb-6">{t("copy193")}</h2>
+        <p className="text-muted-foreground leading-relaxed mb-4">{t("copy194")}</p>
+        <p className="text-muted-foreground leading-relaxed mb-16">{t("copy195")}</p>
 
-        <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-          Perguntas diretas
-        </h2>
+        <h2 className="font-display text-3xl font-bold text-foreground mb-6">{t("copy196")}</h2>
         <div className="space-y-6 mb-16">
           <div>
-            <h3 className="font-display text-lg font-bold text-foreground mb-2">
-              Está incluído na diária?
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Sim, para todos os hóspedes, em todos os dias da estadia na Pousada Gaúcha, sem custo adicional.
-            </p>
+            <h3 className="font-display text-lg font-bold text-foreground mb-2">{t("copy197")}</h3>
+            <p className="text-muted-foreground leading-relaxed">{t("copy198")}</p>
           </div>
           <div>
-            <h3 className="font-display text-lg font-bold text-foreground mb-2">
-              Que horas é o café?
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Das 7h30 às 10h, no deck à beira-mar de frente para a Praia de Bombinhas.
-            </p>
+            <h3 className="font-display text-lg font-bold text-foreground mb-2">{t("copy199")}</h3>
+            <p className="text-muted-foreground leading-relaxed">{t("copy200")}</p>
           </div>
           <div>
-            <h3 className="font-display text-lg font-bold text-foreground mb-2">
-              Funciona no inverno?
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Sim. O café da manhã da Pousada Gaúcha funciona o ano inteiro, com o mesmo horário e qualidade. O restaurante é sazonal, o café não.
-            </p>
+            <h3 className="font-display text-lg font-bold text-foreground mb-2">{t("copy201")}</h3>
+            <p className="text-muted-foreground leading-relaxed">{t("copy202")}</p>
           </div>
           <div>
-            <h3 className="font-display text-lg font-bold text-foreground mb-2">
-              Vocês atendem restrições alimentares?
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Em parte. O buffet tem opções para quem evita lactose, prefere baixo carboidrato ou é vegetariano. Não conseguimos garantir ausência de glúten — tudo é produzido na mesma cozinha. Avise na reserva.
-            </p>
+            <h3 className="font-display text-lg font-bold text-foreground mb-2">{t("copy203")}</h3>
+            <p className="text-muted-foreground leading-relaxed">{t("copy204")}</p>
           </div>
         </div>
 
         <div className="bg-muted/40 rounded-xl p-8 text-center">
-          <p className="text-lg text-foreground mb-6 leading-relaxed">
-            Reserve pelo site e garanta o melhor valor. O café da manhã à beira-mar está incluído em todas as diárias.
-          </p>
+          <p className="text-lg text-foreground mb-6 leading-relaxed">{t("copy205")}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href={getBookingUrl()}
@@ -148,18 +103,14 @@ const CafeDaManha = () => (
               rel="noopener noreferrer"
               onClick={trackInitiateCheckout}
               className="inline-flex items-center justify-center bg-green-500 text-accent-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-            >
-              RESERVE JÁ
-            </a>
+            >{t("copy007")}</a>
             <a
-              href={getWhatsAppUrl()}
+              href={getWhatsAppUrl(locale)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-border text-foreground px-6 py-3 rounded-lg font-semibold hover:bg-foreground/5 transition-colors"
             >
-              <MessageCircle size={18} />
-              WhatsApp (47) 99791-0034
-            </a>
+              <MessageCircle size={18} />{t("copy178")}</a>
           </div>
         </div>
       </div>
@@ -168,5 +119,6 @@ const CafeDaManha = () => (
     <Footer />
   </div>
 );
+};
 
 export default CafeDaManha;

@@ -1,3 +1,4 @@
+import { useI18n } from "@/i18n/context";
 import { useState, useEffect } from "react";
 
 const platforms = [
@@ -108,6 +109,8 @@ const VISIBLE = 3;
 const GROUPS = Math.ceil(quotes.length / VISIBLE);
 
 const SocialProofSection = () => {
+  const { t, text: translate, locale, path } = useI18n();
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 
@@ -127,19 +130,15 @@ const SocialProofSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Cabeçalho com números reais */}
         <div className="text-center mb-14">
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
-            O que dizem quem já ficou
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Números reais, verificáveis nas próprias plataformas. Atualizados em setembro de 2026.
-          </p>
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">{t("copy090")}</h2>
+          <p className="text-muted-foreground max-w-xl mx-auto">{t("copy091")}</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-10 max-w-2xl mx-auto">
           {platforms.map((p) => (
             <a
               key={p.name}
-              href={p.href}
+              href={path(p.href)}
               target="_blank"
               rel="noopener noreferrer nofollow"
               className="bg-background rounded-xl p-6 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-card)] transition-shadow duration-300 text-center flex flex-col items-center justify-center"
@@ -148,30 +147,26 @@ const SocialProofSection = () => {
                 {p.score}<span className="text-muted-foreground text-xs"> / 5</span>
               </span>
               <span className="text-foreground font-semibold mb-1">{p.name}</span>
-              <span className="text-muted-foreground text-sm">{p.count}</span>
+              <span className="text-muted-foreground text-sm">{translate(p.count)}</span>
             </a>
           ))}
         </div>
 
-        <p className="text-center text-foreground font-semibold mb-2">
-          1ª colocada entre as pousadas de Bombinhas no Tripadvisor
-        </p>
-        <p className="text-center text-muted-foreground text-sm mb-14">
-          Travelers' Choice 2026 · 4ª colocada também no ranking geral de hotéis de Bombinhas · Posições verificadas em setembro de 2026
-        </p>
+        <p className="text-center text-foreground font-semibold mb-2">{t("copy092")}</p>
+        <p className="text-center text-muted-foreground text-sm mb-14">{t("copy093")}</p>
 
         {/* O que mais aparece nas avaliações */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {themes.map((t) => (
             <div
-              key={t.title}
+              key={translate(t.title)}
               className="bg-background rounded-xl p-6 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-card)] transition-shadow duration-300"
             >
               <h3 className="font-display text-xl font-bold text-foreground mb-3">
-                {t.title}
+                {translate(t.title)}
               </h3>
               <p className="text-muted-foreground leading-relaxed text-sm">
-                {t.text}
+                {translate(t.text)}
               </p>
             </div>
           ))}
@@ -179,9 +174,7 @@ const SocialProofSection = () => {
 
         {/* Citações de hóspedes */}
         <div className="mt-14">
-          <p className="text-center text-foreground font-semibold mb-8">
-            O que hóspedes escreveram no TripAdvisor
-          </p>
+          <p className="text-center text-foreground font-semibold mb-8">{t("copy094")}</p>
           <div
             className="max-w-5xl mx-auto"
             onMouseEnter={() => setPaused(true)}
@@ -198,13 +191,11 @@ const SocialProofSection = () => {
                   className="bg-background rounded-xl p-6 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-card)] transition-shadow duration-300"
                 >
                   <h3 className="font-display text-xl font-bold text-foreground mb-3">
-                    {q.title}
+                    {translate(q.title)}
                   </h3>
-                  <p className="text-muted-foreground italic leading-relaxed mb-4">
-                    &ldquo;{q.quote}&rdquo;
-                  </p>
+                  <p className="text-muted-foreground italic leading-relaxed mb-4">&ldquo;{translate(q.quote)}&rdquo;</p>
                   <p className="text-foreground font-semibold">{q.author}</p>
-                  <p className="text-muted-foreground text-sm">{q.meta}</p>
+                  <p className="text-muted-foreground text-sm">{translate(q.meta)}</p>
                 </div>
               ))}
             </div>
@@ -216,18 +207,14 @@ const SocialProofSection = () => {
                   type="button"
                   onClick={() => setActiveIndex((i) => (i - 1 + GROUPS) % GROUPS)}
                   className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-border text-foreground font-semibold hover:bg-foreground/5 transition-colors"
-                  aria-label="Citações anteriores"
-                >
-                  ← Anterior
-                </button>
+                  aria-label={t("copy098")}
+                >{t("copy099")}</button>
                 <button
                   type="button"
                   onClick={() => setActiveIndex((i) => (i + 1) % GROUPS)}
                   className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-border text-foreground font-semibold hover:bg-foreground/5 transition-colors"
-                  aria-label="Próximas citações"
-                >
-                  Próximo →
-                </button>
+                  aria-label={t("copy100")}
+                >{t("copy101")}</button>
               </div>
 
               {/* Indicadores */}
@@ -237,7 +224,7 @@ const SocialProofSection = () => {
                     key={i}
                     type="button"
                     onClick={() => setActiveIndex(i)}
-                    aria-label={`Grupo ${i + 1}`}
+                    aria-label={`${translate("Grupo")} ${i + 1}`}
                     className={`h-2 w-2 rounded-full transition-colors ${
                       i === activeIndex ? "bg-primary" : "bg-muted-foreground/40"
                     }`}
@@ -246,34 +233,29 @@ const SocialProofSection = () => {
               </div>
             </div>
           </div>
-          <p className="text-center text-muted-foreground text-sm mt-6">
-            Estas e todas as outras avaliações estão públicas{" "}
+          <p className="text-center text-muted-foreground text-sm mt-6">{t("copy102")}{" "}
             <a
-              href={TRIPADVISOR_URL}
+              href={path(TRIPADVISOR_URL)}
               target="_blank"
               rel="noopener noreferrer nofollow"
               className="text-primary hover:underline"
-            >
-              no Tripadvisor
-            </a>
+            >{t("copy103")}</a>
             .
           </p>
         </div>
 
         {/* Chamada */}
-        <p className="text-center text-muted-foreground mt-14">
-          Prefira ler por conta própria. Todas as avaliações estão públicas no{" "}
+        <p className="text-center text-muted-foreground mt-14">{t("copy104")}{" "}
           <a
-            href={platforms[0].href}
+            href={path(platforms[0].href)}
             target="_blank"
             rel="noopener noreferrer nofollow"
             className="text-primary hover:underline"
           >
             Google
-          </a>{" "}
-          e no{" "}
+          </a>{" "}{t("copy105")}{" "}
           <a
-            href={platforms[1].href}
+            href={path(platforms[1].href)}
             target="_blank"
             rel="noopener noreferrer nofollow"
             className="text-primary hover:underline"

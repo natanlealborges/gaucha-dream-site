@@ -17,9 +17,29 @@ import PousadaPeNaAreia from "./pages/PousadaPeNaAreia.tsx";
 import ServicoDePraia from "./pages/ServicoDePraia.tsx";
 import CafeDaManha from "./pages/CafeDaManha.tsx";
 import Jacuzzis from "./pages/Jacuzzis.tsx";
+import { LocaleProvider } from "./i18n/context";
+import { LanguageSeo } from "./i18n/Seo";
+
+const translatedPages = [
+  { path: "", Page: Index },
+  { path: "/pousada-pe-na-areia-bombinhas", Page: PousadaPeNaAreia },
+  { path: "/servico-de-praia", Page: ServicoDePraia },
+  { path: "/cafe-da-manha", Page: CafeDaManha },
+  { path: "/jacuzzis", Page: Jacuzzis },
+  { path: "/acomodacoes", Page: Acomodacoes },
+  { path: "/acomodacoes/garden", Page: Garden },
+  { path: "/acomodacoes/bloco-gaucha", Page: BlocoGaucha },
+  { path: "/acomodacoes/bloco-praia", Page: BlocoPraia },
+  { path: "/perguntas-frequentes", Page: PerguntasFrequentes },
+];
 
 const AppRoutes = () => (
+  <LocaleProvider>
+  <LanguageSeo />
   <Routes>
+    {["es", "en"].flatMap((locale) => translatedPages.map(({ path, Page }) => (
+      <Route key={`${locale}${path}`} path={`/${locale}${path}`} element={<Page />} />
+    )))}
     <Route path="/" element={<Index />} />
     <Route path="/pousada-pe-na-areia-bombinhas" element={<PousadaPeNaAreia />} />
     <Route path="/servico-de-praia" element={<ServicoDePraia />} />
@@ -40,6 +60,7 @@ const AppRoutes = () => (
     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
     <Route path="*" element={<NotFound />} />
   </Routes>
+  </LocaleProvider>
 );
 
 export default AppRoutes;

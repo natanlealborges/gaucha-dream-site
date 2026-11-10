@@ -143,7 +143,7 @@ const Page = () => (
             heading: "Nuestra escena favorita del invierno",
             paragraphs: [
               "El amanecer visto desde el deck, con el desayuno armándose detrás y toda la playa adelante. Después de 26 años, sigue siendo el momento del día que más nos gusta.",
-              "Bombinhas en invierno es para quien busca encanto, descanso y paz. Si eso es lo que busca, escríbanos antes de cerrar cualquier cosa. Después de 26 años recibiendo huéspedes acá, no vendemos solo la tarifa: ayudamos a armar el itinerario, indicamos el día adecuado para cada playa y avisamos qué vale la pena y qué no en el mes del viaje.",
+              "Bombinhas en invierno es para quien busca encanto, descanso y paz. Para quien busca eso, lo mejor es escribirnos antes de cerrar cualquier cosa. Después de 26 años recibiendo huéspedes acá, no vendemos solo la tarifa: ayudamos a armar el itinerario, indicamos el día adecuado para cada playa y avisamos qué vale la pena y qué no en el mes del viaje.",
               "Reservando directamente en el sitio se obtiene el mejor valor. Equipo Pousada Gaúcha — anfitriones y consultores de experiencias en Bombinhas.",
             ],
           },

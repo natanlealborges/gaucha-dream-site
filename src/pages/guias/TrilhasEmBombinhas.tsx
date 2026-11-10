@@ -73,7 +73,7 @@ const Page = () => (
             heading: "Trilha da Sepultura — fácil",
             paragraphs: [
               "Cerca de 2,3 km ida y vuelta, con poca subida. Es el sendero para el primer día, con niños, con los abuelos, con quien no camina mucho.",
-              "El premio es la piscina natural de la Sepultura, formada entre las piedras, que es el mejor lugar de Bombinhas para hacer snorkel sin barco. Lleve máscara.",
+              "El premio es la piscina natural de la Sepultura, formada entre las piedras, que es el mejor lugar de Bombinhas para hacer snorkel sin barco. Conviene llevar máscara.",
               "Nuestro consejo: ir temprano. A partir de las diez la piscina natural se llena, y es pequeña.",
             ],
           },
@@ -121,7 +121,7 @@ const Page = () => (
             paragraphs: [
               "Día 2: Sepultura, para despertar las piernas. Día 3: Retiro dos Padres, temprano a la mañana. Día 5: Morro do Macaco, al final de la tarde, para ver el atardecer.",
               "Si sobra un día: Quatro Ilhas por la costa rocosa, o el Parque Natural Municipal da Costeira de Zimbros, que tiene diez playas y es la versión salvaje de Bombinhas.",
-              "Si viene a caminar, avísenos al reservar. Armamos el orden de los senderos según el pronóstico de la semana, porque acá lo que decide no es el mapa, es el día. Equipo Pousada Gaúcha — anfitriones y consultores de experiencias en Bombinhas.",
+              "Si el plan es caminar, conviene avisarnos al reservar. Armamos el orden de los senderos según el pronóstico de la semana, porque acá lo que decide no es el mapa, es el día. Equipo Pousada Gaúcha — anfitriones y consultores de experiencias en Bombinhas.",
             ],
             links: [{ to: "/es/guias/o-que-fazer-em-bombinhas", label: "Qué hacer en Bombinhas" }],
           },

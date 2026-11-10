@@ -121,7 +121,7 @@ const Page = () => (
             paragraphs: [
               "Sí, y mucha gente se sorprende. Fuera de la temporada alta la playa es de uno, no hay filas en ningún lugar y los niños tienen espacio.",
               "Si el objetivo del viaje es que los niños estén todo el día en el mar, lo ideal es venir entre diciembre y marzo. Si es la familia junta y descansada, cualquier mes sirve.",
-              "Si viene con niños, cuéntenos las edades al reservar. Le indicamos la playa adecuada para cada día, el apartamento que tiene más sentido para el tamaño de la familia y lo que se puede dejar en casa. Equipo Pousada Gaúcha — anfitriones y consultores de experiencias en Bombinhas.",
+              "Para quienes viajan con niños, conviene contarnos las edades al reservar. Así indicamos la playa adecuada para cada día, el apartamento que tiene más sentido para el tamaño de la familia y lo que se puede dejar en casa. Equipo Pousada Gaúcha — anfitriones y consultores de experiencias en Bombinhas.",
             ],
           },
         ],

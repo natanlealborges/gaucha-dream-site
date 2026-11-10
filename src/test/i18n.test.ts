@@ -70,3 +70,15 @@ describe("schema identity and translation coverage", () => {
     expect(translateSchema(schema, "en")).toMatchObject({ "@id": "https://pousadagaucha.com/#lodging", name: "Pousada Gaúcha", url: "https://pousadagaucha.com/en", inLanguage: "en", petsAllowed: false, checkinTime: "15:00", checkoutTime: "12:00", priceRange: "R$ 595 - R$ 3595" });
   });
 });
+
+describe("guide language switching", () => {
+  it("switches bilingual guides between PT and ES and sends EN to /en", () => {
+    expect(switchLocalePath("/guias/praias-de-bombinhas", "", "es")).toBe("/es/guias/praias-de-bombinhas");
+    expect(switchLocalePath("/es/guias/praias-de-bombinhas", "", "pt")).toBe("/guias/praias-de-bombinhas");
+    expect(switchLocalePath("/es/guias", "", "pt")).toBe("/guias");
+    expect(switchLocalePath("/es/guias/praias-de-bombinhas", "", "en")).toBe("/en");
+  });
+  it("sends the Spanish-only guide to the PT home", () => {
+    expect(switchLocalePath("/es/guias/como-llegar-desde-argentina-paraguay-uruguay", "", "pt")).toBe("/");
+  });
+});

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight, MessageCircle, Waves, Coffee, Umbrella, Eye, UtensilsCrossed, ThermometerSun, Car } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import GuideLinks from "@/components/GuideLinks";
 import { trackInitiateCheckout } from "@/lib/pixel";
 
 const BASE_URL = "https://pousadagaucha.com";
@@ -137,6 +138,8 @@ const PousadaPeNaAreia = () => {
             <p className="text-muted-foreground leading-relaxed">{t("copy295")}</p>
           </div>
         </div>
+
+        <GuideLinks className="mb-10" slugs={["praias-de-bombinhas", "como-chegar-a-bombinhas", "como-llegar-desde-argentina-paraguay-uruguay"]} />
 
         <div className="bg-muted/40 rounded-xl p-8 text-center">
           <p className="text-lg text-foreground mb-6 leading-relaxed">{t("copy296")}</p>

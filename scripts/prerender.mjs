@@ -29,11 +29,31 @@ const ROUTES = [
   "/guias/bombinhas-ou-gramado-no-inverno",
   "/guias/trilhas-em-bombinhas",
   "/guias/bombinhas-com-criancas",
+  "/guias/praias-de-bombinhas",
+  "/guias/como-chegar-a-bombinhas",
+  "/guias/quando-ir-a-bombinhas",
+  "/guias/o-que-fazer-em-bombinhas",
+  "/guias/onde-comer-em-bombinhas",
   "/perguntas-frequentes",
+];
+
+// Guias em espanhol (índice, traduções e o guia só em espanhol).
+const ES_GUIDE_ROUTES = [
+  "/es/guias",
+  "/es/guias/bombinhas-no-inverno",
+  "/es/guias/bombinhas-com-criancas",
+  "/es/guias/trilhas-em-bombinhas",
+  "/es/guias/praias-de-bombinhas",
+  "/es/guias/como-chegar-a-bombinhas",
+  "/es/guias/quando-ir-a-bombinhas",
+  "/es/guias/o-que-fazer-em-bombinhas",
+  "/es/guias/onde-comer-em-bombinhas",
+  "/es/guias/como-llegar-desde-argentina-paraguay-uruguay",
 ];
 
 const translatedPaths = ROUTES.filter((route) => !route.startsWith("/guias"));
 ROUTES.push(...["es", "en"].flatMap((locale) => translatedPaths.map((route) => `/${locale}${route === "/" ? "" : route}`)));
+ROUTES.push(...ES_GUIDE_ROUTES);
 
 // Tags do index.html que o Helmet pode substituir por rota (evita duplicidade).
 // Cada entrada só é removida do template quando a rota realmente emite a tag.

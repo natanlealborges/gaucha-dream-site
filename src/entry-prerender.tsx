@@ -1,3 +1,5 @@
+import { translateSchema } from "@/i18n/translate";
+import { splitLocale } from "@/i18n/config";
 // Entry usado APENAS no build de pré-renderização estática (SSR one-shot).
 // Não é carregado pelo navegador — o cliente continua entrando por src/main.tsx.
 import { renderToString } from "react-dom/server";
@@ -10,6 +12,7 @@ import AppRoutes from "./AppRoutes.tsx";
 export type PrerenderResult = {
   html: string;
   head: string;
+  htmlAttributes: string;
 };
 
 export function render(url: string): PrerenderResult {
@@ -43,5 +46,9 @@ export function render(url: string): PrerenderResult {
         .join("\n    ")
     : "";
 
-  return { html, head };
+  return { html, head, htmlAttributes: helmet?.htmlAttributes.toString() ?? "" };
+}
+
+export function localizeSiteSchema(schema: unknown, route: string): unknown {
+  return translateSchema(schema, splitLocale(route).locale);
 }

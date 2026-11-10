@@ -1,3 +1,4 @@
+import { HomeSeo } from "@/i18n/HomeSeo";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SocialProofSection from "@/components/SocialProofSection";
@@ -11,6 +12,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <HomeSeo />
       <Navbar />
       <HeroSection />
       <SocialProofSection />

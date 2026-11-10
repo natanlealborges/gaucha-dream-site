@@ -66,7 +66,67 @@ const Page = () => (
       },
     ],
       },
-      es: ES_TRILHAS,
+      es: {
+        intro: "Bombinhas tiene 67% de área verde y tres unidades de conservación en un municipio de 36 km². En la práctica, eso significa que casi todas las playas de acá tienen un sendero que sale de ellas. Abajo están los cinco que dibujamos en el papel del desayuno todas las semanas, del más fácil al más exigente. Todos se pueden hacer sin guía, y todos son mejores en invierno, cuando no hace calor en el medio del camino.",
+        sections: [
+          {
+            heading: "Trilha da Sepultura — fácil",
+            paragraphs: [
+              "Cerca de 2,3 km ida y vuelta, con poca subida. Es el sendero para el primer día, con niños, con los abuelos, con quien no camina mucho.",
+              "El premio es la piscina natural de la Sepultura, formada entre las piedras, que es el mejor lugar de Bombinhas para hacer snorkel sin barco. Lleve máscara.",
+              "Nuestro consejo: ir temprano. A partir de las diez la piscina natural se llena, y es pequeña.",
+            ],
+          },
+          {
+            heading: "Retiro dos Padres — fácil a moderado",
+            paragraphs: [
+              "Cerca de 3,5 km, con un desnivel de unos 250 metros, entre 1 h 30 y 2 h. Sale de Bombinhas por el bosque, con un tramo por el costão (la costa rocosa).",
+              "La playa del Retiro dos Padres es pequeña, con una franja de arena que comparte espacio con las rocas, y en la mitad del camino hay una piedra grande desde donde se ve toda la región. Es el sendero con mejor relación entre esfuerzo y recompensa de la ciudad.",
+              "Nuestro consejo: se puede combinar con la Sepultura en la misma mañana.",
+            ],
+          },
+          {
+            heading: "De Quatro Ilhas al Costão do Retiro dos Padres — moderado",
+            paragraphs: [
+              "Cerca de 3,9 km, desnivel de unos 216 metros, entre 1 h 30 y 2 h. Empieza en la Praia de Quatro Ilhas y buena parte del recorrido es por la costa rocosa, lo que exige atención redoblada.",
+              "Desde arriba se ve toda la extensión de las playas de la región. Es el sendero más aventurero de la lista.",
+              "Nuestro consejo: no hacerlo con lluvia. La roca mojada resbala de verdad.",
+            ],
+          },
+          {
+            heading: "Praia da Lagoinha — moderado y corto",
+            paragraphs: [
+              "Veinte minutos de caminata hasta una playa pequeña y protegida, con baño al llegar. Se la conoce como la playa de los pececitos, porque el agua es baja y transparente y los peces se acercan.",
+              "Nuestro consejo: es la mejor de la lista para ir con niños que ya caminan bien.",
+            ],
+          },
+          {
+            heading: "Morro do Macaco — exigente, y vale cada paso",
+            paragraphs: [
+              "El punto más alto de la lista, con 191 metros. El sendero empieza al final de la Praia de Canto Grande Mar de Dentro, al final de la Rua Jequitibá, cerca del muelle. Son de 30 a 40 minutos de subida casi continua, con tramos empinados, arena suelta y piedras.",
+              "Desde la cima se ven Conceição, Canto Grande, Mariscal, Quatro Ilhas, Morrinhos y Zimbros de una sola vez. Es la mejor vista de la península, y el mejor atardecer de la región.",
+              "Nuestro consejo: la segunda mitad tiene poca sombra. En verano, salir antes de las 9 h o ir al final de la tarde. Llevar más agua de la que parece necesaria.",
+              "Para tener altura sin tanto esfuerzo, el Mirante Eco 360º, con 218 metros, tiene visita paga y estructura de apoyo.",
+            ],
+          },
+          {
+            heading: "Qué llevar, siempre",
+            paragraphs: [
+              "Agua, zapatillas cerradas con buena suela, protector solar, gorra y algo para comer. Repelente en verano. Nada de ojotas, ni siquiera en los fáciles.",
+              "Y no hay que subestimar el horario: casi todos los accidentes en senderos acá les pasan a quienes salen tarde y vuelven de noche.",
+            ],
+          },
+          {
+            heading: "El orden que sugerimos para una semana",
+            paragraphs: [
+              "Día 2: Sepultura, para despertar las piernas. Día 3: Retiro dos Padres, temprano a la mañana. Día 5: Morro do Macaco, al final de la tarde, para ver el atardecer.",
+              "Si sobra un día: Quatro Ilhas por la costa rocosa, o el Parque Natural Municipal da Costeira de Zimbros, que tiene diez playas y es la versión salvaje de Bombinhas.",
+              "Si viene a caminar, avísenos al reservar. Armamos el orden de los senderos según el pronóstico de la semana, porque acá lo que decide no es el mapa, es el día. Equipo Pousada Gaúcha — anfitriones y consultores de experiencias en Bombinhas.",
+            ],
+            links: [{ to: "/es/guias/o-que-fazer-em-bombinhas", label: "Qué hacer en Bombinhas" }],
+          },
+        ],
+      },
     }}
   />
 );

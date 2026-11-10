@@ -78,7 +78,77 @@ const Page = () => (
       },
     ],
       },
-      es: ES_INVERNO,
+      es: {
+        heroImage: { src: heroBeach, alt: "Vista aérea de la Praia de Bombinhas, frente a la Pousada Gaúcha, con mar calmo y el muelle" },
+        intro: "Vale la pena, siempre que se sepa qué se viene a buscar. En invierno Bombinhas ofrece espacio, silencio, agua mucho más transparente, senderos con clima agradable y la posibilidad de ver ballenas desde la arena. Lo que cambia es que parte de los restaurantes reduce el horario. Recibimos huéspedes acá hace 26 años y vemos la misma escena todos los años: quien viene en invierno por primera vez se va sintiendo que descubrió Bombinhas dos veces. Esta página no es un folleto. Es lo que respondemos por WhatsApp todas las semanas.",
+        sections: [
+          {
+            heading: "Lo que se gana viniendo entre mayo y septiembre",
+            paragraphs: [
+              "Espacio. Se estaciona frente al lugar donde se va a comer. Se consigue mesa sin esperar. Se camina por la arena eligiendo dónde parar.",
+              "Senderos con buen clima. Las temperaturas suelen estar entre 13 °C y 20 °C, con poca lluvia. Quien ya subió el Morro do Macaco en enero sabe la diferencia.",
+              "Sin tasa de entrada. La Tasa de Preservación Ambiental de Bombinhas se cobra por vehículo entre el 15 de noviembre y el 15 de abril. Fuera de ese período no hay cobro. En invierno se puede entrar y salir de la ciudad las veces que se quiera sin pagar nada, lo que cambia bastante la planificación para conocer Porto Belo, Itapema o la Ilha de Porto Belo en el mismo paseo.",
+              "Tarifas de temporada baja. Vale para alojamiento, restaurantes y paseos.",
+            ],
+            links: [{ to: "/es/guias/quando-ir-a-bombinhas", label: "Cuándo ir a Bombinhas: la mejor época" }],
+          },
+          {
+            heading: "El agua se pone más clara. Esa es la parte que sorprende",
+            paragraphs: [
+              "Esto es lo que casi nadie cuenta sobre Bombinhas: el verano es la estación más lluviosa del año acá. Y la lluvia fuerte mueve el mar. Arrastra arena y sedimento de los cerros y deja el agua más turbia durante uno o dos días.",
+              "En invierno llueve mucho menos y las corrientes son más estables. El resultado es esa agua verde azulada de las fotos.",
+              "No es casualidad que Bombinhas sea la Capital Nacional del Buceo Ecológico y que los buzos vengan justamente en esta época: es cuando se ve lejos bajo el agua. Desde la arena, el efecto es el mismo.",
+              "Quien viene en invierno suele decir que la playa en esta época es más linda, y estamos de acuerdo.",
+            ],
+          },
+          {
+            heading: "Ballenas, y lo que podemos y no podemos prometer",
+            paragraphs: [
+              "Entre julio y noviembre, las ballenas francas migran del Atlántico Sur hacia el litoral de Santa Catarina para aparearse y cuidar a sus crías. La mayor concentración está en el sur del estado, entre Garopaba, Imbituba y Laguna, pero los avistajes entre Bombinhas y Porto Belo vienen aumentando año a año, porque nuestras bahías protegidas y de agua calma son exactamente el tipo de lugar que ellas buscan.",
+              "Nosotros las vemos. No todos los días, no con hora fija, pero las vemos.",
+              "El avistaje se hace desde tierra: desde la arena, la costa rocosa y los miradores. No hace falta barco. Las chances aumentan bastante con tres días o más en la región. Unos binoculares hacen mucha diferencia. Septiembre suele concentrar los avistajes en el estado.",
+              "Lo que no hacemos es vender paquetes con ballena garantizada. Nadie puede garantizar eso.",
+            ],
+          },
+          {
+            heading: "Qué cierra y qué sigue abierto",
+            paragraphs: [
+              "Es la pregunta que más recibimos en invierno, así que vamos directo.",
+              "Reduce o cierra: parte de los restaurantes de la ciudad funciona con horario reducido entre mayo y septiembre; nuestro restaurante frente al mar es de temporada y funciona de octubre a abril; los paradores y la estructura de verano en la arena disminuyen.",
+              "Sigue funcionando: Concha das Ostras, uno de los mejores de la ciudad, abierto todo el año; Patadacobra, operadora de buceo, funcionando normalmente, y el invierno es la mejor época para bucear acá; paseos en buggy, con agencia local activa en temporada baja; guías de paseos locales; ciclismo y mountain bike; y todos los senderos.",
+              "En la posada: el desayuno frente al mar sigue exactamente igual, con la misma calidad y la misma vista; los jacuzzis de la terraza siguen climatizados, y es en invierno cuando más se disfrutan; todo lo demás funciona normalmente.",
+              "Quien viene esperando el movimiento de enero se va a decepcionar. Quien viene buscando descanso, silencio y paisaje encuentra la mejor época del año.",
+            ],
+          },
+          {
+            heading: "Cómo armaríamos sus días",
+            image: { src: aboutJacuzzi, alt: "Jacuzzi en la terraza de la Pousada Gaúcha con vista al mar de Bombinhas" },
+            paragraphs: [
+              "Esta es la parte que solemos hacer por WhatsApp, y vale la pena adelantarla acá.",
+              "Para bucear: venir entre julio y septiembre, reservar el buceo para los días sin lluvia la víspera y dejar libre el día siguiente. Ayudamos a coordinar con la operadora.",
+              "Para caminar: mayo, junio y octubre son los mejores meses. Salir temprano, hacer el sendero a la mañana y dejar la tarde para el jacuzzi.",
+              "Para ver ballenas: agosto y septiembre, mínimo tres noches, y mirador justo después del desayuno, que es cuando el mar suele estar más calmo.",
+              "Solo para descansar: cualquier mes sirve. En ese caso sugerimos lo contrario de todo: no programar nada y dejarnos indicar el plan en el momento, según cómo amanezca el día.",
+              "Para quien ya conoce Bombinhas en verano: venir en octubre. El restaurante reabre, la ciudad se despierta y todavía se puede elegir dónde sentarse. Para mucha gente es el mejor mes del año acá.",
+            ],
+          },
+          {
+            heading: "Para quién el invierno en Bombinhas es perfecto",
+            paragraphs: [
+              "Es perfecto para: parejas que quieren tranquilidad de verdad; quienes ya conocen Bombinhas y quieren conocer su versión calma; buzos, por la visibilidad; fotógrafos y amantes del amanecer; quienes trabajan en remoto y pueden extender la estadía.",
+              "Probablemente no es para: quien viaja para pasar horas dentro del mar; quien busca vida nocturna y movimiento; familias con niños que solo se divierten dentro del agua.",
+            ],
+          },
+          {
+            heading: "Nuestra escena favorita del invierno",
+            paragraphs: [
+              "El amanecer visto desde el deck, con el desayuno armándose detrás y toda la playa adelante. Después de 26 años, sigue siendo el momento del día que más nos gusta.",
+              "Bombinhas en invierno es para quien busca encanto, descanso y paz. Si eso es lo que busca, escríbanos antes de cerrar cualquier cosa. Después de 26 años recibiendo huéspedes acá, no vendemos solo la tarifa: ayudamos a armar el itinerario, indicamos el día adecuado para cada playa y avisamos qué vale la pena y qué no en el mes del viaje.",
+              "Reservando directamente en el sitio se obtiene el mejor valor. Equipo Pousada Gaúcha — anfitriones y consultores de experiencias en Bombinhas.",
+            ],
+          },
+        ],
+      },
     }}
   />
 );

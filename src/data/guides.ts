@@ -213,17 +213,17 @@ export const guides: GuideMeta[] = [
       title: "Bombinhas con niños: playas y paseos tranquilos",
       h1: "Bombinhas con niños: la guía para la familia",
       description:
-        "Bombinhas con niños: playas de poca profundidad, paseos cortos y la logística que hace la diferencia. Escrito por una posada que recibe familias hace 26 años.",
+        "Bombinhas con niños: playas tranquilas, paseos cortos y la logística que hace la diferencia. Escrito por una posada que recibe familias hace 26 años.",
       shortLabel: "Bombinhas con niños",
       hook: "Recibimos familias hace 26 años y aprendimos que un niño feliz es playa tranquila y almuerzo cerca.",
     },
   },
   {
     slug: "como-llegar-desde-argentina-paraguay-uruguay",
-    title: "Cómo llegar a Bombinhas desde Argentina y Paraguay",
+    title: "Cómo llegar a Bombinhas desde Argentina, Paraguay y Uruguay",
     h1: "Cómo llegar a Bombinhas desde Argentina, Paraguay y Uruguay",
     description:
-      "Cómo llegar a Bombinhas en auto desde Buenos Aires, Asunción y Santa Rita, o en avión a Florianópolis o Navegantes. Distancias, tiempos, TPA y estacionamiento.",
+      "En auto desde Buenos Aires, Asunción y Santa Rita, o en avión a Florianópolis o Navegantes: distancias, tiempos, TPA y estacionamiento en Bombinhas.",
     shortLabel: "Cómo llegar desde Argentina, Paraguay y Uruguay",
     hook: "En auto por la BR-101 hasta Porto Belo, o en avión a Florianópolis o Navegantes.",
     published: true,

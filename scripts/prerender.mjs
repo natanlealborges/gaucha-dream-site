@@ -71,11 +71,7 @@ async function main() {
     let page = template;
     if (htmlAttributes) page = page.replace(/<html[^>]*>/i, `<html ${htmlAttributes}>`);
     if (/^\/(es|en)(?:\/|$)/.test(route)) {
-      page = page.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g, (tag, content) => {
-        const localized = mod.localizeSiteSchema(JSON.parse(content), route);
-        return `<script type="application/ld+json">${JSON.stringify(localized)}</script>`;
-      });
-      if (/^\/(es|en)\/?$/.test(route)) page = page.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, "");
+      page = page.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, "");
     }
     if (head.trim()) {
       for (const { emits, strip } of REPLACEABLE) {

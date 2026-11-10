@@ -43,7 +43,7 @@ const HeroSection = () => {
       <img
         key={i}
         src={slide.image}
-        alt={slide.alt}
+        alt={translate(slide.alt)}
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
         i === current ? "opacity-100" : "opacity-0"}`
         }

@@ -193,7 +193,7 @@ const SocialProofSection = () => {
                   <h3 className="font-display text-xl font-bold text-foreground mb-3">
                     {translate(q.title)}
                   </h3>
-                  <p className="text-muted-foreground italic leading-relaxed mb-4">{t("copy096")}{translate(q.quote)}{t("copy097")}</p>
+                  <p className="text-muted-foreground italic leading-relaxed mb-4">&ldquo;{translate(q.quote)}&rdquo;</p>
                   <p className="text-foreground font-semibold">{q.author}</p>
                   <p className="text-muted-foreground text-sm">{translate(q.meta)}</p>
                 </div>

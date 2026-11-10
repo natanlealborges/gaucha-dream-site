@@ -148,7 +148,7 @@ const Navbar = () => {
               onClick={trackContact}
               className="flex items-center gap-2 text-muted-foreground text-sm">
               <Phone size={14} />
-              Telefone: (47) 3369-2472
+              {translate("Telefone")}: (47) 3369-2472
             </a>
           </div>
         </div>

@@ -15,8 +15,29 @@ A Pousada Gaúcha é uma pousada frente-mar no centro de Bombinhas/SC, com acess
 - https://pousadagaucha.com/jacuzzis — Quatro jacuzzis climatizadas na cobertura da Pousada Gaúcha, com vista para o mar e a mata, temperaturas diferentes, uso por agendamento sem custo adicional, funcionamento o ano inteiro.
 - https://pousadagaucha.com/acomodacoes — Hub das acomodações: 38 apartamentos em três blocos (Garden, Gaúcha e Praia), com comparativo de metragem, vista, cozinha e capacidade.
 - https://pousadagaucha.com/acomodacoes/garden — Bloco Garden: os únicos quartos de pousada frente ao mar no centro de Bombinhas, nas categorias Deck, Superior e Studio.
-- https://pousadagaucha.com/guias — Guia de Bombinhas escrito por quem mora na cidade, com dicas de mergulho, inverno, trilhas e viagem em família.
-- https://pousadagaucha.com/guias/bombinhas-no-inverno — Guia completo sobre Bombinhas no inverno: clima, água transparente, baleias-francas, o que abre e o que fecha na baixa temporada.
-- https://pousadagaucha.com/guias/bombinhas-com-criancas — Guia de Bombinhas com crianças: praias rasa por idade, logística que faz diferença e roteiro de uma semana.
-- https://pousadagaucha.com/guias/trilhas-em-bombinhas — Guia das 5 trilhas de Bombinhas por nível de dificuldade, com duração, desnível, o que levar e ordem sugerida para a semana.
 - https://pousadagaucha.com/perguntas-frequentes — Perguntas frequentes da Pousada Gaúcha: check-in das 15h, check-out às 12h, Chegada Livre, café da manhã das 7h30 às 10h, categorias de apartamento, academia das 10h às 22h, estacionamento gratuito, TPA de Bombinhas e serviço de praia incluído.
+
+## Guias de Bombinhas (português)
+
+- [Guia de Bombinhas](https://pousadagaucha.com/guias): índice dos guias escritos pela equipe da pousada, que mora na cidade.
+- [Praias de Bombinhas: qual escolher](https://pousadagaucha.com/guias/praias-de-bombinhas): Bombinhas é uma península com praias de perfis bem diferentes a poucos minutos umas das outras. A mais tranquila é a Praia de Bombinhas (centro), de mar calmo e água clara, seguida de Sepultura e Conceição. Para ondas e mais movimento, Bombas, Quatro Ilhas e Mariscal. Para sossego, Zimbros, Canto Grande e a Tainha.
+- [Como chegar a Bombinhas](https://pousadagaucha.com/guias/como-chegar-a-bombinhas): Chega-se a Bombinhas pela BR-101, saindo em Porto Belo. Os aeroportos mais próximos são Navegantes (cerca de 50 a 60 km) e Florianópolis (cerca de 80 km). Não há ônibus direto dos aeroportos: o último trecho é de transfer, aplicativo ou carro alugado.
+- [Quando ir a Bombinhas: melhor época](https://pousadagaucha.com/guias/quando-ir-a-bombinhas): De dezembro a março é a época de praia, com tudo aberto e a cidade em festa. Para aproveitar a praia com menos movimento, prefira do pós-Carnaval a abril. De maio a outubro Bombinhas fica mais calma: praias vazias, paisagens ainda mais bonitas e diárias menores, o momento certo para descansar de verdade.
+- [O que fazer em Bombinhas](https://pousadagaucha.com/guias/o-que-fazer-em-bombinhas): Além das praias, Bombinhas tem trilhas curtas com mirantes, mergulho e snorkel em águas claras e passeios de barco. Em dois ou três dias dá para combinar praia, uma trilha e um passeio.
+- [Onde comer em Bombinhas: indicações da pousada](https://pousadagaucha.com/guias/onde-comer-em-bombinhas): A cozinha de Bombinhas gira em torno de peixe, camarão e ostra. Estas são as indicações da equipe da Pousada Gaúcha, quase todas perto da pousada.
+- [Bombinhas no inverno vale a pena?](https://pousadagaucha.com/guias/bombinhas-no-inverno): No inverno Bombinhas entrega espaço, silêncio, água muito mais transparente, trilhas com clima confortável e a chance de ver baleia da areia.
+- [Bombinhas com crianças: o guia da família](https://pousadagaucha.com/guias/bombinhas-com-criancas): várias praias de Bombinhas são de baía, com mar raso, água transparente e pouca onda; o guia indica a praia certa por idade e a logística que faz diferença.
+- [Trilhas em Bombinhas: as que a gente indica](https://pousadagaucha.com/guias/trilhas-em-bombinhas): as cinco trilhas que a equipe indica, da mais leve para a mais puxada, com duração, desnível e o que levar.
+
+## Guías de Bombinhas (español)
+
+- [Guía de Bombinhas](https://pousadagaucha.com/es/guias)
+- [Cómo llegar a Bombinhas desde Argentina, Paraguay y Uruguay](https://pousadagaucha.com/es/guias/como-llegar-desde-argentina-paraguay-uruguay)
+- [Playas de Bombinhas: cuál elegir](https://pousadagaucha.com/es/guias/praias-de-bombinhas)
+- [Cómo llegar a Bombinhas](https://pousadagaucha.com/es/guias/como-chegar-a-bombinhas)
+- [Cuándo ir a Bombinhas: la mejor época](https://pousadagaucha.com/es/guias/quando-ir-a-bombinhas)
+- [Qué hacer en Bombinhas](https://pousadagaucha.com/es/guias/o-que-fazer-em-bombinhas)
+- [Dónde comer en Bombinhas](https://pousadagaucha.com/es/guias/onde-comer-em-bombinhas)
+- [Bombinhas en invierno](https://pousadagaucha.com/es/guias/bombinhas-no-inverno)
+- [Bombinhas con niños](https://pousadagaucha.com/es/guias/bombinhas-com-criancas)
+- [Senderos en Bombinhas](https://pousadagaucha.com/es/guias/trilhas-em-bombinhas)

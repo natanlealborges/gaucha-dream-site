@@ -1,9 +1,7 @@
+import { getBookingUrl, getWhatsAppUrl } from "@/lib/attribution";
 import { trackInitiateCheckout } from "@/lib/pixel";
 
-const BOOKING_URL =
-  "https://hbook.hsystem.com.br/Booking?companyId=5cae2795ab41d51dd869d73a&checkin=04/12/2019&checkout=08/12/2019&adults=1&children=0&_gl=1*1m36n9x*_gcl_au*MTkzNTI4MzE0Mi4xNzY2MzE3MTcy#_ga=2.158433650.936447759.1773250147-595639725.1766317175";
 
-const WHATSAPP_URL = "http://wa.me/5547997910034";
 
 const CTASection = () => {
   return (
@@ -17,7 +15,7 @@ const CTASection = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href={BOOKING_URL}
+            href={getBookingUrl()}
             target="_blank"
             rel="noopener noreferrer"
             onClick={trackInitiateCheckout}
@@ -26,7 +24,7 @@ const CTASection = () => {
             Reservar Agora
           </a>
           <a
-            href={WHATSAPP_URL}
+            href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="border-2 border-primary-foreground/30 text-primary-foreground px-10 py-4 rounded-lg text-lg font-medium hover:bg-primary-foreground/10 transition-colors"

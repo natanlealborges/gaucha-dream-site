@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import AppRoutes from "./AppRoutes.tsx";
 import { installConversionClickListener, trackPageView } from "@/lib/gtag";
+import { initializeAttribution } from "@/lib/attribution";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const RouteChangeTracker = () => {
 };
 
 const App = () => {
+  initializeAttribution();
   useEffect(() => installConversionClickListener(), []);
 
   return (

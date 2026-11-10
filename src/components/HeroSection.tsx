@@ -1,3 +1,4 @@
+import { getBookingUrl } from "@/lib/attribution";
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { trackInitiateCheckout } from "@/lib/pixel";
@@ -7,7 +8,6 @@ import aboutJacuzzi from "@/assets/about-jacuzzi.jpg";
 import roomGardenDeck from "@/assets/room-garden-deck.jpg";
 import breakfastBuffet from "@/assets/breakfast-buffet.jpg";
 
-const BOOKING_URL = "https://hbook.hsystem.com.br/Booking?companyId=5cae2795ab41d51dd869d73a&checkin=04/12/2019&checkout=08/12/2019&adults=1&children=0&_gl=1*1m36n9x*_gcl_au*MTkzNTI4MzE0Mi4xNzY2MzE3MTcy#_ga=2.158433650.936447759.1773250147-595639725.1766317175";
 
 const slides = [
 { image: heroBeach, alt: "Rooftop com jacuzzis e vista panorâmica do mar" },
@@ -94,7 +94,7 @@ const HeroSection = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up opacity-0" style={{ animationDelay: "0.8s" }}>
           <a
-            href={BOOKING_URL}
+            href={getBookingUrl()}
             target="_blank"
             rel="noopener noreferrer"
             onClick={trackInitiateCheckout}

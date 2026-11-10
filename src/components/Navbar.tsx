@@ -1,12 +1,11 @@
+import { getBookingUrl, getWhatsAppUrl } from "@/lib/attribution";
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, Instagram, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { trackInitiateCheckout, trackContact } from "@/lib/pixel";
 import { GUIDES_PUBLISHED } from "@/config/site";
 
-const BOOKING_URL = "https://hbook.hsystem.com.br/Booking?companyId=5cae2795ab41d51dd869d73a&checkin=04/12/2019&checkout=08/12/2019&adults=1&children=0&_gl=1*1m36n9x*_gcl_au*MTkzNTI4MzE0Mi4xNzY2MzE3MTcy#_ga=2.158433650.936447759.1773250147-595639725.1766317175";
 
-const WHATSAPP_URL = "http://wa.me/5547997910034";
 
 const PHONE_URL = "tel:+554733692472";
 
@@ -83,7 +82,7 @@ const Navbar = () => {
               <span className="hidden lg:inline">(47) 3369-2472</span>
             </a>
             <a
-              href={BOOKING_URL}
+              href={getBookingUrl()}
               target="_blank"
               rel="noopener noreferrer"
               onClick={trackInitiateCheckout}
@@ -127,7 +126,7 @@ const Navbar = () => {
               </a>
           )}
             <a
-            href={BOOKING_URL}
+            href={getBookingUrl()}
             target="_blank"
             rel="noopener noreferrer"
             onClick={trackInitiateCheckout}
@@ -136,7 +135,7 @@ const Navbar = () => {
               Reserve Já
             </a>
             <a
-              href={WHATSAPP_URL}
+              href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-foreground text-sm pt-2 font-medium">

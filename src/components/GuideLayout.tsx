@@ -1,3 +1,4 @@
+import { getBookingUrl } from "@/lib/attribution";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, ChevronRight } from "lucide-react";
@@ -7,8 +8,6 @@ import { GuideMeta, getRelatedGuides } from "@/data/guides";
 import { trackInitiateCheckout } from "@/lib/pixel";
 
 const BASE_URL = "https://pousadagaucha.com";
-const BOOKING_URL =
-  "https://hbook.hsystem.com.br/Booking?companyId=5cae2795ab41d51dd869d73a&checkin=04/12/2019&checkout=08/12/2019&adults=1&children=0&_gl=1*1m36n9x*_gcl_au*MTkzNTI4MzE0Mi4xNzY2MzE3MTcy#_ga=2.158433650.936447759.1773250147-595639725.1766317175";
 
 export type GuideSection = {
   heading: string;
@@ -161,7 +160,7 @@ const GuideLayout = ({ guide, intro, sections, heroImage }: GuideLayoutProps) =>
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href={BOOKING_URL}
+                href={getBookingUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={trackInitiateCheckout}

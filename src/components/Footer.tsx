@@ -1,3 +1,4 @@
+import { getWhatsAppUrl } from "@/lib/attribution";
 import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
@@ -28,7 +29,7 @@ const Footer = () => {
 
           <div className="text-sm space-y-1">
             <p className="text-primary-foreground font-semibold mb-3">Contato</p>
-            <a href="http://wa.me/5547997910034" target="_blank" rel="noopener noreferrer" className="block hover:text-primary-foreground transition-colors">
+            <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="block hover:text-primary-foreground transition-colors">
               WhatsApp: (47) 99791-0034
             </a>
             <a href="tel:+554733692472" className="block hover:text-primary-foreground transition-colors">

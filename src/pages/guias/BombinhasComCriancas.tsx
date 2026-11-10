@@ -60,7 +60,7 @@ const Page = () => (
         heading: "Vale a pena vir com criança fora do verão?",
         paragraphs: [
           "Vale, e muita gente se surpreende. Fora da alta temporada a praia é sua, não tem fila em lugar nenhum e a criança tem espaço.",
-          "O único ponto é a água, que fica fria para banho demorado. Se o objetivo da viagem é a criança dentro do mar, venha entre dezembro e março. Se é a família junta e descansada, qualquer mês serve.",
+          "Na baixa temporada a cidade fica mais calma, as praias ficam vazias, há paz e tranquilidade e as diárias são menores. Se o objetivo da viagem é a criança dentro do mar, venha entre dezembro e março. Se é a família junta e descansada, qualquer mês serve.",
           "Se você vem com criança, conte pra gente as idades quando reservar. A gente indica a praia certa para cada dia, o apartamento que faz mais sentido para o tamanho da família e o que dá para deixar em casa. Equipe Pousada Gaúcha — anfitriões e consultores de experiência em Bombinhas.",
         ],
       },
@@ -120,7 +120,7 @@ const Page = () => (
             heading: "¿Vale la pena venir con niños fuera del verano?",
             paragraphs: [
               "Sí, y mucha gente se sorprende. Fuera de la temporada alta la playa es de uno, no hay filas en ningún lugar y los niños tienen espacio.",
-              "Si el objetivo del viaje es que los niños estén todo el día en el mar, lo ideal es venir entre diciembre y marzo. Si es la familia junta y descansada, cualquier mes sirve.",
+              "En temporada baja la ciudad está más tranquila, las playas están vacías, hay paz y tranquilidad y las tarifas son menores. Si el objetivo del viaje es que los niños estén todo el día en el mar, lo ideal es venir entre diciembre y marzo. Si es la familia junta y descansada, cualquier mes sirve.",
               "Para quienes viajan con niños, conviene contarnos las edades al reservar. Así indicamos la playa adecuada para cada día, el apartamento que tiene más sentido para el tamaño de la familia y lo que se puede dejar en casa. Equipo Pousada Gaúcha — anfitriones y consultores de experiencias en Bombinhas.",
             ],
           },

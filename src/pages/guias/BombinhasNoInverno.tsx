@@ -9,14 +9,14 @@ const Page = () => (
     content={{
       pt: {
     heroImage: { src: heroBeach, alt: "Vista aérea da Praia de Bombinhas, em frente à Pousada Gaúcha, com mar calmo e o trapiche" },
-    intro: "Vale, desde que você saiba o que vem buscar. No inverno Bombinhas entrega espaço, silêncio, água muito mais transparente, trilhas com clima confortável e a chance de ver baleia da areia. O que muda é que o banho de mar fica curto e parte dos restaurantes reduz o horário. A gente recebe hóspedes aqui há 26 anos e vê a mesma cena todo ano: quem vem no inverno pela primeira vez volta achando que descobriu Bombinhas duas vezes. Esta página não é um folheto. É o que a gente responde por WhatsApp toda semana.",
+    intro: "Vale, desde que você saiba o que vem buscar. No inverno Bombinhas entrega espaço, silêncio, água muito mais transparente, trilhas com clima confortável e a chance de ver baleia da areia. O que muda é que a cidade fica mais calma e parte dos restaurantes reduz o horário. A gente recebe hóspedes aqui há 26 anos e vê a mesma cena todo ano: quem vem no inverno pela primeira vez volta achando que descobriu Bombinhas duas vezes. Esta página não é um folheto. É o que a gente responde por WhatsApp toda semana.",
     sections: [
       {
         heading: "O que você ganha vindo entre maio e setembro",
         paragraphs: [
           "Espaço. Você estaciona na frente do lugar onde vai comer. Senta sem esperar. Caminha na areia escolhendo onde parar.",
           "Trilhas em clima bom. As temperaturas costumam ficar entre 13 °C e 20 °C, com pouca chuva. Quem já subiu o Morro do Macaco em janeiro sabe a diferença.",
-          "Nada de taxa de entrada. A Taxa de Preservação Ambiental de Bombinhas é cobrada por veículo entre 15 de novembro e 15 de abril, e em 2026 chegou a R$ 191,50 para carros. Fora desse período não há cobrança. No inverno você entra e sai da cidade quantas vezes quiser sem pagar nada, o que muda bastante o planejamento de quem quer conhecer Porto Belo, Itapema ou a Ilha de Porto Belo no mesmo passeio.",
+          "Nada de taxa de entrada. A Taxa de Preservação Ambiental de Bombinhas é cobrada por veículo entre 15 de novembro e 15 de abril. O valor varia por tipo de veículo e é atualizado a cada temporada; confira o valor vigente no site da Prefeitura de Bombinhas. Fora desse período não há cobrança. No inverno você entra e sai da cidade quantas vezes quiser sem pagar nada, o que muda bastante o planejamento de quem quer conhecer Porto Belo, Itapema ou a Ilha de Porto Belo no mesmo passeio.",
           "Diárias de baixa temporada. Vale para hospedagem, restaurante e passeio.",
         ],
         links: [{ to: "/guias/quando-ir-a-bombinhas", label: "Quando ir a Bombinhas: melhor época" }],
@@ -27,7 +27,7 @@ const Page = () => (
           "Aqui está o que quase ninguém conta sobre Bombinhas: o verão é a estação mais chuvosa do ano aqui. E chuva forte mexe com o mar. Ela carrega areia e sedimento dos morros e deixa a água mais turva por um ou dois dias.",
           "No inverno chove muito menos e as correntes ficam mais estáveis. O resultado é aquela água verde-azulada das fotos.",
           "Não é acaso que Bombinhas é a Capital Nacional do Mergulho Ecológico e que os mergulhadores vêm justamente nesta época: é quando dá para enxergar longe debaixo d'água. Da areia, o efeito é o mesmo.",
-          "Sobre entrar no mar, com sinceridade: a água fica mais fria, e quanto você aguenta depende muito de onde você vem. Gaúcho e catarinense entram. Quem vem do Nordeste, provavelmente não. Mas mesmo quem não entra costuma dizer que a praia no inverno é mais bonita, e a gente concorda.",
+          "Na baixa temporada a cidade fica mais calma, as praias ficam vazias e a paisagem aparece inteira. Quem vem nesta época costuma dizer que a praia no inverno é mais bonita, e a gente concorda.",
         ],
       },
       {
@@ -87,7 +87,7 @@ const Page = () => (
             paragraphs: [
               "Espacio. Se estaciona frente al lugar donde se va a comer. Se consigue mesa sin esperar. Se camina por la arena eligiendo dónde parar.",
               "Senderos con buen clima. Las temperaturas suelen estar entre 13 °C y 20 °C, con poca lluvia. Quien ya subió el Morro do Macaco en enero sabe la diferencia.",
-              "Sin tasa de entrada. La Tasa de Preservación Ambiental de Bombinhas se cobra por vehículo entre el 15 de noviembre y el 15 de abril. Fuera de ese período no hay cobro. En invierno se puede entrar y salir de la ciudad las veces que se quiera sin pagar nada, lo que cambia bastante la planificación para conocer Porto Belo, Itapema o la Ilha de Porto Belo en el mismo paseo.",
+              "Sin tasa de entrada. La Tasa de Preservación Ambiental de Bombinhas se cobra por vehículo entre el 15 de noviembre y el 15 de abril. El valor varía según el tipo de vehículo y se actualiza cada temporada; conviene consultar el valor vigente en el sitio de la Prefeitura de Bombinhas. Fuera de ese período no hay cobro. En invierno se puede entrar y salir de la ciudad las veces que se quiera sin pagar nada, lo que cambia bastante la planificación para conocer Porto Belo, Itapema o la Ilha de Porto Belo en el mismo paseo.",
               "Tarifas de temporada baja. Vale para alojamiento, restaurantes y paseos.",
             ],
             links: [{ to: "/es/guias/quando-ir-a-bombinhas", label: "Cuándo ir a Bombinhas: la mejor época" }],
@@ -98,7 +98,7 @@ const Page = () => (
               "Esto es lo que casi nadie cuenta sobre Bombinhas: el verano es la estación más lluviosa del año acá. Y la lluvia fuerte mueve el mar. Arrastra arena y sedimento de los cerros y deja el agua más turbia durante uno o dos días.",
               "En invierno llueve mucho menos y las corrientes son más estables. El resultado es esa agua verde azulada de las fotos.",
               "No es casualidad que Bombinhas sea la Capital Nacional del Buceo Ecológico y que los buzos vengan justamente en esta época: es cuando se ve lejos bajo el agua. Desde la arena, el efecto es el mismo.",
-              "Quien viene en invierno suele decir que la playa en esta época es más linda, y estamos de acuerdo.",
+              "En temporada baja la ciudad está más tranquila, las playas están vacías y el paisaje se muestra entero. Quien viene en esta época suele decir que la playa en invierno es más linda, y estamos de acuerdo.",
             ],
           },
           {

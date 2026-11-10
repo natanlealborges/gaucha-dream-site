@@ -3,7 +3,7 @@ import { getWhatsAppUrl } from "@/lib/attribution";
 import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
-import { publishedGuides } from "@/data/guides";
+import { guidePath, guidesFor, guideText } from "@/data/guides";
 import { GUIDES_PUBLISHED } from "@/config/site";
 
 const Footer = () => {
@@ -44,17 +44,17 @@ const Footer = () => {
           </div>
 
           {/* Seção "Guia de Bombinhas" oculta enquanto GUIDES_PUBLISHED = false (ver src/config/site.ts) */}
-          {GUIDES_PUBLISHED && locale === "pt" && (
+          {GUIDES_PUBLISHED && locale !== "en" && (
           <div className="text-sm md:col-span-2">
             <p className="text-primary-foreground font-semibold mb-3">{t("copy013")}</p>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4">
-              {publishedGuides().map((g) => (
+              {guidesFor(locale === "es" ? "es" : "pt").map((g) => (
                 <li key={g.slug}>
                   <Link
-                    to={path(`/guias/${g.slug}`)}
+                    to={guidePath(g.slug, locale === "es" ? "es" : "pt")}
                     className="hover:text-primary-foreground transition-colors"
                   >
-                    {g.shortLabel}
+                    {guideText(g, locale === "es" ? "es" : "pt").shortLabel}
                   </Link>
                 </li>
               ))}

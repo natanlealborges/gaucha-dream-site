@@ -54,10 +54,10 @@ const Navbar = () => {
           <div className="hidden md:block"><LanguageSelector scrolled={scrolled} /></div>
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.filter((link) => locale === "pt" || !link.href.startsWith("/guias")).map((link) =>
+            {navLinks.filter((link) => locale !== "en" || !link.href.startsWith("/guias")).map((link) =>
             <a
               key={link.href}
-              href={path(link.href)}
+              href={link.href === "/guias" && locale === "es" ? "/es/guias" : path(link.href)}
               className={`text-sm font-medium transition-colors hover:text-accent ${
               scrolled ? "text-foreground" : "text-primary-foreground/90"}`
               }>
@@ -119,10 +119,10 @@ const Navbar = () => {
       <div className="md:hidden bg-card/98 backdrop-blur-lg border-t border-border">
           <div className="px-6 py-6 space-y-4">
             <LanguageSelector />
-            {navLinks.filter((link) => locale === "pt" || !link.href.startsWith("/guias")).map((link) =>
+            {navLinks.filter((link) => locale !== "en" || !link.href.startsWith("/guias")).map((link) =>
           <a
             key={link.href}
-            href={path(link.href)}
+            href={link.href === "/guias" && locale === "es" ? "/es/guias" : path(link.href)}
             onClick={() => setIsOpen(false)}
             className="block text-foreground font-medium py-2">
             

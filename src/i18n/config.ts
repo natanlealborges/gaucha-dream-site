@@ -1,3 +1,4 @@
+import { getGuide, guideLocales } from "@/data/guides";
 export const LOCALES = ["pt", "es", "en"] as const;
 export type Locale = (typeof LOCALES)[number];
 
@@ -57,6 +58,20 @@ export function absoluteUrl(path: string, locale: Locale): string {
 /** Target used by the language selector. Pages without translation open the selected home page. */
 export function switchLocalePath(pathname: string, hash: string, locale: Locale): string {
   const { path } = splitLocale(pathname);
+  const guidePath = guideSwitchPath(normalizePath(path), locale);
+  if (guidePath) return guidePath;
   if (!isTranslatedPath(path)) return locale === "pt" ? "/" : `/${locale}`;
   return localizePath(`${normalizePath(path)}${hash}`, locale);
+}
+
+/** Guides exist in Portuguese and Spanish only; English (or a missing translation) opens the selected home page. */
+function guideSwitchPath(path: string, locale: Locale): string | null {
+  if (path !== "/guias" && !path.startsWith("/guias/")) return null;
+  if (locale === "en") return "/en";
+  const slug = path.split("/")[2];
+  if (slug) {
+    const guide = getGuide(slug);
+    if (!guide || !guideLocales(guide).includes(locale)) return locale === "pt" ? "/" : `/${locale}`;
+  }
+  return locale === "es" ? `/es${path}` : path;
 }

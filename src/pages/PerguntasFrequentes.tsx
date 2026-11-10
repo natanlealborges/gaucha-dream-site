@@ -235,7 +235,7 @@ const CATEGORIES: Category[] = [
       {
         question: "Preciso pagar a Taxa de Preservação Ambiental?",
         answer: [
-          "Depende de quando você vem. A TPA é cobrada por veículo entre 15 de novembro e 15 de abril. Em 2026 o valor chegou a R$ 191,50 para carros de passeio. Fora desse período não há cobrança.",
+          "Depende de quando você vem. A TPA é cobrada por veículo entre 15 de novembro e 15 de abril. O valor varia por tipo de veículo e é atualizado a cada temporada; confira o valor vigente no site da Prefeitura de Bombinhas. Fora desse período não há cobrança.",
           "Um detalhe que pega muita gente: a taxa vale por 24 horas. Se você sair do município e voltar depois desse prazo, paga de novo. Vale planejar os passeios para fora de Bombinhas pensando nisso.",
         ],
       },
@@ -307,7 +307,7 @@ const CATEGORIES: Category[] = [
       {
         question: "Quanto custa a Taxa de Preservação Ambiental de Bombinhas?",
         answer: [
-          "A taxa é cobrada de 15 de novembro a 15 de abril. Em 2026 chegou a R$ 191,50 para carros de passeio. Ela vale por 24 horas: sair da cidade e voltar depois desse prazo implica novo pagamento. A cobrança é da Prefeitura de Bombinhas, não da pousada.",
+          "A taxa é cobrada de 15 de novembro a 15 de abril. O valor varia por tipo de veículo e é atualizado a cada temporada; confira o valor vigente no site da Prefeitura de Bombinhas. Ela vale por 24 horas: sair da cidade e voltar depois desse prazo implica novo pagamento. A cobrança é da Prefeitura de Bombinhas, não da pousada.",
         ],
       },
       {

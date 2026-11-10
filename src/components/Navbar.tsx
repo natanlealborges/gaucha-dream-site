@@ -1,3 +1,5 @@
+import { useI18n } from "@/i18n/context";
+import { LanguageSelector } from "@/i18n/LanguageSelector";
 import { getBookingUrl, getWhatsAppUrl } from "@/lib/attribution";
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, Instagram, MessageCircle } from "lucide-react";
@@ -20,6 +22,8 @@ const navLinks = [
 
 
 const Navbar = () => {
+  const { t, text: translate, locale, path } = useI18n();
+
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -41,23 +45,24 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-3">
-            <img src={logo} alt="Pousada Gaúcha" className="h-12 w-12 rounded-full object-cover" />
+            <img src={logo} alt={t("copy606")} className="h-12 w-12 rounded-full object-cover" />
             <span className={`font-display text-2xl font-bold tracking-tight transition-colors ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
               Pousada Gaúcha
             </span>
           </a>
 
+          <div className="hidden md:block"><LanguageSelector scrolled={scrolled} /></div>
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) =>
+            {navLinks.filter((link) => locale === "pt" || !link.href.startsWith("/guias")).map((link) =>
             <a
               key={link.href}
-              href={link.href}
+              href={path(link.href)}
               className={`text-sm font-medium transition-colors hover:text-accent ${
               scrolled ? "text-foreground" : "text-primary-foreground/90"}`
               }>
               
-                {link.label}
+                {translate(link.label)}
               </a>
             )}
             <a
@@ -65,7 +70,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className={`transition-colors hover:text-accent ${scrolled ? "text-foreground" : "text-primary-foreground/90"}`}
-              aria-label="Instagram">
+              aria-label={t("copy607")}>
 
               <Instagram size={18} />
             </a>
@@ -77,7 +82,7 @@ const Navbar = () => {
                   ? "border-foreground/30 text-foreground hover:bg-foreground/5"
                   : "border-primary-foreground/40 text-primary-foreground/90 hover:bg-primary-foreground/10"
               }`}
-              aria-label="Ligar para (47) 3369-2472">
+              aria-label={t("copy006")}>
               <Phone size={15} />
               <span className="hidden lg:inline">(47) 3369-2472</span>
             </a>
@@ -86,10 +91,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={trackInitiateCheckout}
-              className="text-accent-foreground px-6 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity bg-green-500">
-
-              RESERVE JÁ
-            </a>
+              className="text-accent-foreground px-6 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity bg-green-500">{t("copy007")}</a>
           </div>
 
           {/* Mobile toggle + phone icon */}
@@ -98,10 +100,11 @@ const Navbar = () => {
               href={PHONE_URL}
               onClick={trackContact}
               className={`p-2 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
-              aria-label="Ligar para (47) 3369-2472">
+              aria-label={t("copy006")}>
               <Phone size={22} />
             </a>
             <button
+              aria-label={isOpen ? translate("Fechar menu") : translate("Abrir menu")}
               onClick={() => setIsOpen(!isOpen)}
               className={`p-2 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
 
@@ -115,14 +118,15 @@ const Navbar = () => {
       {isOpen &&
       <div className="md:hidden bg-card/98 backdrop-blur-lg border-t border-border">
           <div className="px-6 py-6 space-y-4">
-            {navLinks.map((link) =>
+            <LanguageSelector />
+            {navLinks.filter((link) => locale === "pt" || !link.href.startsWith("/guias")).map((link) =>
           <a
             key={link.href}
-            href={link.href}
+            href={path(link.href)}
             onClick={() => setIsOpen(false)}
             className="block text-foreground font-medium py-2">
             
-                {link.label}
+                {translate(link.label)}
               </a>
           )}
             <a
@@ -130,12 +134,9 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={trackInitiateCheckout}
-            className="block bg-accent text-accent-foreground px-6 py-3 rounded-lg text-center font-semibold">
-            
-              Reserve Já
-            </a>
+            className="block bg-accent text-accent-foreground px-6 py-3 rounded-lg text-center font-semibold">{t("copy008")}</a>
             <a
-              href={getWhatsAppUrl()}
+              href={getWhatsAppUrl(locale)}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-foreground text-sm pt-2 font-medium">

@@ -1,5 +1,6 @@
+import { useI18n } from "@/i18n/context";
 import { getBookingUrl } from "@/lib/attribution";
-import { Helmet } from "react-helmet-async";
+import { LocaleHelmet as Helmet } from "@/i18n/LocaleHelmet";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -366,6 +367,8 @@ const CATEGORIES: Category[] = [
 ];
 
 const PerguntasFrequentes = () => {
+  const { t, text: translate, locale, path } = useI18n();
+
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -390,12 +393,12 @@ const PerguntasFrequentes = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Perguntas frequentes · Pousada Gaúcha Bombinhas</title>
+        <title>{t("copy433")}</title>
         <meta
           name="description"
           content="Check-in, chegada antecipada, café da manhã, estacionamento, crianças, taxa de Bombinhas e serviço de praia. Respostas diretas de quem recebe há 26 anos."
         />
-        <link rel="canonical" href={URL} />
+        <link rel="canonical" href={path(URL)} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Perguntas frequentes · Pousada Gaúcha Bombinhas" />
         <meta
@@ -417,38 +420,33 @@ const PerguntasFrequentes = () => {
 
       <article className="pt-32 pb-16 px-6">
         <div className="max-w-3xl mx-auto">
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-            <Link to="/" className="hover:text-primary">Início</Link>
+          <nav aria-label={t("copy596")} className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
+            <Link to={path("/")} className="hover:text-primary">{t("copy000")}</Link>
             <ChevronRight size={14} />
-            <span className="text-foreground">Perguntas frequentes</span>
+            <span className="text-foreground">{t("copy022")}</span>
           </nav>
 
           <header className="mb-10">
             <p className="font-semibold text-sm tracking-[0.2em] uppercase mb-3 text-primary">
               Pousada Gaúcha
             </p>
-            <h1 className="font-display text-3xl md:text-5xl font-bold text-foreground leading-tight mb-6">
-              Perguntas frequentes
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              As dúvidas que mais chegam até a gente, respondidas com a franqueza de quem
-              recebe hóspedes em Bombinhas há 26 anos.
-            </p>
+            <h1 className="font-display text-3xl md:text-5xl font-bold text-foreground leading-tight mb-6">{t("copy022")}</h1>
+            <p className="text-lg text-muted-foreground leading-relaxed">{t("copy435")}</p>
           </header>
 
           {CATEGORIES.map((cat) => (
-            <section key={cat.heading} className="mb-12">
+            <section key={translate(cat.heading)} className="mb-12">
               <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mt-10 mb-6">
-                {cat.heading}
+                {translate(cat.heading)}
               </h2>
               {cat.items.map((qa) => (
-                <div key={qa.question} className="mb-8">
+                <div key={translate(qa.question)} className="mb-8">
                   <h3 className="font-display text-xl font-bold text-foreground mb-3">
-                    {qa.question}
+                    {translate(qa.question)}
                   </h3>
                   {qa.answer.map((p, i) => (
                     <p key={i} className="text-muted-foreground leading-relaxed mb-4">
-                      {p}
+                      {translate(p)}
                     </p>
                   ))}
                 </div>
@@ -458,12 +456,8 @@ const PerguntasFrequentes = () => {
 
           {/* CTA final */}
           <section className="mt-12 p-8 md:p-12 bg-foreground text-primary-foreground rounded-xl text-center">
-            <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">
-              Ficou alguma dúvida?
-            </h2>
-            <p className="text-primary-foreground/70 mb-8 max-w-lg mx-auto leading-relaxed">
-              Fale com a gente pelo WhatsApp ou reserve direto pelo site, com o melhor valor.
-            </p>
+            <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">{t("copy436")}</h2>
+            <p className="text-primary-foreground/70 mb-8 max-w-lg mx-auto leading-relaxed">{t("copy437")}</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
                 href={getBookingUrl()}
@@ -471,15 +465,11 @@ const PerguntasFrequentes = () => {
                 rel="noopener noreferrer"
                 onClick={trackInitiateCheckout}
                 className="bg-green-500 text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-              >
-                Reservar na Pousada Gaúcha
-              </a>
+              >{t("copy438")}</a>
               <Link
-                to="/"
+                to={path("/")}
                 className="border-2 border-primary-foreground/30 text-primary-foreground px-8 py-3 rounded-lg font-medium hover:bg-primary-foreground/10 transition-colors"
-              >
-                Conhecer a pousada
-              </Link>
+              >{t("copy439")}</Link>
             </div>
           </section>
         </div>

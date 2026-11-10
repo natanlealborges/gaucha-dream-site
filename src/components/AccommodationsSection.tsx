@@ -1,3 +1,4 @@
+import { useI18n } from "@/i18n/context";
 import { getBookingUrl } from "@/lib/attribution";
 import { UmbrellaIcon, Wind, Utensils, Bath } from "lucide-react";
 import { trackInitiateCheckout } from "@/lib/pixel";
@@ -34,50 +35,45 @@ const amenities = [
 
 
 const AccommodationsSection = () => {
+  const { t, text: translate, locale, path } = useI18n();
+
   return (
     <section id="acomodacoes" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="font-semibold text-sm tracking-[0.2em] uppercase mb-3 text-secondary-foreground">Acomodações</p>
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
-            Conforto à beira-mar
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Todos os apartamentos são equipados com cozinha completa, ar-condicionado  decoração aconchegante e muita comodidade para suas férias.
-
-          </p>
+          <p className="font-semibold text-sm tracking-[0.2em] uppercase mb-3 text-secondary-foreground">{t("copy001")}</p>
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">{t("copy116")}</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">{t("copy117")}</p>
         </div>
 
         {/* Room cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {rooms.map((room) =>
           <div
-            key={room.name}
+            key={translate(room.name)}
             className="group bg-card rounded-xl overflow-hidden shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elevated)] transition-shadow duration-300">
             
               <div className="relative overflow-hidden aspect-[4/3]">
                 <img
                 src={room.image}
-                alt={`Acomodação ${room.name}`}
+                alt={`${translate("Acomodação")} ${room.name}`}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy" />
               
                 <div className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
-                  {room.highlight}
+                  {translate(room.highlight)}
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="font-display text-2xl font-bold text-foreground mb-3">{room.name}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-5">{room.description}</p>
+                <h3 className="font-display text-2xl font-bold text-foreground mb-3">{translate(room.name)}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-5">{translate(room.description)}</p>
                 <a
                 href={getBookingUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={trackInitiateCheckout}
-                className="inline-block bg-primary text-primary-foreground px-6 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
-                
-                  Reservar
-                </a>
+                className="inline-block bg-primary text-primary-foreground px-6 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">{t("copy118")}</a>
               </div>
             </div>
           )}
@@ -86,9 +82,9 @@ const AccommodationsSection = () => {
         {/* Amenities strip */}
         <div className="flex flex-wrap justify-center gap-8 md:gap-16">
           {amenities.map(({ icon: Icon, label }) =>
-          <div key={label} className="flex items-center gap-2 text-muted-foreground">
+          <div key={translate(label)} className="flex items-center gap-2 text-muted-foreground">
               <Icon size={20} className="text-primary" />
-              <span className="text-sm font-medium">{label}</span>
+              <span className="text-sm font-medium">{translate(label)}</span>
             </div>
           )}
         </div>

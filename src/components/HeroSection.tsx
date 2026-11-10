@@ -1,3 +1,4 @@
+import { useI18n } from "@/i18n/context";
 import { getBookingUrl } from "@/lib/attribution";
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -18,6 +19,8 @@ const slides = [
 
 
 const HeroSection = () => {
+  const { t, text: translate, locale, path } = useI18n();
+
   const [current, setCurrent] = useState(0);
 
   const next = useCallback(() => {
@@ -54,14 +57,14 @@ const HeroSection = () => {
       <button
         onClick={prev}
         className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 bg-background/20 backdrop-blur-sm hover:bg-background/40 text-primary-foreground rounded-full p-2 transition-colors"
-        aria-label="Slide anterior">
+        aria-label={t("copy029")}>
         
         <ChevronLeft size={24} />
       </button>
       <button
         onClick={next}
         className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 bg-background/20 backdrop-blur-sm hover:bg-background/40 text-primary-foreground rounded-full p-2 transition-colors"
-        aria-label="Próximo slide">
+        aria-label={t("copy030")}>
         
         <ChevronRight size={24} />
       </button>
@@ -75,39 +78,28 @@ const HeroSection = () => {
           className={`w-2.5 h-2.5 rounded-full transition-all ${
           i === current ? "bg-primary-foreground w-8" : "bg-primary-foreground/40"}`
           }
-          aria-label={`Ir para slide ${i + 1}`} />
+          aria-label={`${translate("Ir para slide")} ${i + 1}`} />
 
         )}
       </div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <p className="text-sand text-sm md:text-base font-body tracking-[0.3em] uppercase mb-6 animate-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
-          Bombinhas • Santa Catarina
-        </p>
-        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up opacity-0" style={{ animationDelay: "0.4s" }}>
-          Pousada pé na areia<br />
-          <span className="italic font-medium">em Bombinhas</span>
+        <p className="text-sand text-sm md:text-base font-body tracking-[0.3em] uppercase mb-6 animate-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>{t("copy031")}</p>
+        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up opacity-0" style={{ animationDelay: "0.4s" }}>{t("copy032")}<br />
+          <span className="italic font-medium">{t("copy033")}</span>
         </h1>
-        <p className="text-primary-foreground/80 text-lg md:text-xl font-body max-w-2xl mx-auto mb-10 animate-fade-up opacity-0" style={{ animationDelay: "0.6s" }}>
-          Pousada beira-mar, pé na areia na Praia de Bombinhas. Café à beira-mar, serviço de praia incluído, jacuzzis na cobertura e 26 anos de família gaúcha.
-        </p>
+        <p className="text-primary-foreground/80 text-lg md:text-xl font-body max-w-2xl mx-auto mb-10 animate-fade-up opacity-0" style={{ animationDelay: "0.6s" }}>{t("copy034")}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up opacity-0" style={{ animationDelay: "0.8s" }}>
           <a
             href={getBookingUrl()}
             target="_blank"
             rel="noopener noreferrer"
             onClick={trackInitiateCheckout}
-            className="text-accent-foreground px-10 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity bg-green-500">
-            
-            ​RESERVE AGORA 
-          </a>
+            className="text-accent-foreground px-10 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity bg-green-500">{t("copy035")}</a>
           <a
             href="#acomodacoes"
-            className="border-2 border-primary-foreground/40 text-primary-foreground px-10 py-4 rounded-lg text-lg font-medium hover:bg-primary-foreground/10 transition-colors">
-            
-            Conheça Nossos Quartos
-          </a>
+            className="border-2 border-primary-foreground/40 text-primary-foreground px-10 py-4 rounded-lg text-lg font-medium hover:bg-primary-foreground/10 transition-colors">{t("copy036")}</a>
         </div>
       </div>
 

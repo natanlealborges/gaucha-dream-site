@@ -1,3 +1,4 @@
+import { useI18n } from "@/i18n/context";
 import { getWhatsAppUrl } from "@/lib/attribution";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { trackContact } from "@/lib/pixel";
@@ -5,16 +6,14 @@ import { trackContact } from "@/lib/pixel";
 const PHONE_URL = "tel:+554733692472";
 
 const ContactSection = () => {
+  const { t, text: translate, locale, path } = useI18n();
+
   return (
     <section id="contato" className="section-padding bg-background">
       <div className="max-w-4xl mx-auto text-center">
-        <p className="font-semibold text-sm tracking-[0.2em] uppercase mb-3 text-secondary-foreground">Contato</p>
-        <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">
-          Entre em contato
-        </h2>
-        <p className="text-muted-foreground text-lg mb-12 max-w-xl mx-auto">
-          Estamos prontos para ajudar a planejar suas férias perfeitas em Bombinhas.
-        </p>
+        <p className="font-semibold text-sm tracking-[0.2em] uppercase mb-3 text-secondary-foreground">{t("copy005")}</p>
+        <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">{t("copy143")}</h2>
+        <p className="text-muted-foreground text-lg mb-12 max-w-xl mx-auto">{t("copy144")}</p>
 
         <div className="grid sm:grid-cols-3 gap-8 mb-12">
           <div className="flex flex-col items-center gap-3">
@@ -22,8 +21,8 @@ const ContactSection = () => {
               <Phone size={22} className="text-primary" />
             </div>
             <div>
-              <p className="font-semibold text-foreground text-sm mb-2">WhatsApp</p>
-              <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm hover:text-primary">(47) 99791-0034</a>
+              <p className="font-semibold text-foreground text-sm mb-2">{t("copy145")}</p>
+              <a href={getWhatsAppUrl(locale)} target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm hover:text-primary">(47) 99791-0034</a>
             </div>
           </div>
 
@@ -32,7 +31,7 @@ const ContactSection = () => {
               <Phone size={22} className="text-primary" />
             </div>
             <div>
-              <p className="font-semibold text-foreground text-sm mb-2">Telefone</p>
+              <p className="font-semibold text-foreground text-sm mb-2">{t("copy146")}</p>
               <a href={PHONE_URL} onClick={trackContact} className="text-muted-foreground text-sm hover:text-primary">(47) 3369-2472</a>
             </div>
           </div>
@@ -42,7 +41,7 @@ const ContactSection = () => {
               <Mail size={22} className="text-primary" />
             </div>
             <div>
-              <p className="font-semibold text-foreground text-sm">Email</p>
+              <p className="font-semibold text-foreground text-sm">{t("copy147")}</p>
               <a href="mailto:reservas@pousadagaucha.com.br" className="text-muted-foreground text-sm hover:text-primary break-all">
                 reservas@pousadagaucha.com.br
               </a>
@@ -54,22 +53,18 @@ const ContactSection = () => {
               <MapPin size={22} className="text-primary" />
             </div>
             <div>
-              <p className="font-semibold text-foreground text-sm">Endereço</p>
-              <p className="text-muted-foreground text-sm">R. Cascudo, 10-A - Beira Mar<br />Bombinhas - SC</p>
+              <p className="font-semibold text-foreground text-sm">{t("copy148")}</p>
+              <p className="text-muted-foreground text-sm">R. Cascudo, 10-A - Beira Mar<br />{t("copy149")}</p>
             </div>
           </div>
         </div>
 
         <a
-          href={getWhatsAppUrl()}
+          href={getWhatsAppUrl(locale)}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-accent-foreground px-10 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity bg-green-500">
-          
-          Fale pelo WhatsApp
-        </a>
-        <p className="text-muted-foreground text-sm mt-6">
-          ou ligue para nós:{" "}
+          className="inline-flex items-center gap-2 text-accent-foreground px-10 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity bg-green-500">{t("copy136")}</a>
+        <p className="text-muted-foreground text-sm mt-6">{t("copy150")}{" "}
           <a href={PHONE_URL} onClick={trackContact} className="font-semibold text-foreground hover:text-primary transition-colors">
             (47) 3369-2472
           </a>

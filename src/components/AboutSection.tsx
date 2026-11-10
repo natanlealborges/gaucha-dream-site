@@ -1,3 +1,4 @@
+import { useI18n } from "@/i18n/context";
 import { MapPin, Star, Users, Sun } from "lucide-react";
 import aboutDeck from "@/assets/about-deck.jpg";
 import aboutJacuzzi from "@/assets/about-jacuzzi.jpg";
@@ -27,33 +28,29 @@ const features = [
 
 
 const AboutSection = () => {
+  const { t, text: translate, locale, path } = useI18n();
+
   return (
     <section id="sobre" className="section-padding bg-sand">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
           {/* Text */}
           <div>
-            <p className="font-semibold text-sm tracking-[0.2em] uppercase mb-3 text-secondary-foreground">Sobre nós</p>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-              Acolhimento e conforto desde sempre
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              A <strong className="text-foreground">Pousada Gaúcha</strong>, localizada em Bombinhas/SC, é sinônimo de acolhimento familiar, conforto e profissionalismo.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              Situada literalmente à beira-mar, nossa pousada oferece acesso direto à praia, sendo a escolha ideal para quem viaja com crianças e busca praticidade, segurança e tranquilidade.
-            </p>
+            <p className="font-semibold text-sm tracking-[0.2em] uppercase mb-3 text-secondary-foreground">{t("copy126")}</p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">{t("copy127")}</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">{t("copy128")}<strong className="text-foreground">Pousada Gaúcha</strong>{t("copy129")}</p>
+            <p className="text-muted-foreground leading-relaxed mb-8">{t("copy130")}</p>
           </div>
 
           {/* Features grid */}
           <div className="grid sm:grid-cols-2 gap-6">
             {features.map(({ icon: Icon, title, description }) =>
-            <div key={title} className="bg-card p-6 rounded-xl shadow-[var(--shadow-soft)]">
+            <div key={translate(title)} className="bg-card p-6 rounded-xl shadow-[var(--shadow-soft)]">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <Icon size={24} className="text-primary" />
                 </div>
-                <h3 className="font-display text-lg font-bold text-foreground mb-2">{title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
+                <h3 className="font-display text-lg font-bold text-foreground mb-2">{translate(title)}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{translate(description)}</p>
               </div>
             )}
           </div>
@@ -61,9 +58,9 @@ const AboutSection = () => {
 
         {/* Photo gallery */}
         <div className="grid md:grid-cols-3 gap-4">
-          <img src={aboutDeck} alt="Deck com cadeiras e vista para a praia" className="w-full h-64 object-cover rounded-xl" loading="lazy" />
-          <img src={aboutJacuzzi} alt="Jacuzzi com vista para o mar" className="w-full h-64 object-cover rounded-xl" loading="lazy" />
-          <img src={breakfastBuffet} alt="Buffet de café da manhã da Pousada Gaúcha" className="w-full h-64 object-cover rounded-xl" loading="lazy" />
+          <img src={aboutDeck} alt={t("copy131")} className="w-full h-64 object-cover rounded-xl" loading="lazy" />
+          <img src={aboutJacuzzi} alt={t("copy026")} className="w-full h-64 object-cover rounded-xl" loading="lazy" />
+          <img src={breakfastBuffet} alt={t("copy132")} className="w-full h-64 object-cover rounded-xl" loading="lazy" />
         </div>
       </div>
     </section>);

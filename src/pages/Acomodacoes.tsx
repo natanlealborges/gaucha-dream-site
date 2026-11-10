@@ -1,5 +1,6 @@
+import { useI18n } from "@/i18n/context";
 import { getWhatsAppUrl } from "@/lib/attribution";
-import { Helmet } from "react-helmet-async";
+import { LocaleHelmet as Helmet } from "@/i18n/LocaleHelmet";
 import { Link } from "react-router-dom";
 import { ChevronRight, MessageCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -48,6 +49,8 @@ const COMPARISON: { label: string; garden: string; gaucha: string; praia: string
 ];
 
 const Acomodacoes = () => {
+  const { t, text: translate, locale, path } = useI18n();
+
   const blocks = publishedAccommodations();
 
   return (
@@ -55,7 +58,7 @@ const Acomodacoes = () => {
       <Helmet>
         <title>{TITLE}</title>
         <meta name="description" content={DESCRIPTION} />
-        <link rel="canonical" href={URL} />
+        <link rel="canonical" href={path(URL)} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={TITLE} />
         <meta property="og:description" content={DESCRIPTION} />
@@ -70,22 +73,15 @@ const Acomodacoes = () => {
 
       <main className="pt-32 pb-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-            <Link to="/" className="hover:text-primary">Início</Link>
+          <nav aria-label={t("copy596")} className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
+            <Link to={path("/")} className="hover:text-primary">{t("copy000")}</Link>
             <ChevronRight size={14} />
-            <span className="text-foreground">Acomodações</span>
+            <span className="text-foreground">{t("copy001")}</span>
           </nav>
 
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Acomodações da Pousada Gaúcha
-          </h1>
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">{t("copy170")}</h1>
 
-          <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-            A Pousada Gaúcha tem 38 apartamentos distribuídos em três blocos, todos com cozinha
-            equipada, TV com Netflix, ar-condicionado, Wi-Fi e sofá-cama na sala. A capacidade ideal
-            é de 2 adultos e até 2 crianças. Os tamanhos variam de 40 a 45m². Nenhuma acomodação é
-            de corredor de hotel: todas têm sala, cozinha e área privativa.
-          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-12">{t("copy171")}</p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {blocks.map((block) => (
@@ -93,50 +89,44 @@ const Acomodacoes = () => {
                 key={block.id}
                 className="bg-background rounded-xl p-6 shadow-[var(--shadow-soft)] flex flex-col"
               >
-                <h2 className="font-display text-2xl font-bold text-foreground mb-1">{block.name}</h2>
-                <p className="text-sm font-medium text-primary mb-3">{block.subtitle}</p>
+                <h2 className="font-display text-2xl font-bold text-foreground mb-1">{translate(block.name)}</h2>
+                <p className="text-sm font-medium text-primary mb-3">{translate(block.subtitle)}</p>
                 <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                  {block.description}
+                  {translate(block.description)}
                 </p>
                 {block.hasDetailPage ? (
                   <Link
-                    to={block.href}
+                    to={path(block.href)}
                     className="mt-6 inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
-                  >
-                    Ver detalhes
-                    <ChevronRight size={16} />
+                  >{t("copy172")}<ChevronRight size={16} />
                   </Link>
                 ) : (
-                  <span className="mt-6 inline-flex items-center justify-center gap-2 border border-border text-muted-foreground px-5 py-2.5 rounded-lg text-sm font-semibold cursor-not-allowed">
-                    Em breve
-                  </span>
+                  <span className="mt-6 inline-flex items-center justify-center gap-2 border border-border text-muted-foreground px-5 py-2.5 rounded-lg text-sm font-semibold cursor-not-allowed">{t("copy173")}</span>
                 )}
               </div>
             ))}
           </div>
 
-          <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-            Comparativo entre os blocos
-          </h2>
+          <h2 className="font-display text-3xl font-bold text-foreground mb-6">{t("copy174")}</h2>
           <div className="overflow-x-auto mb-16">
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="border-b border-border">
                   <th className="text-left py-3 pr-4 font-semibold text-foreground"></th>
                   <th className="text-left py-3 pr-4 font-semibold text-foreground">Garden</th>
-                  <th className="text-left py-3 pr-4 font-semibold text-foreground">Gaúcha</th>
-                  <th className="text-left py-3 font-semibold text-foreground">Praia</th>
+                  <th className="text-left py-3 pr-4 font-semibold text-foreground">{t("copy175")}</th>
+                  <th className="text-left py-3 font-semibold text-foreground">{t("copy176")}</th>
                 </tr>
               </thead>
               <tbody>
                 {COMPARISON.map((row) => (
-                  <tr key={row.label} className="border-b border-border/60">
+                  <tr key={translate(row.label)} className="border-b border-border/60">
                     <th scope="row" className="text-left py-3 pr-4 font-medium text-foreground align-top">
-                      {row.label}
+                      {translate(row.label)}
                     </th>
-                    <td className="py-3 pr-4 text-muted-foreground align-top">{row.garden}</td>
-                    <td className="py-3 pr-4 text-muted-foreground align-top">{row.gaucha}</td>
-                    <td className="py-3 text-muted-foreground align-top">{row.praia}</td>
+                    <td className="py-3 pr-4 text-muted-foreground align-top">{translate(row.garden)}</td>
+                    <td className="py-3 pr-4 text-muted-foreground align-top">{translate(row.gaucha)}</td>
+                    <td className="py-3 text-muted-foreground align-top">{translate(row.praia)}</td>
                   </tr>
                 ))}
               </tbody>
@@ -144,19 +134,14 @@ const Acomodacoes = () => {
           </div>
 
           <div className="bg-muted/40 rounded-xl p-8 text-center">
-            <p className="text-lg text-foreground mb-6 leading-relaxed">
-              Não tem certeza de qual escolher? Fale com a gente pelo WhatsApp antes de reservar. A
-              gente indica pelo tamanho do grupo e pelo que você quer da viagem.
-            </p>
+            <p className="text-lg text-foreground mb-6 leading-relaxed">{t("copy177")}</p>
             <a
-              href={getWhatsAppUrl()}
+              href={getWhatsAppUrl(locale)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-500 text-accent-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
             >
-              <MessageCircle size={18} />
-              WhatsApp (47) 99791-0034
-            </a>
+              <MessageCircle size={18} />{t("copy178")}</a>
           </div>
         </div>
       </main>

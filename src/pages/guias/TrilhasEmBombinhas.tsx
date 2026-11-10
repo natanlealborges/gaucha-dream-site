@@ -1,11 +1,13 @@
-import GuideLayout from "@/components/GuideLayout";
+import { LocalizedGuide } from "@/components/GuideLayout";
 import { getGuide } from "@/data/guides";
 
 const Page = () => (
-  <GuideLayout
+  <LocalizedGuide
     guide={getGuide("trilhas-em-bombinhas")!}
-    intro="Bombinhas tem 67% de área verde e três unidades de conservação num município de 36 km². Na prática, isso quer dizer que quase toda praia daqui tem uma trilha saindo dela. Abaixo estão as cinco que a gente desenha no papel do café toda semana, da mais leve para a mais puxada. Todas dão para fazer sem guia, e todas ficam melhores no inverno, quando não faz calor no meio do caminho."
-    sections={[
+    content={{
+      pt: {
+    intro: "Bombinhas tem 67% de área verde e três unidades de conservação num município de 36 km². Na prática, isso quer dizer que quase toda praia daqui tem uma trilha saindo dela. Abaixo estão as cinco que a gente desenha no papel do café toda semana, da mais leve para a mais puxada. Todas dão para fazer sem guia, e todas ficam melhores no inverno, quando não faz calor no meio do caminho.",
+    sections: [
       {
         heading: "Trilha da Sepultura — fácil",
         paragraphs: [
@@ -60,8 +62,12 @@ const Page = () => (
           "Se sobrar dia: Quatro Ilhas pelo costão, ou o Parque Natural Municipal da Costeira de Zimbros, que tem dez praias e é a versão selvagem de Bombinhas.",
           "Se você vem para caminhar, avise na reserva. A gente monta a ordem das trilhas conforme a previsão da sua semana, porque aqui o que decide não é o mapa, é o dia. Equipe Pousada Gaúcha — anfitriões e consultores de experiência em Bombinhas.",
         ],
+        links: [{ to: "/guias/o-que-fazer-em-bombinhas", label: "O que fazer em Bombinhas" }],
       },
-    ]}
+    ],
+      },
+      es: ES_TRILHAS,
+    }}
   />
 );
 

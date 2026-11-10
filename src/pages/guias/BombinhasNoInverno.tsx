@@ -1,14 +1,16 @@
-import GuideLayout from "@/components/GuideLayout";
+import { LocalizedGuide } from "@/components/GuideLayout";
 import { getGuide } from "@/data/guides";
 import heroBeach from "@/assets/hero-beach.jpg";
 import aboutJacuzzi from "@/assets/about-jacuzzi.jpg";
 
 const Page = () => (
-  <GuideLayout
+  <LocalizedGuide
     guide={getGuide("bombinhas-no-inverno")!}
-    heroImage={{ src: heroBeach, alt: "Vista aérea da Praia de Bombinhas, em frente à Pousada Gaúcha, com mar calmo e o trapiche" }}
-    intro="Vale, desde que você saiba o que vem buscar. No inverno Bombinhas entrega espaço, silêncio, água muito mais transparente, trilhas com clima confortável e a chance de ver baleia da areia. O que muda é que o banho de mar fica curto e parte dos restaurantes reduz o horário. A gente recebe hóspedes aqui há 26 anos e vê a mesma cena todo ano: quem vem no inverno pela primeira vez volta achando que descobriu Bombinhas duas vezes. Esta página não é um folheto. É o que a gente responde por WhatsApp toda semana."
-    sections={[
+    content={{
+      pt: {
+    heroImage: { src: heroBeach, alt: "Vista aérea da Praia de Bombinhas, em frente à Pousada Gaúcha, com mar calmo e o trapiche" },
+    intro: "Vale, desde que você saiba o que vem buscar. No inverno Bombinhas entrega espaço, silêncio, água muito mais transparente, trilhas com clima confortável e a chance de ver baleia da areia. O que muda é que o banho de mar fica curto e parte dos restaurantes reduz o horário. A gente recebe hóspedes aqui há 26 anos e vê a mesma cena todo ano: quem vem no inverno pela primeira vez volta achando que descobriu Bombinhas duas vezes. Esta página não é um folheto. É o que a gente responde por WhatsApp toda semana.",
+    sections: [
       {
         heading: "O que você ganha vindo entre maio e setembro",
         paragraphs: [
@@ -17,6 +19,7 @@ const Page = () => (
           "Nada de taxa de entrada. A Taxa de Preservação Ambiental de Bombinhas é cobrada por veículo entre 15 de novembro e 15 de abril, e em 2026 chegou a R$ 191,50 para carros. Fora desse período não há cobrança. No inverno você entra e sai da cidade quantas vezes quiser sem pagar nada, o que muda bastante o planejamento de quem quer conhecer Porto Belo, Itapema ou a Ilha de Porto Belo no mesmo passeio.",
           "Diárias de baixa temporada. Vale para hospedagem, restaurante e passeio.",
         ],
+        links: [{ to: "/guias/quando-ir-a-bombinhas", label: "Quando ir a Bombinhas: melhor época" }],
       },
       {
         heading: "A água fica mais clara. Essa é a parte que surpreende",
@@ -73,7 +76,10 @@ const Page = () => (
           "Reservando direto pelo site você paga o melhor valor. Equipe Pousada Gaúcha — anfitriões e consultores de experiência em Bombinhas.",
         ],
       },
-    ]}
+    ],
+      },
+      es: ES_INVERNO,
+    }}
   />
 );
 

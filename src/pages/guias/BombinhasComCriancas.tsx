@@ -1,13 +1,15 @@
-import GuideLayout from "@/components/GuideLayout";
+import { LocalizedGuide } from "@/components/GuideLayout";
 import { getGuide } from "@/data/guides";
 import heroBeach from "@/assets/hero-beach.jpg";
 
 const Page = () => (
-  <GuideLayout
+  <LocalizedGuide
     guide={getGuide("bombinhas-com-criancas")!}
-    heroImage={{ src: heroBeach, alt: "Vista aérea da Praia de Bombinhas, em frente à Pousada Gaúcha, com mar calmo e areia clara" }}
-    intro="Bombinhas é um dos melhores destinos de praia do Sul para quem viaja com criança pequena, e o motivo é simples: várias praias daqui são de baía, com mar raso, água transparente e pouca onda. A criança entra e você enxerga o pé dela no fundo. Mas nem toda praia daqui é assim, e escolher errado estraga o dia. É isso que este guia resolve."
-    sections={[
+    content={{
+      pt: {
+    heroImage: { src: heroBeach, alt: "Vista aérea da Praia de Bombinhas, em frente à Pousada Gaúcha, com mar calmo e areia clara" },
+    intro: "Bombinhas é um dos melhores destinos de praia do Sul para quem viaja com criança pequena, e o motivo é simples: várias praias daqui são de baía, com mar raso, água transparente e pouca onda. A criança entra e você enxerga o pé dela no fundo. Mas nem toda praia daqui é assim, e escolher errado estraga o dia. É isso que este guia resolve.",
+    sections: [
       {
         heading: "As praias certas por idade",
         paragraphs: [
@@ -17,6 +19,7 @@ const Page = () => (
           "Também calma: Canto Grande Mar de Dentro, com mais espaço na areia, boa para quem quer fugir do movimento.",
           "Cuidado: Quatro Ilhas e Mariscal são lindas e são praias de onda. Bom para adolescente que quer surfar, ruim para criança pequena.",
         ],
+        links: [{ to: "/guias/praias-de-bombinhas", label: "Praias de Bombinhas: qual escolher" }],
       },
       {
         heading: "O que faz diferença de verdade viajando com criança",
@@ -61,7 +64,10 @@ const Page = () => (
           "Se você vem com criança, conte pra gente as idades quando reservar. A gente indica a praia certa para cada dia, o apartamento que faz mais sentido para o tamanho da família e o que dá para deixar em casa. Equipe Pousada Gaúcha — anfitriões e consultores de experiência em Bombinhas.",
         ],
       },
-    ]}
+    ],
+      },
+      es: ES_CRIANCAS,
+    }}
   />
 );
 

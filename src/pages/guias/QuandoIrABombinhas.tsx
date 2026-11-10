@@ -54,7 +54,7 @@ const Page = () => (
           { q: "¿Cuándo está más llena Bombinhas?", a: "Desde Año Nuevo hasta fines de enero y en Carnaval." },
           { q: "¿Vale la pena ir a Bombinhas fuera del verano?", a: "Sí. La ciudad está más tranquila, las playas están vacías y las tarifas son menores." },
         ],
-        ctaText: "Consulte disponibilidad y tarifas directamente en el sitio.",
+        ctaText: "Consulta disponibilidad y tarifas directamente en el sitio.",
       },
     }}
   />

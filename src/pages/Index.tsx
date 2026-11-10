@@ -8,6 +8,7 @@ import CTASection from "@/components/CTASection";
 import EventsSection from "@/components/EventsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import GuidesHomeSection from "@/components/GuidesHomeSection";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <AboutSection />
       <CTASection />
       <EventsSection />
+      <GuidesHomeSection />
       <ContactSection />
       <Footer />
     </div>

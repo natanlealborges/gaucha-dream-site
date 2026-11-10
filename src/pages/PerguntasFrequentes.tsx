@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import GuideLinks from "@/components/GuideLinks";
 import { trackInitiateCheckout } from "@/lib/pixel";
 
 const BASE_URL = "https://pousadagaucha.com";
@@ -453,6 +454,8 @@ const PerguntasFrequentes = () => {
               ))}
             </section>
           ))}
+
+          <GuideLinks className="mt-12" slugs={["como-chegar-a-bombinhas", "quando-ir-a-bombinhas"]} />
 
           {/* CTA final */}
           <section className="mt-12 p-8 md:p-12 bg-foreground text-primary-foreground rounded-xl text-center">

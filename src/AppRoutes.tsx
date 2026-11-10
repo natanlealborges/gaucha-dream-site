@@ -8,6 +8,12 @@ import BombinhasComChuva from "./pages/guias/BombinhasComChuva.tsx";
 import BombinhasOuGramado from "./pages/guias/BombinhasOuGramado.tsx";
 import TrilhasEmBombinhas from "./pages/guias/TrilhasEmBombinhas.tsx";
 import BombinhasComCriancas from "./pages/guias/BombinhasComCriancas.tsx";
+import PraiasDeBombinhas from "./pages/guias/PraiasDeBombinhas.tsx";
+import ComoChegarABombinhas from "./pages/guias/ComoChegarABombinhas.tsx";
+import QuandoIrABombinhas from "./pages/guias/QuandoIrABombinhas.tsx";
+import OQueFazerEmBombinhas from "./pages/guias/OQueFazerEmBombinhas.tsx";
+import OndeComerEmBombinhas from "./pages/guias/OndeComerEmBombinhas.tsx";
+import ComoLlegarDesdeArgentina from "./pages/guias/ComoLlegarDesdeArgentina.tsx";
 import PerguntasFrequentes from "./pages/PerguntasFrequentes.tsx";
 import Acomodacoes from "./pages/Acomodacoes.tsx";
 import Garden from "./pages/acomodacoes/Garden.tsx";
@@ -33,6 +39,18 @@ const translatedPages = [
   { path: "/perguntas-frequentes", Page: PerguntasFrequentes },
 ];
 
+/** Guias em PT e ES (mesmo slug); o guia só em espanhol fica apenas em /es. */
+const bilingualGuides = [
+  { slug: "praias-de-bombinhas", Page: PraiasDeBombinhas },
+  { slug: "como-chegar-a-bombinhas", Page: ComoChegarABombinhas },
+  { slug: "quando-ir-a-bombinhas", Page: QuandoIrABombinhas },
+  { slug: "o-que-fazer-em-bombinhas", Page: OQueFazerEmBombinhas },
+  { slug: "onde-comer-em-bombinhas", Page: OndeComerEmBombinhas },
+  { slug: "bombinhas-no-inverno", Page: BombinhasNoInverno },
+  { slug: "trilhas-em-bombinhas", Page: TrilhasEmBombinhas },
+  { slug: "bombinhas-com-criancas", Page: BombinhasComCriancas },
+];
+
 const AppRoutes = () => (
   <LocaleProvider>
   <LanguageSeo />
@@ -50,12 +68,15 @@ const AppRoutes = () => (
     <Route path="/acomodacoes/bloco-gaucha" element={<BlocoGaucha />} />
     <Route path="/acomodacoes/bloco-praia" element={<BlocoPraia />} />
     <Route path="/guias" element={<GuiasIndex />} />
+    <Route path="/es/guias" element={<GuiasIndex />} />
+    {bilingualGuides.flatMap(({ slug, Page }) => [
+      <Route key={`pt-${slug}`} path={`/guias/${slug}`} element={<Page />} />,
+      <Route key={`es-${slug}`} path={`/es/guias/${slug}`} element={<Page />} />,
+    ])}
+    <Route path="/es/guias/como-llegar-desde-argentina-paraguay-uruguay" element={<ComoLlegarDesdeArgentina />} />
     <Route path="/guias/mergulho-em-bombinhas" element={<MergulhoEmBombinhas />} />
-    <Route path="/guias/bombinhas-no-inverno" element={<BombinhasNoInverno />} />
     <Route path="/guias/o-que-fazer-em-bombinhas-com-chuva" element={<BombinhasComChuva />} />
     <Route path="/guias/bombinhas-ou-gramado-no-inverno" element={<BombinhasOuGramado />} />
-    <Route path="/guias/trilhas-em-bombinhas" element={<TrilhasEmBombinhas />} />
-    <Route path="/guias/bombinhas-com-criancas" element={<BombinhasComCriancas />} />
     <Route path="/perguntas-frequentes" element={<PerguntasFrequentes />} />
     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
     <Route path="*" element={<NotFound />} />

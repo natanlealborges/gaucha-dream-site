@@ -68,6 +68,7 @@ const Footer = () => {
             <Link to={path("/servico-de-praia")} className="block hover:text-primary-foreground transition-colors">{t("copy016")}</Link>
             <Link to={path("/cafe-da-manha")} className="block hover:text-primary-foreground transition-colors">{t("copy017")}</Link>
             <Link to={path("/jacuzzis")} className="block hover:text-primary-foreground transition-colors">{t("copy018")}</Link>
+            <Link to={path("/pousada-para-familias-em-bombinhas")} className="block hover:text-primary-foreground transition-colors">{t("familyLabel")}</Link>
             <Link to={path("/acomodacoes")} className="block hover:text-primary-foreground transition-colors">{t("copy001")}</Link>
             <Link to={path("/acomodacoes/garden")} className="block hover:text-primary-foreground transition-colors">
               Bloco Garden

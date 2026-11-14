@@ -18,6 +18,7 @@ const ROUTES = [
   "/servico-de-praia",
   "/cafe-da-manha",
   "/jacuzzis",
+  "/pousada-para-familias-em-bombinhas",
   "/acomodacoes",
   "/acomodacoes/garden",
   "/acomodacoes/bloco-gaucha",

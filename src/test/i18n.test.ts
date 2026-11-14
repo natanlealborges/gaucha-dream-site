@@ -25,7 +25,7 @@ describe("explicit language routes", () => {
     expect(isTranslatedPath("/guias")).toBe(false);
     expect(localizePath("/guias/bombinhas-no-inverno", "es")).toBe("/guias/bombinhas-no-inverno");
     expect(switchLocalePath("/guias/bombinhas-no-inverno", "", "en")).toBe("/en");
-    expect(TRANSLATED_PATHS).toHaveLength(10);
+    expect(TRANSLATED_PATHS).toHaveLength(11);
   });
   it("uses the requested locale tags", () => {
     expect(LOCALE_META.pt).toMatchObject({ htmlLang: "pt-BR", hreflang: "pt-BR", ogLocale: "pt_BR" });

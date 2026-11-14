@@ -108,7 +108,7 @@ const PousadaParaFamilias = () => {
           <div className="bg-muted/40 rounded-xl p-8 text-center">
             <p className="text-lg text-foreground mb-6 leading-relaxed">{t("familyCta")}</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button asChild className="h-auto bg-accent text-accent-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 hover:bg-accent">
+              <Button asChild className="h-auto bg-[hsl(var(--booking))] text-accent-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 hover:bg-[hsl(var(--booking))]">
                 <a href={getBookingUrl()} target="_blank" rel="noopener noreferrer" onClick={trackInitiateCheckout}>{t("copy007")}</a>
               </Button>
               <Button asChild variant="outline" className="h-auto bg-transparent border-border text-foreground px-6 py-3 rounded-lg font-semibold hover:bg-foreground/5">

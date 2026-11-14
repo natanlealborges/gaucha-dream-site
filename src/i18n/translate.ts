@@ -1,11 +1,12 @@
 import { pt } from "./pt";
 import { es } from "./es";
 import { en } from "./en";
+import { families } from "./families";
 import { absoluteUrl, SITE_URL, splitLocale, type Locale } from "./config";
 
-export const catalogs = { pt, es, en };
-export type TranslationKey = keyof typeof pt;
-const sourceKeys = new Map<string, TranslationKey>(Object.entries(pt).map(([key, value]) => [value, key as TranslationKey]));
+export const catalogs = { pt: { ...pt, ...families.pt }, es: { ...es, ...families.es }, en: { ...en, ...families.en } };
+export type TranslationKey = keyof typeof catalogs.pt;
+const sourceKeys = new Map<string, TranslationKey>(Object.entries(catalogs.pt).map(([key, value]) => [value, key as TranslationKey]));
 
 export function translateText(text: string, locale: Locale): string {
   if (locale === "pt") return text;

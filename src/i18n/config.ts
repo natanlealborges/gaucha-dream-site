@@ -13,6 +13,7 @@ export const TRANSLATED_PATHS = [
   "/acomodacoes/bloco-praia",
   "/cafe-da-manha",
   "/jacuzzis",
+  "/pousada-para-familias-em-bombinhas",
   "/servico-de-praia",
   "/pousada-pe-na-areia-bombinhas",
   "/perguntas-frequentes",

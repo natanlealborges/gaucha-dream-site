@@ -23,6 +23,7 @@ import PousadaPeNaAreia from "./pages/PousadaPeNaAreia.tsx";
 import ServicoDePraia from "./pages/ServicoDePraia.tsx";
 import CafeDaManha from "./pages/CafeDaManha.tsx";
 import Jacuzzis from "./pages/Jacuzzis.tsx";
+import PousadaParaFamilias from "./pages/PousadaParaFamilias.tsx";
 import { LocaleProvider } from "./i18n/context";
 import { LanguageSeo } from "./i18n/Seo";
 
@@ -32,6 +33,7 @@ const translatedPages = [
   { path: "/servico-de-praia", Page: ServicoDePraia },
   { path: "/cafe-da-manha", Page: CafeDaManha },
   { path: "/jacuzzis", Page: Jacuzzis },
+  { path: "/pousada-para-familias-em-bombinhas", Page: PousadaParaFamilias },
   { path: "/acomodacoes", Page: Acomodacoes },
   { path: "/acomodacoes/garden", Page: Garden },
   { path: "/acomodacoes/bloco-gaucha", Page: BlocoGaucha },
@@ -63,6 +65,7 @@ const AppRoutes = () => (
     <Route path="/servico-de-praia" element={<ServicoDePraia />} />
     <Route path="/cafe-da-manha" element={<CafeDaManha />} />
     <Route path="/jacuzzis" element={<Jacuzzis />} />
+    <Route path="/pousada-para-familias-em-bombinhas" element={<PousadaParaFamilias />} />
     <Route path="/acomodacoes" element={<Acomodacoes />} />
     <Route path="/acomodacoes/garden" element={<Garden />} />
     <Route path="/acomodacoes/bloco-gaucha" element={<BlocoGaucha />} />

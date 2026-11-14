@@ -82,6 +82,9 @@ const Acomodacoes = () => {
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">{t("copy170")}</h1>
 
           <p className="text-lg text-muted-foreground leading-relaxed mb-12">{t("copy171")}</p>
+          <p className="text-sm text-muted-foreground mb-8">
+            <Link to={path("/pousada-para-familias-em-bombinhas")} className="hover:text-primary underline underline-offset-4">{t("familyLink")}</Link>
+          </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {blocks.map((block) => (

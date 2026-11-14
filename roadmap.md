@@ -7,3 +7,5 @@
 - [x] Test Portuguese parity and translated flows without publishing.
 - [x] Add rating and block occupancy to sitewide JSON-LD and verify static schemas (42 tests; 52 routes).
 - [x] Request publication of the structured SEO changes.
+- [ ] Create the family page in PT/ES/EN with localized static SEO and FAQ.
+- [ ] Add only the requested footer and accommodations links; verify and publish.

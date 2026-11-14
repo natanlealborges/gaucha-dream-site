@@ -35,22 +35,26 @@ export const siteSchemas = [
     "checkoutTime": "12:00",
     "numberOfRooms": 38,
     "petsAllowed": false,
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": 1100, "bestRating": "5" },
     "containsPlace": [
       {
         "@type": "Suite",
         "name": "Bloco Garden",
+        "occupancy": { "@type": "QuantitativeValue", "maxValue": 4, "unitText": "pessoas" },
         "url": "https://pousadagaucha.com/acomodacoes",
         "description": "Os apartamentos mais refinados da Pousada Gaúcha, com a melhor vista para a Praia de Bombinhas. Inclui também studios com vista lateral, sem sacada."
       },
       {
         "@type": "Suite",
         "name": "Bloco Gaúcha",
+        "occupancy": { "@type": "QuantitativeValue", "maxValue": 6, "unitText": "pessoas" },
         "url": "https://pousadagaucha.com/acomodacoes",
         "description": "Os maiores apartamentos, com sacada com churrasqueira e cozinha mais completa. Indicados para família."
       },
       {
         "@type": "Suite",
         "name": "Bloco Praia",
+        "occupancy": { "@type": "QuantitativeValue", "maxValue": 6, "unitText": "pessoas" },
         "url": "https://pousadagaucha.com/acomodacoes",
         "description": "Apartamentos mais compactos e os mais próximos do café da manhã à beira-mar."
       }

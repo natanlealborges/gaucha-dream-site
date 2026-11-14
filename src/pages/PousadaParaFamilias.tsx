@@ -68,8 +68,7 @@ const PousadaParaFamilias = () => {
           <h2 className="font-display text-3xl font-bold text-foreground mb-6">{t("familyBeachHeading")}</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">{t("familyBeach1")}</p>
           <p className="text-muted-foreground leading-relaxed mb-4">{t("familyBeach2")}</p>
-          <p className="text-muted-foreground leading-relaxed mb-6">{t("familyBeach3")}</p>
-          <img src={beach} alt={t("familyBeach1")} className="w-full aspect-video object-cover rounded-xl mb-16" loading="lazy" />
+          <p className="text-muted-foreground leading-relaxed mb-16">{t("familyBeach3")}</p>
 
           <h2 className="font-display text-3xl font-bold text-foreground mb-6">{t("familyRoomsHeading")}</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">{t("familyRoomsIntro")}</p>
@@ -86,7 +85,8 @@ const PousadaParaFamilias = () => {
 
           <h2 className="font-display text-3xl font-bold text-foreground mb-6">{t("familyActivitiesHeading")}</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">{t("familyActivities1")}</p>
-          <p className="text-muted-foreground leading-relaxed mb-16">{t("familyActivities2")}</p>
+          <p className="text-muted-foreground leading-relaxed mb-6">{t("familyActivities2")}</p>
+          <img src={beach} alt={t("familyActivities2")} className="w-full aspect-video object-cover rounded-xl mb-16" loading="lazy" />
 
           <h2 className="font-display text-3xl font-bold text-foreground mb-6">{t("familyBreakfastHeading")}</h2>
           <p className="text-muted-foreground leading-relaxed mb-16">{t("familyBreakfast")}</p>

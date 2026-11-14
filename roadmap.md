@@ -9,4 +9,4 @@
 - [x] Request publication of the structured SEO changes.
 - [x] Create the family page in PT/ES/EN with localized static SEO and FAQ (52 tests passed).
 - [x] Add only the requested footer and accommodations links; verify desktop/mobile and static SEO.
-- [ ] Request publication of the family page.
+- [x] Request publication of the family page at https://pousadagaucha.com.

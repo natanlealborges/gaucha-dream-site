@@ -30,7 +30,7 @@ export type GuideSection = {
   image?: { src?: string; alt: string };
 };
 
-export type GuideFaq = { q: string; a: string };
+export type GuideFaq = { q: string; a: string; links?: GuideLink[] };
 
 export type GuideContent = {
   intro: string; // "Resposta rápida"
@@ -98,7 +98,7 @@ const GuideLayout = ({ guide, intro, sections, faqs, ctaText, heroImage }: Guide
     mainEntityOfPage: url,
     inLanguage: locale === "es" ? "es" : "pt-BR",
     datePublished: guide.datePublished,
-    dateModified: GUIDES_MODIFIED,
+    dateModified: guide.dateModified ?? GUIDES_MODIFIED,
     author: { "@type": "Organization", name: "Pousada Gaúcha" },
     publisher: { "@id": `${BASE_URL}/#lodging` },
     image: `${BASE_URL}/lovable-uploads/bdf75423-2928-485e-9c80-d580d5d99039.jpg`,
@@ -177,7 +177,7 @@ const GuideLayout = ({ guide, intro, sections, faqs, ctaText, heroImage }: Guide
               <p className="text-lg text-foreground leading-relaxed">{intro}</p>
             </div>
             <p className="text-sm text-muted-foreground">
-              <time dateTime={GUIDES_MODIFIED}>{ui.updated}</time>
+              <time dateTime={guide.dateModified ?? GUIDES_MODIFIED}>{ui.updated}</time>
             </p>
           </header>
 
@@ -246,6 +246,12 @@ const GuideLayout = ({ guide, intro, sections, faqs, ctaText, heroImage }: Guide
                   <div key={f.q}>
                     <h3 className="font-display text-lg font-bold text-foreground mb-2">{f.q}</h3>
                     <p className="text-muted-foreground leading-relaxed">{f.a}</p>
+                    {f.links?.map((link) => (
+                      <Link key={link.to} to={link.to} className="inline-flex items-center gap-2 text-primary hover:underline">
+                        <ArrowRight size={16} />
+                        {link.label}
+                      </Link>
+                    ))}
                   </div>
                 ))}
               </div>

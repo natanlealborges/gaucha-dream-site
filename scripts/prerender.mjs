@@ -35,6 +35,7 @@ const ROUTES = [
   "/guias/quando-ir-a-bombinhas",
   "/guias/o-que-fazer-em-bombinhas",
   "/guias/onde-comer-em-bombinhas",
+  "/guias/melhor-praia-de-santa-catarina-para-familia",
   "/perguntas-frequentes",
 ];
 

@@ -14,17 +14,34 @@ export type GuideMeta = GuideText & {
   slug: string;
   published: boolean; // guias não publicados ficam ocultos de menus, sitemap e levam noindex
   datePublished: string;
+  /** Data de alteração específica do guia; ausente mantém o padrão existente. */
+  dateModified?: string;
   /** Idiomas em que o guia existe. Ausente = só português. */
   locales?: GuideLocale[];
   /** Textos em espanhol (obrigatório quando locales inclui "es"). */
   es?: GuideText;
   /** Guia exibido em destaque no índice do idioma. */
   featured?: boolean;
+  /** Descoberta restrita ao índice, sem novos links em páginas existentes. */
+  indexOnly?: boolean;
 };
 
 export const GUIDES_MODIFIED = "2026-11-10";
 
 export const guides: GuideMeta[] = [
+  {
+    slug: "melhor-praia-de-santa-catarina-para-familia",
+    title: "Melhor praia de Santa Catarina para família e crianças (2027) · Pousada Gaúcha",
+    h1: "Qual é a melhor praia de Santa Catarina para família (e para crianças)?",
+    description: "Qual a melhor praia de Santa Catarina para ir com crianças? Comparamos as praias mais famosas de SC e explicamos por que a Praia de Bombinhas é a escolha das famílias.",
+    shortLabel: "Melhor praia de Santa Catarina para família",
+    hook: "Comparamos as praias mais famosas de SC e explicamos por que a Praia de Bombinhas é a escolha das famílias.",
+    published: true,
+    datePublished: "2026-11-23",
+    dateModified: "2026-11-23",
+    locales: ["pt"],
+    indexOnly: true,
+  },
   {
     slug: "mergulho-em-bombinhas",
     title: "Mergulho em Bombinhas: guia de quem mora aqui",
@@ -251,4 +268,4 @@ export const guidePath = (slug: string, locale: GuideLocale) =>
 export const getGuide = (slug: string) => guides.find((g) => g.slug === slug);
 
 export const getRelatedGuides = (slug: string, locale: GuideLocale = "pt"): GuideMeta[] =>
-  guidesFor(locale).filter((g) => g.slug !== slug);
+  guidesFor(locale).filter((g) => g.slug !== slug && !g.indexOnly);

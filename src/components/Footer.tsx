@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="text-sm md:col-span-2">
             <p className="text-primary-foreground font-semibold mb-3">{t("copy013")}</p>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4">
-              {guidesFor(locale === "es" ? "es" : "pt").map((g) => (
+              {guidesFor(locale === "es" ? "es" : "pt").filter((g) => !g.indexOnly).map((g) => (
                 <li key={g.slug}>
                   <Link
                     to={guidePath(g.slug, locale === "es" ? "es" : "pt")}

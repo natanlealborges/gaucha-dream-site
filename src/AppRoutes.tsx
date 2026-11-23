@@ -6,6 +6,7 @@ import MergulhoEmBombinhas from "./pages/guias/MergulhoEmBombinhas.tsx";
 import BombinhasNoInverno from "./pages/guias/BombinhasNoInverno.tsx";
 import BombinhasComChuva from "./pages/guias/BombinhasComChuva.tsx";
 import BombinhasOuGramado from "./pages/guias/BombinhasOuGramado.tsx";
+import MelhorPraiaParaFamilia from "./pages/guias/MelhorPraiaParaFamilia.tsx";
 import TrilhasEmBombinhas from "./pages/guias/TrilhasEmBombinhas.tsx";
 import BombinhasComCriancas from "./pages/guias/BombinhasComCriancas.tsx";
 import PraiasDeBombinhas from "./pages/guias/PraiasDeBombinhas.tsx";
@@ -80,6 +81,7 @@ const AppRoutes = () => (
     <Route path="/guias/mergulho-em-bombinhas" element={<MergulhoEmBombinhas />} />
     <Route path="/guias/o-que-fazer-em-bombinhas-com-chuva" element={<BombinhasComChuva />} />
     <Route path="/guias/bombinhas-ou-gramado-no-inverno" element={<BombinhasOuGramado />} />
+    <Route path="/guias/melhor-praia-de-santa-catarina-para-familia" element={<MelhorPraiaParaFamilia />} />
     <Route path="/perguntas-frequentes" element={<PerguntasFrequentes />} />
     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
     <Route path="*" element={<NotFound />} />

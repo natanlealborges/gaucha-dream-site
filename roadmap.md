@@ -1,5 +1,8 @@
 # Tasks
 
+- [x] Create and verify the Portuguese family beach guide, static schemas, sitemap entry and index card.
+- [x] Request publication of the new guide at https://pousadagaucha.com.
+
 - [x] Centralize HBook and WhatsApp links with first-session attribution.
 - [x] Verify attribution rules, link navigation, and existing conversion tracking without publishing.
 - [x] Translate requested pages into ES/EN while preserving Portuguese.

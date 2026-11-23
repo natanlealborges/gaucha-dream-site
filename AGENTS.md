@@ -5,3 +5,5 @@
 - Derive locale from explicit URL prefixes and reuse page components with centralized translation catalogs; Portuguese remains the source language and guides stay unprefixed to prevent accidental language redirects.
 - Render localized head tags and JSON-LD through shared locale helpers in both the browser and static prerendering; keep stable entity IDs and translate only descriptive fields to preserve identity and facts.
 - Merge the family page's dedicated PT/ES/EN catalog into the shared translation catalog, so its visible copy, metadata and FAQ schema use the same locale helpers without changing existing copy.
+- Allow guide-specific modification dates and optional FAQ links in GuideLayout so new guides can share the existing presentation without changing older guides' dates or answers.
+- Use indexOnly for guides whose discovery is limited to the guide index, preserving existing footer and related-guide lists when the request forbids changes elsewhere.

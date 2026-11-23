@@ -40,6 +40,11 @@ const Page = () => {
           ],
         },
         {
+          heading: "Chegando de Minas Gerais: tem voo direto",
+          paragraphs: ["Para as famílias de Minas Gerais, a viagem é mais fácil do que parece: há voos diretos de Belo Horizonte (Confins) para Navegantes — o aeroporto mais próximo de Bombinhas — e também para Florianópolis, operados pela Azul. Do aeroporto, a pousada agenda translado terceirizado para quem tem reserva. Ou seja: dá para sair de BH de manhã e almoçar de frente para o mar."],
+          links: [{ to: "/guias/como-chegar-a-bombinhas", label: "Como chegar a Bombinhas" }],
+        },
+        {
           heading: "Onde ficar na Praia de Bombinhas com crianças",
           paragraphs: ["A Pousada Gaúcha fica na areia da Praia de Bombinhas: café da manhã de frente para o mar, serviço de praia com cadeiras e guarda-sóis incluído, apartamentos de 1 e 2 dormitórios para até 6 pessoas com cozinha equipada, espaço kids, sala de jogos, cinema e quatro jacuzzis na cobertura."],
           links: [{ to: "/pousada-para-familias-em-bombinhas", label: "Pousada para famílias em Bombinhas" }],
@@ -58,6 +63,10 @@ const Page = () => {
           q: "Quando ir a Bombinhas com crianças?",
           a: "O verão é a alta temporada, com mar e cidade em clima de férias. Na baixa temporada a cidade fica mais calma e tranquila, com paisagens paradisíacas e preços menores.",
           links: [{ to: "/guias/quando-ir-a-bombinhas", label: "Quando ir a Bombinhas" }],
+        },
+        {
+          q: "Tem voo direto de Minas Gerais para Bombinhas?",
+          a: "Bombinhas não tem aeroporto, mas há voos diretos de Belo Horizonte (Confins) para Navegantes, o aeroporto mais próximo, e para Florianópolis. A Pousada Gaúcha agenda translado terceirizado do aeroporto para hóspedes com reserva.",
         },
       ]}
     />

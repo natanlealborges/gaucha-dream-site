@@ -70,14 +70,21 @@ export function getBookingUrl(): string {
   return url.toString();
 }
 
-export function getWhatsAppUrl(locale: "pt" | "es" | "en" = "pt"): string {
+const DATES_SENTENCE: Record<"pt" | "es" | "en", string> = {
+  pt: "Não consegui reservar minhas datas pelo site.",
+  es: "No pude reservar mis fechas en el sitio.",
+  en: "I couldn't book my dates on the website.",
+};
+
+export function getWhatsAppUrl(locale: "pt" | "es" | "en" = "pt", intent?: "dates"): string {
   initializeAttribution();
   const source = sessionAttribution?.utm_source?.toLowerCase();
   const origin = source === "google" ? "Google" : source === "instagram" || source === "facebook" ? "Instagram" : "site";
-  const message = locale === "es"
+  const first = locale === "es"
     ? `¡Hola! Vine por ${origin === "site" ? "el sitio web" : origin} y quiero saber más sobre la Pousada Gaúcha.`
     : locale === "en"
       ? `Hi! I came from ${origin === "site" ? "the website" : origin} and would like to know more about Pousada Gaúcha.`
       : `Olá! Vim pelo ${origin} e quero saber mais sobre a Pousada Gaúcha.`;
+  const message = intent === "dates" ? `${first} ${DATES_SENTENCE[locale]}` : first;
   return `https://wa.me/5547997910034?text=${encodeURIComponent(message)}`;
 }

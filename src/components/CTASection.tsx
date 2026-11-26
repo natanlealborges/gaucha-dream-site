@@ -27,6 +27,13 @@ const CTASection = () => {
             className="border-2 border-primary-foreground/30 text-primary-foreground px-10 py-4 rounded-lg text-lg font-medium hover:bg-primary-foreground/10 transition-colors"
           >{t("copy136")}</a>
         </div>
+        <p className="text-primary-foreground/70 text-sm mt-6">
+          <a
+            href={getWhatsAppUrl(locale, "dates")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline">{t("copy610")}</a>
+        </p>
       </div>
     </section>
   );

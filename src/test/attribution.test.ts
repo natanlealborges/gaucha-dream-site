@@ -86,3 +86,37 @@ describe("first-session attribution", () => {
     expect(url.href).toContain("Ol%C3%A1!");
   });
 });
+
+const FIRST_SENTENCE = {
+  pt: "Olá! Vim pelo Google e quero saber mais sobre a Pousada Gaúcha.",
+  es: "¡Hola! Vine por Google y quiero saber más sobre la Pousada Gaúcha.",
+  en: "Hi! I came from Google and would like to know more about Pousada Gaúcha.",
+} as const;
+
+const DATES_SENTENCE = {
+  pt: "Não consegui reservar minhas datas pelo site.",
+  es: "No pude reservar mis fechas en el sitio.",
+  en: "I couldn't book my dates on the website.",
+} as const;
+
+describe("WhatsApp dates fallback", () => {
+  it.each(["pt", "es", "en"] as const)("keeps the %s default message unchanged", async (locale) => {
+    const { getWhatsAppUrl } = await booking("?utm_source=google");
+    const url = new URL(getWhatsAppUrl(locale));
+    expect(url.searchParams.get("text")).toBe(FIRST_SENTENCE[locale]);
+    expect(url.href).not.toContain(encodeURIComponent(DATES_SENTENCE[locale]));
+  });
+
+  it("keeps the default call identical to an explicit undefined intent", async () => {
+    const { getWhatsAppUrl } = await booking("?utm_source=google");
+    expect(getWhatsAppUrl("es")).toBe(getWhatsAppUrl("es", undefined));
+  });
+
+  it.each(["pt", "es", "en"] as const)("appends the dates sentence for %s", async (locale) => {
+    const { getWhatsAppUrl } = await booking("?utm_source=google");
+    const text = new URL(getWhatsAppUrl(locale, "dates")).searchParams.get("text");
+    expect(text?.startsWith(FIRST_SENTENCE[locale])).toBe(true);
+    expect(text?.endsWith(DATES_SENTENCE[locale])).toBe(true);
+    expect(text).toBe(`${FIRST_SENTENCE[locale]} ${DATES_SENTENCE[locale]}`);
+  });
+});

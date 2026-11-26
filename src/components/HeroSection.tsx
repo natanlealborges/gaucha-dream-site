@@ -1,5 +1,5 @@
 import { useI18n } from "@/i18n/context";
-import { getBookingUrl } from "@/lib/attribution";
+import { getBookingUrl, getWhatsAppUrl } from "@/lib/attribution";
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { trackInitiateCheckout } from "@/lib/pixel";
@@ -101,6 +101,13 @@ const HeroSection = () => {
             href="#acomodacoes"
             className="border-2 border-primary-foreground/40 text-primary-foreground px-10 py-4 rounded-lg text-lg font-medium hover:bg-primary-foreground/10 transition-colors">{t("copy036")}</a>
         </div>
+        <p className="text-primary-foreground/80 text-sm mt-4 animate-fade-up opacity-0" style={{ animationDelay: "1s" }}>
+          <a
+            href={getWhatsAppUrl(locale, "dates")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline">{t("copy610")}</a>
+        </p>
       </div>
 
       {/* Scroll indicator */}

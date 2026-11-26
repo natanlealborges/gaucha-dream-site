@@ -609,5 +609,6 @@ export const es = {
   "copy606": "Pousada Gaúcha",
   "copy607": "Instagram",
   "copy608": "Google",
-  "copy609": "TripAdvisor"
+  "copy609": "TripAdvisor",
+  "copy610": "¿Querés menos noches de las que permite el sitio o no encontraste tus fechas? Escribinos por WhatsApp."
 } as const;
